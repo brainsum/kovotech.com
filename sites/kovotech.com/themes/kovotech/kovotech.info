@@ -1,0 +1,18 @@
+; $Id: garland.info,v 1.10 2010/11/07 00:27:20 dries Exp $
+name = Kovotech
+description = Kovotech drupal7 theme
+version = VERSION
+core = 7.x
+
+; CSS
+stylesheets[all][] = css/reset.css
+stylesheets[all][] = css/style.css
+stylesheets[print][] = css/print.css
+
+; Regions
+regions[language] = Language Switcher
+regions[header] = Header
+regions[menu] = Menu
+regions[sidebar] = Sidebar
+regions[content] = Content
+regions[footer] = Footer

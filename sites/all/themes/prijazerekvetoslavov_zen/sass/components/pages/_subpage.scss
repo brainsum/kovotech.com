@@ -1,0 +1,44 @@
+.not-front {
+	background-image: url(../images/bg_subpage.png);
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-color: #fafafa;
+
+
+	#content {
+		margin: 0 auto;
+		width: rem(1000);
+	}
+
+	h2,
+	&.section-o-projekte h1 {
+		font-family: $playfair;
+		text-transform: uppercase;
+		font-size: em(30);
+		text-align: center;
+		font-weight: 400;
+		line-height: 1.5em;
+		color: $black;
+
+		&:after {
+			content: '';
+			display: block;
+			height: 1px;
+			width: rem(271);
+			border-bottom: 1px solid $black;
+			margin: 0 auto;
+		} //h2:after
+
+	} //h2
+
+	h3 {
+		font-weight: 700;
+		font-size: em(16);
+		font-family: $roboto;
+		color: $black;
+		margin: em(25, 16) 0;
+		text-align: left;
+		text-transform: uppercase;
+	} //h3
+
+} //.not-front

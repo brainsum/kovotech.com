@@ -1,0 +1,73 @@
+.footer-wrapper {
+	width: 100%;
+	margin-top: rem(24);
+	height: rem(140);
+
+	.not-front & {
+		background-image: url(../images/bg_footer.png);
+		background-repeat: no-repeat;
+		background-position: center bottom;
+	}
+	
+} //.footer-wrapper
+
+footer#footer {
+
+	width: rem(1000);
+	margin: 0 auto;
+	@include clearfix;
+	padding: rem(55) 0;
+
+	p {
+		margin: 0;
+	}
+
+	.copyright {
+		float: left;
+		font-weight: 200;
+		color: $black;
+		font-family: $roboto;
+		font-size: em(16);
+		text-transform: uppercase;
+	} //.copyright
+
+	.author {
+		float: right;
+
+		.label {
+			@extend .copyright;
+			display: block;
+			float: left;
+			line-height: rem(36);
+			margin-right: rem(25);
+		} //.label
+
+		.content {
+			float: left;
+			display: block;
+			color: $white;
+			font-family: $roboto;
+			font-weight: 400;
+			font-size: em(12);
+			text-align: left;
+			width: rem(162);
+			line-height: 1em;
+
+			&:before {
+				content: '';
+				display: block;
+				width: rem(24);
+				height: rem(30);
+				background-image: url(../images/brainsum_logo.png);
+				background-repeat: no-repeat;
+				background-position: 0 0;
+				margin-right: rem(8);
+				float: left;
+				margin-top: rem(5);
+
+			} //.content:before
+
+		} //.content
+	}
+
+} //.region-footer

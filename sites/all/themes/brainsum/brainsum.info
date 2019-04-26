@@ -1,0 +1,17 @@
+; $Id: garland.info,v 1.10 2010/11/07 00:27:20 dries Exp $
+name = Brainsum
+description = Brainsum Default drupal7 theme
+version = VERSION
+core = 7.x
+stylesheets[all][] = style.css
+stylesheets[print][] = print.css
+
+
+regions[header] = Header
+regions[sidebar_first] = Sidebar left
+regions[precontent] = Pre content
+regions[content] = Content
+regions[postcontent] = Post content
+regions[sidebar_second] = Sidebar right
+regions[footer] = Footer
+regions[highlighted] = Highlighted

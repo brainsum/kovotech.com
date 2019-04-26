@@ -1,0 +1,944 @@
+/*  Default css for drupal 7
+ *  code by: Brainsum s.r.o.
+ *  author: keeteean
+ *  project: Kovotech
+ *  date: 2012.08
+ *  INFO: Before modifying, adding new definitions read all comments
+ *  HELP: Blocks could be find easier by searching for its region:
+ *  -- LANGUAGE REGION -- , -- HEADER REGION -- , -- MENU REGION -- , -- SIDEBAR REGION -- , 
+ *  -- CONTENT REGION -- , -- FOOTER REGION --
+ */
+
+
+/*  -------------------------------------  ELEMENTS DEFAULT STYLE - @START ------------------------------
+/*  -------------------------------------  ELEMENTS DEFAULT STYLE - @START ------------------------------
+/*  -------------------------------------  ELEMENTS DEFAULT STYLE - @START ------------------------------
+ *  RESTRICTION: only element or tag names, without classes, ids (.,#)
+ */
+
+html {background-color:#B4B4B4;}
+
+*:first-child+html .clearfix {display: inline;} 
+
+
+
+h1, h2, h3, h4, h5, h6, label,
+form, input, textarea,
+ul, ol, li, quote,
+div, span, code, hr{
+  margin:0;
+  padding:0;
+}
+
+ul, ol{
+  padding-left:20px;
+}
+
+
+fieldset{
+margin:8px 0px 16px 0px;
+padding:10px;
+}
+
+h1 {
+  font-size: 45.92px; 
+  font-weight: bold; 
+  letter-spacing: -1px;
+  padding-top:10px;
+  padding-bottom:20px; 
+  
+}
+
+h2 {  
+  font-size: 14px; 
+  font-weight:normal; 
+  padding-top:25px; 
+  padding-bottom:15px;
+}
+
+h3 {
+  font-size: 15.57px; 
+  font-weight:bold; 
+  letter-spacing: -1px; 
+  margin-top: -3px;
+  padding-top:15px; 
+  padding-bottom:10px;   
+  
+}
+
+h4 {
+  font-size: 15px; 
+  font-weight:bold; 
+  padding-top:10px; 
+  padding-bottom:5px; 
+}
+
+h5 {  
+  font-size: 13px; 
+  font-weight:bold; 
+  padding-top:5px; 
+  padding-bottom:3px; 
+}
+
+h6 {  
+  font-size: 12px; 
+  font-weight:bold; 
+  padding-top:5px; 
+  padding-bottom:1px; 
+}
+
+p {
+  margin: 0;
+  padding: 7px 0px 14px 0px;
+}
+
+a:link, a:visited {
+  color: #a29b00;
+  text-decoration: none;
+  outline:0px;
+}
+
+a:active,
+a:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+a img{
+	border:0px;
+}
+
+fieldset{
+  background-color:#F9f9f9;
+  padding:15px;
+  margin-bottom:20px;
+}
+
+fieldset legend{
+  background-color:#FFFFFF;
+  border:1px solid #888888;
+  padding:3px 5px;
+}
+
+table{
+  width:100%;
+  margin-bottom:15px;
+  border-spacing: 0;
+}
+
+table tr{
+  background-color:transparent;
+  margin-bottom: 31px;
+}
+
+table td{
+  padding-bottom:31px;
+}
+
+table thead th{
+  padding:2px 0px 2px 5px;
+  background-color:#fff;
+  border-bottom:1px solid #ccc;
+}
+
+table caption{
+  font-size:17px;
+  font-weight:normal;
+  padding-bottom:5px;
+  text-align:left;
+}
+
+select{
+  border:1px solid #a6adb0;
+  background:#fff url(../images/input-bg.gif) no-repeat top left;
+}
+
+textarea{
+  border:1px solid #a6adb0;
+  width:99%;
+  background:#fff url(../images/input-bg.gif) no-repeat top left;
+}
+
+
+/*  -------------------------------------  ELEMENTS DEFAULT STYLE - @END ------------------------------
+ */
+
+
+/*  --------------------------------------  COMMON CLASSES -  @START ----------------------------------
+/*  --------------------------------------  COMMON CLASSES -  @START ----------------------------------
+/*  --------------------------------------  COMMON CLASSES -  @START ----------------------------------
+ *  RESTRICTION: No ID-s here!!!
+ *               No 'only tagname' definitions here!!!
+ *  INFO: Here comes classes, which are used on many places, like a.active, h2.title, .block, .clear, etc.
+ *
+ */
+
+a.active {
+  color: #f68220;
+}
+
+input.form-text{
+  border:1px solid #a6adb0;
+  height:19px;
+  text-indent:5px;
+  font-size:12px;
+  padding-bottom:1px;
+  background:#fff url(../images/input-bg.gif) no-repeat top left;
+}
+
+input.form-submit {
+  background-color:#000;
+  color:#fff200;
+  cursor:pointer;
+  font-weight:normal;
+  height:26px;
+  margin-top:7px;
+  padding:1px 5px 2px;
+  border:none;
+}
+
+input.form-submit:hover,
+input.form-submit:active{
+  color: #fff;
+}
+
+.clear{
+    clear:both;
+    height:0px;
+    overflow:hidden;
+    }
+
+ul.menu{
+  padding: 0;
+  }
+
+ul.menu li {
+  margin: 0;
+  display: inline;
+  list-style-type: none;
+}
+
+li.leaf{
+  list-style-image:none;
+  list-style-type:none;
+}
+
+fieldset.collapsible{
+  padding:15px;
+}
+
+fieldset.collapsed{
+  padding:0px;
+}
+
+
+table tr.odd{
+  background-color:#f8f8f8;
+}
+
+table tr.even{
+  background-color:#fafafa;
+}
+
+html.js .resizable-textarea textarea,
+.resizable-textarea,
+.node-form input.form-text,
+.node-form textarea{
+  width:100%;
+}
+
+html.js fieldset.collapsed {
+  margin-bottom:20px;
+}
+
+ul.primary{
+  border-bottom: 1px solid #000;
+  padding-bottom: 3px;
+}
+
+ul.primary li a:link,
+ul.primary li a:visited {
+  color:#000;
+  background-color:#fff200;
+  border:none;
+  padding: 3px 6px;
+}
+
+ul.primary li a:hover,
+ul.primary li a:active {
+  color:#fff200;
+  background-color:#000;
+}
+
+ul.primary li.active a:link,
+ul.primary li.active a:visited {
+  color:#fff200;
+  background-color:#000;
+  border: none;
+  padding: 3px 6px;
+}
+
+ul.primary li.active a:hover,
+ul.primary li.active a:active {
+  color:#000;
+  background-color:#fff200;
+}
+
+
+ ul.inline li, 
+ ul.links.inline li{
+  background-color: #000;
+  padding:3px 6px;
+}
+
+ ul.inline li a:link, 
+ ul.inline li a:visited,
+ ul.links.inline li a:link,
+ ul.links.inline li a:visited{
+    color:#fff200;
+  }
+
+ ul.inline li a:hover, 
+ ul.inline li a:active,
+ ul.links.inline li a:hover,
+ ul.links.inline li a:active{
+    color:#fff;
+  }
+
+ul.tabs{margin-top:20px;}
+
+div.messages{
+  background-color:#000;
+  color:#fff200;
+  padding:10px 10px 10px 50px;
+  margin-bottom:15px;
+}
+
+div.error{
+  background-color: #ff5020;
+  color:#fff;
+  font-weight:bold;
+  
+}
+
+div.error a:link,
+div.error a:visited {
+  color: black;
+}
+
+div.status,
+.ok{
+  background-color: #6AB158;
+  color: #234600;
+}
+
+div.status a:link,
+div.status a:visited,
+.ok a:link,
+.ok a:visited{
+  color: black;
+}
+
+div.status a:hover,
+div.status a:active,
+.ok a:hover,
+.ok a:active{
+  color: black;
+}
+
+div.node{padding-bottom: 20px;}
+
+div.node p{line-height: 18px;}
+
+div.sidebar div.block{
+  margin:62px 0px 20px 0px;
+}
+
+div.sidebar div.block h2{
+  border-bottom:1px solid #939393;
+  color:#000;
+  margin-bottom:5px;
+  padding:1px 5px 14px;
+}
+
+div.sidebar div.block p{
+  font-size: 12px;
+  line-height: 18px;
+  
+}
+
+
+div.field-label{
+  background-color:#F6F6F6;
+  margin:4px 0;
+  padding:5px 0 5px 0;
+}
+
+div.field-name-field-lead{
+  font-weight:bold;
+  padding:10px 0px;
+}
+
+div.node div.links{
+	padding-top:20px;
+}
+
+form.node-form div.form-item-language{
+	float:none;
+	clear:both;
+}
+
+/*  --------------------------------------  COMMON CLASSES -  @END ------------------------------------
+ */
+
+
+/*  --------------------------------  PAGE MAIN LAYOUT ELEMENTS -  @START -----------------------------
+/*  --------------------------------  PAGE MAIN LAYOUT ELEMENTS -  @START -----------------------------
+/*  --------------------------------  PAGE MAIN LAYOUT ELEMENTS -  @START -----------------------------
+ *  RESTRICTION: ONLY ID-s, and BODY tag!!! (#)
+ *  INFO: Page layout elements must have ID's.
+ *        Here comes elements like header, sidebars, content ,footer
+ */
+body {
+    background-color:#b4b4b4;
+    background-image: url(../images/background-gradient.jpg);
+    background-repeat: repeat-x;
+    background-position: top center;
+    color:#000;
+    font-family:Georgia;
+    font-size:12px;
+    padding:0px;
+    margin:0px;
+    }
+
+#page-outer{
+    margin:0px auto 20px auto;
+    background:#B3B3B3 none;
+    width:983px;
+    padding-bottom:10px;
+    text-align:left;
+    }
+
+#language{
+  margin:0px auto;
+  padding:0;  
+}
+
+#page-inner{
+    background:#fff none;
+    margin:0px auto;
+    width:983px;
+    clear: right;
+    }
+
+#page_container{
+    padding:0px;
+    }
+
+#header{
+  padding: 44px 0 10px;
+  background-color: #fff200;
+}
+
+#sidebar{
+  width:240px;
+  float:right;
+}
+
+#page_container{
+  background-image: url(../images/background.png);
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+
+#stripes{
+  background-image: url(../images/stripes.png);
+  background-repeat: repeat-x;
+  background-position: left top;
+  width:643px;
+  height: 10px;
+  clear: left;
+  float: left;
+  margin-left: 73px;
+  margin-bottom: 44px;
+}
+
+#content{
+  width:613px;
+  float: left;
+  margin: 1px 0 0 73px;
+  padding:20px 10px 0 20px;
+  background-color: #eee;
+ }
+
+#footer{
+  clear:both;
+  background-color:#fff200;
+  padding: 30px 70px 20px 30px;
+}
+/*  ---------------------------------  PAGE MAIN LAYOUT ELEMENTS -  @END ------------------------------
+ */
+
+
+
+/*  --------------------------------  BLOCKS STYLE DEFINITIONS  -  @START -----------------------------
+/*  --------------------------------  BLOCKS STYLE DEFINITIONS  -  @START -----------------------------
+/*  --------------------------------  BLOCKS STYLE DEFINITIONS  -  @START -----------------------------
+ *  RESTRICTON: Group boxes, definitions by regions!!!
+ */
+
+/* ------------- -- LANGUAGE REGION -- START ------------------------ */
+/* ------------- -- LANGUAGE REGION -- START ------------------------ */
+
+#language div.language{
+  width: 85px;
+  float: right;
+  margin: 12px 0 12px;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+  #language div.language h2 {
+    padding: 0;
+  }
+
+  #language div.language ul.menu {
+    text-align: center;
+    padding: 6px 0;
+    background-color: #000;
+    }
+
+    #language div.language ul li{
+      list-style: none;
+      padding:0;
+    }
+
+      #language div.language ul li a:link,
+      #language div.language ul li a:visited{
+       color: #fff200;        
+      }
+
+      #language div.language ul li a:hover,
+      #language div.language ul li a:active{
+       color: #fff;
+       text-decoration: none;  
+      }
+
+/* ------------- -- LANGUAGE REGION -- END ------------------------ */
+
+
+/* ------------- -- HEADER REGION -- START ------------------------ */
+/* ------------- -- HEADER REGION -- START ------------------------ */
+
+#header #logo{
+  float:left;
+  margin-left: 30px;
+	}
+
+#header .contact {
+  margin-right: 25px;
+  color: #010101;
+  text-align: right;
+  font-size: 14px;
+}
+
+
+#header .contact p{padding-top:0;}
+
+
+/* ------------- -- HEADER REGION -- END -------------------------- */
+
+
+/* ------------- -- MENU REGION -- START ------------------------ */
+/* ------------- -- MENU REGION -- START ------------------------ */
+
+#header .region-menu{
+  margin-top:40px;
+  padding:8px 0 9px;
+  height: 34px;
+  background-image: url(../images/stripes.png);
+  background-repeat: repeat;
+  background-position: left top;
+
+}
+
+#header #block-menu-menu-product-menu{
+  clear: left;
+  float: left;
+  width: 686px;
+  padding:8px 0 8px 30px;
+  background-color: #000;
+  
+}
+
+#header #block-menu-menu-product-menu ul.menu{
+  padding:0;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
+#header #block-menu-menu-product-menu ul.menu li.leaf {
+    background-image: url(../images/bullet-yellow.png);
+    background-repeat: no-repeat;
+    background-position: right 60%;
+    padding-right: 11px;
+}
+
+*+html #header #block-menu-menu-product-menu ul.menu li.leaf{padding:0 5px;}
+*+html #header #block-menu-menu-product-menu ul.menu li.leaf a{letter-spacing: -2px;}
+
+#header #block-menu-menu-product-menu ul.menu li.last {
+    background-image: none;
+    
+}
+
+  #header #block-menu-menu-product-menu ul.menu li a:link,
+  #header #block-menu-menu-product-menu ul.menu li a:visited{
+    color: #fff;  
+  }
+
+  #header #block-menu-menu-product-menu ul.menu li a:hover,
+  #header #block-menu-menu-product-menu ul.menu li a:active{
+    color: #fff200;
+    text-decoration: none;  
+  }
+
+#header #block-system-main-menu{
+  float:right;
+  font-size:14px;
+  width: 227px;
+  padding:8px 15px 8px 25px;
+  background-color: #484400;
+}
+
+#header #block-system-main-menu ul.menu {
+  padding: 0;
+  color: #fff200;
+
+  text-shadow:0px 1px 1px rgb(0,0,0);
+  -ms-filter:"progid:DXImageTransform.Microsoft.dropshadow(OffX = 0,OffY = 1,Color = #ff000000,Positive = true)";zoom:1;
+  filter:progid:DXImageTransform.Microsoft.dropshadow(OffX = 0,OffY = 1,Color = #ff000000,Positive = true);
+  
+}
+
+#header #block-system-main-menu ul.menu li.leaf {
+    background-image: url(../images/bullet-yellow.png);
+    background-repeat: no-repeat;
+    background-position: right 60%;
+    padding-right: 11px;
+}
+
+*+html #header #block-system-main-menu ul.menu li.leaf{
+  padding:0 5px;
+}
+
+
+#header #block-system-main-menu ul.menu li.last {
+    background-image: none;
+    padding-right: 0;
+}
+
+  #header #block-system-main-menu ul.menu li a:link,
+  #header #block-system-main-menu ul.menu li a:visited{
+    color: #fff200;        
+  }
+
+  #header #block-system-main-menu ul.menu li a:hover,
+  #header #block-system-main-menu ul.menu li a:active{
+    color: #fff;
+    text-decoration: none;  
+  }
+
+/* ------------- -- MENU REGION -- END -------------------------- */
+
+
+/* ------------- -- SIDEBAR REGION -- START ------------------ */
+/* ------------- -- SIDEBAR REGION -- START ------------------ */
+
+#block-search-0 #edit-search-block-form-1-wrapper label{
+  display:none;
+}
+
+#block-search-0 #edit-search-block-form-1-wrapper{
+  float:left;
+  margin-top:7px;
+  padding-right:4px;
+  width:127px;
+}
+
+#block-search-0 input.form-text{
+  width:125px;
+}
+
+
+#block-search-0 input.form-submit{
+  margin-top:7px;
+  padding:0px 4px 1px;
+  height:22px;
+}
+
+#block-user-0 input.form-text{
+  width:100%;
+}
+
+#block-user-0 .form-item label {
+  font-weight:normal;
+  text-align:left;
+}
+
+#block-user-0 .item-list ul{
+  padding:6px 0px 0px 0px;
+}
+
+#block-user-0 .form-item {
+  margin:0px 0px 5px 0px;
+}
+
+#block-user-0 .item-list ul li {
+  list-style:none;
+  font-size:10px;
+  margin:0px;
+}
+
+#block-user-0 #user-login-form {
+  padding-top:5px;
+  text-align:left;
+}
+
+#block-user-0 input.form-submit{
+  height:23px;
+  padding:0 5px 2px;
+}
+
+#block-simplenews-1 #edit-mail-wrapper label{
+  font-weight:normal;
+}
+
+#block-simplenews-1 input.form-text{
+  width:100%;
+}
+
+#block-simplenews-1 #edit-mail-wrapper{
+  margin:0px;
+  padding-top:5px;
+}
+
+#block-simplenews-1 div.form-radios{
+  margin:0px;
+}
+
+#sidebar ul.inline, 
+#sidebar ul.links.inline{
+  margin: 12px 0;
+}
+
+div.contact-modul div.content{padding:7px 0 14px;}
+
+div.contact-modul p{padding:0;}
+
+
+/* ------------- -- SIDEBAR REGION -- END -------------------- */
+
+
+
+
+/* ------------- -- CONTENT REGION -- START ----------------------- */
+/* ------------- -- CONTENT REGION -- START ----------------------- */
+
+body.front #content {
+  padding:0;
+  width: 643px;
+}
+
+body.front #content div.content div.node,
+body.front #content div.content div.node div.links{
+  padding:0;
+}
+
+div.views-row{
+  padding:10px 0px;
+  border-bottom:1px dashed #e8e8e8;
+}
+
+div.views-field-title{
+  padding-bottom:8px;
+  font-weight:bold;
+  font-size:13px;
+}
+
+div.view-slider div.views-row{
+	padding:0px;
+	border:0px none;
+}
+
+div.view-slider div.views-row img{
+	display:block;
+}
+
+div.skin-default{position: relative;}
+
+div.views-slideshow-controls-bottom{
+  padding-right: 35px;
+  position: absolute;
+  right: 0;
+  bottom:-10px;
+  z-index: 99;
+}
+
+div.view-slider div.views_slideshow_pager_field div.views-slideshow-pager-field-item{
+	float:right;
+  margin-right:2px;
+	padding:4px 10px;
+	background:#fff200;
+	color:#000;
+  font-weight: bold;
+}
+
+div.view-slider div.views_slideshow_pager_field div.views-slideshow-pager-field-item:last-child{
+	border:0px none;
+}
+
+div.view-slider div.views_slideshow_pager_field div.active{
+	cursor:pointer;
+	background:#000;
+  color:#fff200;
+}
+
+div.view-slider div.views_slideshow_pager_field div.views-slideshow-pager-field-item div.views-field-title{
+	padding:0px;
+	font-weight:normal;
+}
+
+div.field-name-field-photogallery div.field-item,
+div.views-field-field-photogallery{
+  float:left;
+}
+
+div.field-name-field-photogallery div.field-item img,
+div.views-field-field-photogallery img{
+  padding:0px 10px 5px 0px;
+}
+
+h1.slider-title{
+  position: absolute;
+  bottom: -120px;
+  letter-spacing: -3px;
+}
+
+body.front div#stripes {margin-bottom: 120px;}
+
+
+.float-right{
+  float:right;
+  padding:0px 0px 8px 15px;
+}
+
+.float-left{
+  float:left;
+  padding:0px 15px 8px 0px;
+}
+
+.image-padding{
+  padding:19px 15px ;
+}
+
+#content h3.product-name{
+  width: 303px;
+  background-color: #fff;
+  text-align: center;
+}
+
+
+
+.block-contact-form-blocks input[type="text"],
+html.js .resizable-textarea textarea,
+.block-contact-form-blocks textarea,
+.resizable-textarea, 
+.node-form input.form-text, 
+.node-form textarea {
+  width: 400px;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ddd;
+}
+
+.block-contact-form-blocks input[type="text"]:hover,
+html.js .resizable-textarea textarea:hover,
+.block-contact-form-blocks textarea:hover,
+.resizable-textarea:hover, 
+.node-form input.form-text:hover, 
+.node-form textarea:hover {
+  border-color: #999;
+}
+
+.block-contact-form-blocks input[type="text"]:focus,
+html.js .resizable-textarea textarea:focus,
+.block-contact-form-blocks textarea:focus,
+.resizable-textarea:focus, 
+.node-form input.form-text:focus, 
+.node-form textarea:focus {
+  border: 2px solid #333;
+}
+
+.block-contact-form-blocks input[type="text"]{
+  height:30px;  
+}
+
+
+body.page-node-2 div.region-content div.node div.content{padding: 7px 0 14px;}
+body.page-node-2 div.region-content div.node div.content p {padding: 0;}
+
+
+
+/* ------------- -- CONTENT REGION -- END ------------------------- */
+
+/* ------------- -- FOOTER REGION -- START ------------------------ */
+/* ------------- -- FOOTER REGION -- START ------------------------ */
+
+#footer #block-system-0 {
+  float:left;
+  font-size:11px;
+  padding:0 14px 0 20px;
+}
+
+#footer a:link,
+#footer a:visited{
+  color: #000;
+}
+
+#footer a:hover,
+#footer a:active{
+  text-decoration: underline;
+}
+
+#footer p{padding: 0;}
+
+#footer .footer-menu{float: left;}
+
+#footer .copyright{
+  float: left;
+  margin-left: 40px;
+}
+
+#footer .madeby{
+  float: right;
+  width: 110px;
+  padding-left: 30px;
+  background-image: url(../images/brainsum-logo.png);
+  background-repeat: no-repeat;
+  background-position: left 2px;
+  font-size: 12px;
+  line-height: 11px;
+}
+
+
+
+
+/* ------------- -- FOOTER REGION -- END -------------------------- */
+
+
+/*  ---------------------------------  BLOCKS STYLE DEFINITIONS  -  @END ------------------------------
+ */

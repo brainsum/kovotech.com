@@ -1,0 +1,29 @@
+.section-o-projekte {
+
+	#content {
+		position: relative;
+	}
+
+	h1 {
+		width: 50%;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+
+	.field-name-body {
+
+		font-family: $roboto;
+		font-weight: 300;
+		font-size: em(16);
+		line-height: 1.2em;
+		padding-top: 5px;
+
+		img {
+			float: left;
+			margin: rem(-68) rem(20) rem(20) 0;
+		}
+
+	} //.field-name-body
+
+} //.section-o-projekte

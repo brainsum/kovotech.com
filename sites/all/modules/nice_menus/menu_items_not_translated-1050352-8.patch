@@ -1,0 +1,50 @@
+--- a/nice_menus.module	2012-02-23 05:39:00.000000000 +0100
++++ b/nice_menus.module	2012-03-29 11:22:13.654661952 +0200
+@@ -347,10 +347,10 @@
+   if (module_exists('i18n_menu')) {
+     $menu = i18n_menu_localize_tree($menu);
+   }
+-  
++
+   // Assume depth == 0 by default, overriden if mlid is specified.
+   $parent_depth = 0;
+-  
++
+   // For custom $menus and menus built all the way from the top-level we
+   // don't need to "create" the specific sub-menu and we need to get the title
+   // from the $menu_name since there is no "parent item" array.
+@@ -387,7 +387,7 @@
+     $depth =  ($depth > 0) ? ($parent_depth + $depth) : $depth;
+     $output['content'] .= theme('nice_menus_build', array('menu' => $menu, 'depth' => $depth, 'trail' => $trail));
+   }
+-  
++
+   return $output;
+ }
+ 
+@@ -455,7 +455,7 @@
+         $parent_class = ($children && ($menu_item['link']['depth'] <= $depth || $depth == -1)) ? 'menuparent ' : '';
+          $element = array(
+           '#below' => $children,
+-          '#title' => $menu_item['link']['link_title'],
++          '#title' => $menu_item['link']['title'],
+           '#href' =>  $menu_item['link']['href'],
+           '#localized_options' => $menu_item['link']['localized_options'],
+           '#attributes' => array(
+@@ -464,13 +464,13 @@
+         );
+         $variables['element'] = $element;
+         $output .= theme('menu_link', $variables);
+-        
++
+       }
+       else {
+-     
++
+         $element = array(
+           '#below' => '',
+-          '#title' => $menu_item['link']['link_title'],
++          '#title' => $menu_item['link']['title'],
+           '#href' =>  $menu_item['link']['href'],
+           '#localized_options' => $menu_item['link']['localized_options'],
+           '#attributes' => array(

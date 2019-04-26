@@ -1,0 +1,39 @@
+.page-flat-types {
+
+	div.flat-types {
+
+		div.texts div.sub-texts {
+
+			height: 270px;
+
+			.field-name-body {
+				
+			} //.field-name-body
+
+			ul {
+				font-size: em(16);
+				font-weight: 300;
+				font-family: $roboto;
+				color: $black;
+			} //ul
+
+		} //.sub-texts
+
+		div.flats .ind {
+			display: none;
+		}
+
+		div.flat-details div.flat {
+			min-height: 500px;
+			background: none;
+		}
+
+		.interest-form {
+			width: rem(520);
+			padding: rem(40);
+			margin: 0 auto;
+		}
+
+	} //.flat-types
+
+} //.page-flat-types

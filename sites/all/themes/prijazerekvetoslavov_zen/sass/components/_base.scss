@@ -1,0 +1,14 @@
+img {
+	display: block;
+	max-width: none;
+}
+
+#main {
+	padding-top: rem(38);
+}
+
+#page {
+	overflow: hidden;
+}
+
+.tabs-primary, .tabs-secondary {position: relative; z-index: 99;}
