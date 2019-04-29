@@ -39,7 +39,7 @@ function title_entity_info() {
         'field' => $field,
         'instance' => array(
           'label' => t('Title'),
-          'description' => t('A field replacing node title.'),
+          'description' => '',
         ) + $instance,
       ),
     ),
@@ -53,7 +53,7 @@ function title_entity_info() {
           'field' => $field,
           'instance' => array(
             'label' => t('Name'),
-            'description' => t('A field replacing taxonomy term name.'),
+            'description' => '',
           ) + $instance,
           'preprocess_key' => 'term_name',
         ),
@@ -64,7 +64,7 @@ function title_entity_info() {
           'instance' => array(
             'required' => FALSE,
             'label' => t('Description'),
-            'description' => t('A field replacing taxonomy term description.'),
+            'description' => '',
             'settings' => array(
               'text_processing' => 1,
             ),
@@ -87,7 +87,7 @@ function title_entity_info() {
           'field' => $field,
           'instance' => array(
             'label' => t('Subject'),
-            'description' => t('A field replacing comment subject.'),
+            'description' => '',
           ) + $instance,
           'preprocess_key' => 'title',
         ),
@@ -109,6 +109,11 @@ function title_field_term_description_submit($entity_type, $entity, $legacy_fiel
     if (isset($entity->{$info['field']['field_name']}[$langcode][0][$key])) {
       $values['description'][$key] = $entity->{$info['field']['field_name']}[$langcode][0][$key];
     }
+    // If the keys are not defined an empty value has been submitted, hence we
+    // need to update the term description accordingly.
+    else {
+      $values['description'][$key] = ($key == 'value') ?  '' : filter_default_format();
+    }
   }
 }
 
@@ -122,7 +127,7 @@ function title_field_text_sync_get($entity_type, $entity, $legacy_field, $info, 
     $items = $entity->{$field_name}[$langcode];
     $value = !empty($items[0]['value']) ? $items[0]['value'] : NULL;
   }
-  return $value;
+  return array($legacy_field => $value);
 }
 
 /**
@@ -137,25 +142,31 @@ function title_field_text_sync_set($entity_type, $entity, $legacy_field, $info, 
  */
 function title_field_text_with_summary_sync_get($entity_type, $entity, $legacy_field, $info, $langcode) {
   $value = NULL;
+  $format = NULL;
   $format_key = $info['additional keys']['format'];
   $field_name = $info['field']['field_name'];
   // Return values only if there is any available to process for the current
   // language.
   if (!empty($entity->{$field_name}[$langcode]) && is_array($entity->{$field_name}[$langcode])) {
-    $entity->{$format_key} = $entity->{$field_name}[$langcode][0]['format'];
     $items = $entity->{$field_name}[$langcode];
     $value = !empty($items[0]['value']) ? $items[0]['value'] : NULL;
+    $format = $entity->{$field_name}[$langcode][0]['format'];
   }
-  return $value;
+  return array(
+    $legacy_field => $value,
+    $format_key => $format,
+  );
 }
 
 /**
  * Sync back callback for the text with summary field type.
  */
 function title_field_text_with_summary_sync_set($entity_type, $entity, $legacy_field, $info, $langcode) {
-  $format_key = $info['additional keys']['format'];
-  $entity->{$info['field']['field_name']}[$langcode][0]['value'] = $entity->{$legacy_field};
-  $entity->{$info['field']['field_name']}[$langcode][0]['format'] = $entity->{$format_key};
+  foreach (array('value' => $legacy_field, 'format' => $info['additional keys']['format']) as $column => $name) {
+    if (isset($entity->{$name})) {
+      $entity->{$info['field']['field_name']}[$langcode][0][$column] = $entity->{$name};
+    }
+  }
 }
 
 /**
