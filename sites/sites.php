@@ -61,7 +61,8 @@
 #$sites['jenhladce.cz.muntiac.brain.sk'] = 'jenhladce.cz';
 
 $sites['www.kovotech.com'] = 'kovotech.com';
-$sites['kovotech.com.muntiac.brain.sk'] = 'kovotech.com';
+$sites['kovotech.gubo.brainsum.com'] = 'kovotech.com';
+$sites['localhost'] = 'kovotech.com';
 
 #$sites['medicalproducts.sk.muntiac.brain.sk'] = 'medicalproducts.sk';
 #$sites['www.bnm-slovakia.sk'] = 'medicalproducts.sk';
