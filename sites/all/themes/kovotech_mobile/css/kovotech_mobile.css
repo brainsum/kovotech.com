@@ -11,16 +11,6 @@ header.header {
   height: 60px;
   padding: 15px;
   background-color: #fff200;
-  /*#hamburger{
-    background-image: url(../images/hamburger.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 30px;
-    width: 30px;
-    float: right;
-    cursor: pointer;
-    margin-left: 10px;
-  }*/
 }
 
 header.header #header.container {
@@ -164,14 +154,14 @@ header.header .region-header-mobile .sk.active a {
   width: 40%;
   text-align: right;
   color: #eee;
-  font-size: 0.8em;
+  font-size: 14px;
 }
 
 .mobile-menu #block-menu-menu-product-menu {
   width: 60%;
   text-transform: uppercase;
   color: white;
-  font-size: 0.7em;
+  font-size: 14px;
   font-weight: bold;
 }
 
@@ -224,16 +214,130 @@ header.header .region-header-mobile .sk.active a {
   width: 70%;
 }
 
+#main .main-content {
+  min-height: 480px;
+  background-color: #eee;
+}
+
+#main .field,
+#main .block-contact-form-blocks {
+  width: 95%;
+  margin: auto;
+  padding: 0 3px;
+  font-size: 14px;
+}
+
+#main #contact-site-form label {
+  padding: 0;
+}
+
+#main #contact-site-form .form-text {
+  height: 30px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+#main #contact-site-form .form-text,
+#main #contact-site-form .form-textarea {
+  width: 100%;
+  border: solid 1px #ddd;
+  box-shadow: none;
+  font-size: 12px;
+}
+
+#main #contact-site-form .form-text:focus,
+#main #contact-site-form .form-textarea:focus {
+  border: solid 1px #333;
+  border-radius: 0;
+}
+
+#main #contact-site-form .grippie {
+  background-color: #eee;
+}
+
+#main table,
+#main h1 {
+  width: 95%;
+  margin: auto;
+  padding: 15px 3px;
+  padding-top: 30px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+#main td {
+  width: 50%;
+  padding: 6px 3px;
+  vertical-align: top;
+  border-bottom: 0;
+}
+
+#main td img {
+  width: 100%;
+}
+
+#main td h3 {
+  height: 45px;
+  padding: 0 5px;
+  padding-top: 15px;
+  text-align: center;
+  background-color: white;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 13px;
+}
+
+#main #stripes {
+  width: 100%;
+  height: 9px;
+  background-image: url(../images/stripes.png);
+  background-repeat: repeat-x;
+  background-position: left top;
+}
+
+.section-kontakty .field p,
+.section-elerhetoseg .field p {
+  margin-bottom: 0;
+}
+
+.section-kontakty .field p a,
+.section-elerhetoseg .field p a {
+  color: #a29b00;
+}
+
+.section-kontakty .field p a:hover,
+.section-elerhetoseg .field p a:hover {
+  color: #000;
+}
+
+.section-kontakty #edit-submit,
+.section-elerhetoseg #edit-submit {
+  height: auto;
+  padding: 3px 6px;
+  color: #fff200;
+  border: 0;
+  border-radius: 0;
+  background-color: black;
+  font-size: 12px;
+}
+
 .region-sidebar {
   float: left;
   width: 30%;
+  background-image: url(../images/background.png);
+  background-repeat: no-repeat;
+  background-position: right top;
 }
 
 .region-sidebar h2 {
-  margin-top: 35px;
+  margin-top: 40px;
   padding-bottom: 14px;
   border-bottom: 1px solid #939393;
   font-size: 14px;
+}
+
+.region-sidebar .block {
+  padding-bottom: 40px;
 }
 
 .region-sidebar p {
@@ -262,13 +366,13 @@ header.header .region-header-mobile .sk.active a {
   color: white;
 }
 
-.region-sidebar #block-nodeblock-2 a {
-  text-decoration: none;
-  color: #a29b00;
-}
-
 .region-sidebar #block-nodeblock-2 p {
   padding: 0;
+}
+
+.region-sidebar #block-nodeblock-2 p a {
+  text-decoration: none;
+  color: #a29b00;
 }
 
 .region-sidebar #block-nodeblock-2 .field-item {

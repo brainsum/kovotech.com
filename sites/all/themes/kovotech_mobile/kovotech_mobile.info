@@ -58,6 +58,7 @@ stylesheets[all][] = css/kovotech_mobile.layout.css
 stylesheets[all][] = css/kovotech_mobile.components.css
 stylesheets[all][] = css/kovotech_mobile.theme.css
 stylesheets[all][] = css/kovotech_mobile.css
+stylesheets[all][] = css/kovotech_mobile_@media.css
 
 ; If you wish to use conditional stylesheets, you should install the
 ; conditional stylesheets module: https://drupal.org/project/conditional_styles

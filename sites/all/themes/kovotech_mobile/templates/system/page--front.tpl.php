@@ -125,9 +125,6 @@
       <section class="<?php print $content_class; ?>">
         <a href="#skip-link" class="visually-hidden visually-hidden--focusable" id="main-content"><?php print t('Back to top'); ?></a>
         <?php print render($title_prefix); ?>
-        <?php if ($title): ?>
-          <h1><?php print $title; ?></h1>
-        <?php endif; ?>
         <?php print render($title_suffix); ?>
         <?php print $messages; ?>
         <?php print render($tabs); ?>
@@ -147,7 +144,6 @@
 
     </div>
   </div>
-  <div id="stripes"></div>
 </main>
 
 <?php if ($page['sidebar']): ?>
