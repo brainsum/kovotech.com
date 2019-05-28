@@ -1,0 +1,24 @@
+footer{
+  background-color: #fff200;
+  font-size: 12px;
+  line-height: 11px;
+  padding: 30px 30px 20px 30px;
+  clear: both;
+  .block{
+    padding: 0px;
+  }
+  p{
+    margin: 0;
+  }
+  a, a:hover{
+    color: #000;
+  }
+  .madeby p::before{
+    content: url(../images/brainsum-logo.png);
+    vertical-align: middle;
+    padding-right: 5px;
+  }
+  a{
+    display: inline-block;
+  }
+}

@@ -1309,58 +1309,6 @@ th .checkbox {
 
 /**
  * @file
- * Spectre Labels
- *
- * Labels are formatted text tags for highlighted, informative information.
- *
- * Add the label class to <span> or <small> elements. You can add another class
- * label-primary, label-secondary, label-success, label-warning and label-error
- * for colored labels.
- *
- * @see https://picturepan2.github.io/spectre/elements.html#labels
- */
-.label {
-  display: inline-block;
-  padding: 0.1rem 0.15rem;
-  color: #5b657a;
-  border-radius: 0.1rem;
-  background: #f0f1f4;
-  line-height: 1.2;
-}
-
-.label.label-rounded {
-  padding-right: 0.4rem;
-  padding-left: 0.4rem;
-  border-radius: 5rem;
-}
-
-.label.label-primary {
-  color: #fff;
-  background: #5755d9;
-}
-
-.label.label-secondary {
-  color: #5755d9;
-  background: #f1f1fc;
-}
-
-.label.label-success {
-  color: #fff;
-  background: #32b643;
-}
-
-.label.label-warning {
-  color: #fff;
-  background: #ffb700;
-}
-
-.label.label-error {
-  color: #fff;
-  background: #e85600;
-}
-
-/**
- * @file
  * Spectre Media + Zen's Responsive media
  *
  * @see https://picturepan2.github.io/spectre/elements.html#media
@@ -1446,28 +1394,6 @@ figure {
 figure figcaption {
   margin-top: 0.4rem;
   color: #667189;
-}
-
-/**
- * @file
- * Drupal's Resizable textarea
- *
- * A textarea that can be resized with a "grippie" widget.
- */
-.resizable-textarea,
-.resizable-textarea textarea {
-  width: 100%;
-  vertical-align: bottom;
-}
-
-.resizable-textarea__grippie,
-.resizable-textarea .grippie {
-  overflow: hidden;
-  height: 9px;
-  cursor: s-resize;
-  border: 1px solid #caced7;
-  border-top-width: 0;
-  background: url(../sass/components/resizable-textarea/grippie.png) no-repeat center 2px #454d5d;
 }
 
 /**
@@ -1677,6 +1603,120 @@ h6 {
   clear: both;
 }
 
+header.header {
+  height: 60px;
+  padding: 15px;
+  background-color: #fff200;
+}
+
+header.header #header.container {
+  float: left;
+  width: 180px;
+  margin: 0;
+  font-size: 18px;
+}
+
+header.header #hamburger {
+  float: right;
+  width: 30px;
+  height: 27px;
+  margin-top: 3px;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+header.header #hamburger span {
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 4px;
+  transition: 0.25s ease-in-out;
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -ms-transform-origin: left center;
+  transform-origin: left center;
+  opacity: 1;
+  border-radius: 4px;
+  background: black;
+}
+
+header.header #hamburger span:nth-child(1) {
+  top: 0;
+}
+
+header.header #hamburger span:nth-child(2) {
+  top: 10px;
+}
+
+header.header #hamburger span:nth-child(3) {
+  top: 20px;
+}
+
+header.header #hamburger.open span:nth-child(1) {
+  top: 0;
+  left: 7px;
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+header.header #hamburger.open span:nth-child(2) {
+  width: 0;
+  opacity: 0;
+}
+
+header.header #hamburger.open span:nth-child(3) {
+  top: 21px;
+  left: 7px;
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+header.header .region-header-mobile {
+  float: right;
+}
+
+header.header .region-header-mobile .column {
+  padding-right: 12px;
+  padding-left: 0;
+}
+
+header.header .region-header-mobile ul {
+  margin: 0;
+  padding: 0;
+  padding-top: 3.5px;
+  line-height: 0;
+}
+
+header.header .region-header-mobile li {
+  display: inline-block;
+  margin-top: 0;
+  list-style: none;
+  vertical-align: middle;
+  line-height: 19px;
+}
+
+header.header .region-header-mobile .sk a,
+header.header .region-header-mobile .hu a {
+  padding: 3px 6px;
+  text-decoration: none;
+  color: #fff200;
+  background-color: black;
+  font-size: 11px;
+}
+
+header.header .region-header-mobile .sk a:hover,
+header.header .region-header-mobile .hu a:hover {
+  color: white;
+}
+
+header.header .region-header-mobile .hu.active a,
+header.header .region-header-mobile .sk.active a {
+  display: none;
+}
+
 /*
  * @file
  * Drupal's Navbar
@@ -1700,8 +1740,7 @@ h6 {
 .element-invisible,
 .element-focusable,
 .main-navigation .block-menu .block__title,
-.main-navigation .block-menu-block .block__title,
-.breadcrumb__title {
+.main-navigation .block-menu-block .block__title {
   position: absolute !important;
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
@@ -1814,82 +1853,6 @@ summary.accordion-header::-webkit-details-marker {
 
 /**
  * @file
- * Drupal's Autocomplete field + Spectre Autocomplete
- *
- * As the user starts to type a value, a selection list appears below the form
- * item allowing them to choose an option.
- *
- * .is-throbbing - Waiting for search result.
- *
- * @see https://picturepan2.github.io/spectre/experimentals.html#autocomplete
- */
-.autocomplete,
-.form-autocomplete {
-  position: relative;
-  min-height: 0.8rem;
-  background-image: url(../sass/components/autocomplete/throbber-inactive.png);
-  background-repeat: no-repeat;
-  background-position: 100% center;
-  /*&::after {
-   border: $border-width-lg solid $primary-color;
-   border-radius: 50%;
-   border-right-color: transparent;
-   border-top-color: transparent;
-   content: " ";
-   display: block;
-   height: $unit-4;
-   left: 50%;
-   margin-left: -$unit-2;
-   margin-top: -$unit-2;
-   position: absolute;
-   top: 50%;
-   width: $unit-4;
-   z-index: $zindex-0;
-  }*/
-}
-
-.autocomplete__list-wrapper,
-#autocomplete {
-  position: absolute;
-  z-index: 100;
-  overflow: hidden;
-  border: 1px solid;
-}
-
-.autocomplete__list,
-#autocomplete ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  list-style-image: none;
-}
-
-.autocomplete__list-item,
-#autocomplete li {
-  cursor: default;
-  white-space: pre;
-  color: #fefeff;
-  background: #5755d9;
-}
-
-.autocomplete__list-item.is-selected,
-.autocomplete__list-item--is-selected,
-#autocomplete li.is-selected,
-#autocomplete .selected {
-  border-color: #5755d9;
-  box-shadow: 0 0 0 0.1rem rgba(87, 85, 217, 0.2);
-}
-
-.autocomplete.is-throbbing::after,
-.autocomplete--is-throbbing::after,
-.is-throbbing.form-autocomplete::after,
-.form-autocomplete.throbbing::after {
-  animation: loading 500ms infinite linear;
-  border: 0.1rem solid #5755d9;
-}
-
-/**
- * @file
  * Avatars
  *
  * Avatars are user profile pictures.
@@ -1998,82 +1961,6 @@ summary.accordion-header::-webkit-details-marker {
 
 /**
  * @file
- * Spectre Badges
- *
- * Badges are often used as unread number indicators.
- *
- * Add the badge class to non self closing elements. And add the data-badge
- * attribute to define the content of a badge. The badge will appear in the
- * top-right direction of the element.
- *
- * If there is no data-badge or the attribute is not specified, the badge will
- * appear as a dot.
- *
- * @see https://picturepan2.github.io/spectre/components.html#badges
- */
-.badge {
-  position: relative;
-  white-space: nowrap;
-}
-
-.badge[data-badge]::after,
-.badge:not([data-badge])::after {
-  display: inline-block;
-  content: attr(data-badge);
-  -ms-transform: translate(-0.1rem, -0.5rem);
-  transform: translate(-0.1rem, -0.5rem);
-  color: #fff;
-  border-radius: 0.5rem;
-  background: #5755d9;
-  background-clip: padding-box;
-  box-shadow: 0 0 0 0.1rem #fff;
-}
-
-.badge[data-badge]::after {
-  min-width: 0.9rem;
-  height: 0.9rem;
-  padding: 0.1rem 0.2rem;
-  text-align: center;
-  white-space: nowrap;
-  font-size: 0.7rem;
-  line-height: 1;
-}
-
-.badge:not([data-badge])::after,
-.badge[data-badge=""]::after {
-  width: 6px;
-  min-width: 6px;
-  height: 6px;
-  padding: 0;
-}
-
-.badge.btn::after {
-  position: absolute;
-  top: 0;
-  right: 0;
-  -ms-transform: translate(50%, -50%);
-  transform: translate(50%, -50%);
-}
-
-.badge.avatar::after {
-  position: absolute;
-  z-index: 100;
-  top: 14.64%;
-  right: 14.64%;
-  -ms-transform: translate(50%, -50%);
-  transform: translate(50%, -50%);
-}
-
-.badge.avatar-xs::after {
-  width: 0.4rem;
-  min-width: 0.4rem;
-  height: 0.4rem;
-  padding: 0;
-  content: "";
-}
-
-/**
- * @file
  * Box
  *
  * A simple box style.
@@ -2160,302 +2047,6 @@ summary.accordion-header::-webkit-details-marker {
  *   }
  * }
  */
-/**
- * @file
- * Zen's Breadcrumb navigation + Spectre Breadcrumbs
- *
- * Breadcrumbs are used as navigational hierarchies to indicate current location.
- *
- * @see https://picturepan2.github.io/spectre/components.html#breadcrumbs
- */
-@media print {
-  .breadcrumb {
-    display: none;
-  }
-}
-
-.breadcrumb__list {
-  margin: 0.2rem 0;
-  padding: 0.2rem 0;
-  list-style: none;
-}
-
-.breadcrumb__item {
-  display: inline-block;
-  margin: 0;
-  padding: 0.2rem 0;
-  color: #667189;
-}
-
-.breadcrumb__item:not(:last-child) {
-  margin-right: 0.4rem;
-}
-
-.breadcrumb__item:not(:last-child) a {
-  color: #667189;
-}
-
-.breadcrumb__separator {
-  padding-left: 0.4rem;
-  color: #e7e9ed;
-}
-
-/**
- * @file
- * Spectre's Calendars
- *
- * Calendars are designed for date or date range picker and events display. It is made with flex layout.
- *
- * @see https://picturepan2.github.io/spectre/experimentals.html#calendars
- */
-.calendar {
-  display: block;
-  min-width: 280px;
-  text-align: center;
-  border: 0.05rem solid #e7e9ed;
-  border-radius: 0.1rem;
-}
-
-.calendar .calendar-nav {
-  display: flex;
-  align-items: center;
-  padding: 0.4rem;
-  border-top-left-radius: 0.1rem;
-  border-top-right-radius: 0.1rem;
-  background: #f8f9fa;
-  font-size: 0.9rem;
-}
-
-.calendar .calendar-header,
-.calendar .calendar-body {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 0.4rem 0;
-}
-
-.calendar .calendar-header .calendar-date,
-.calendar .calendar-body .calendar-date {
-  flex: 0 0 14.28%;
-  max-width: 14.28%;
-}
-
-.calendar .calendar-header {
-  color: #acb3c2;
-  border-bottom: 0.05rem solid #e7e9ed;
-  background: #f8f9fa;
-  font-size: 0.7rem;
-}
-
-.calendar .calendar-body {
-  color: #667189;
-}
-
-.calendar .calendar-date {
-  padding: 0.2rem;
-  border: 0;
-}
-
-.calendar .calendar-date .date-item {
-  position: relative;
-  width: 1.4rem;
-  height: 1.4rem;
-  padding: 0.1rem;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  text-align: center;
-  vertical-align: middle;
-  white-space: nowrap;
-  text-decoration: none;
-  color: #667189;
-  border: 0.05rem solid transparent;
-  border-radius: 50%;
-  outline: none;
-  background: transparent;
-  font-size: 0.7rem;
-  line-height: 1rem;
-
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.calendar .calendar-date .date-item.date-today {
-  color: #5755d9;
-  border-color: #e5e5f9;
-}
-
-.calendar .calendar-date .date-item:focus {
-  box-shadow: 0 0 0 0.1rem rgba(87, 85, 217, 0.2);
-}
-
-.calendar .calendar-date .date-item:focus,
-.calendar .calendar-date .date-item:hover {
-  text-decoration: none;
-  color: #5755d9;
-  border-color: #e5e5f9;
-  background: #fefeff;
-}
-
-.calendar .calendar-date .date-item:active,
-.calendar .calendar-date .date-item.active {
-  color: #fff;
-  border-color: #3634d2;
-  background: #4b48d6;
-}
-
-.calendar .calendar-date .date-item.badge::after {
-  position: absolute;
-  top: 3px;
-  right: 3px;
-  -ms-transform: translate(50%, -50%);
-  transform: translate(50%, -50%);
-}
-
-.calendar .calendar-date.disabled .date-item,
-.calendar .calendar-date.disabled .calendar-event,
-.calendar .calendar-date .date-item:disabled,
-.calendar .calendar-date .calendar-event:disabled {
-  cursor: default;
-  pointer-events: none;
-  opacity: 0.25;
-}
-
-.calendar .calendar-range {
-  position: relative;
-}
-
-.calendar .calendar-range::before {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  left: 0;
-  height: 1.4rem;
-  content: "";
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  background: #f1f1fc;
-}
-
-.calendar .calendar-range.range-start::before {
-  left: 50%;
-}
-
-.calendar .calendar-range.range-end::before {
-  right: 50%;
-}
-
-.calendar .calendar-range .date-item {
-  color: #5755d9;
-}
-
-.calendar.calendar-lg .calendar-body {
-  padding: 0;
-}
-
-.calendar.calendar-lg .calendar-body .calendar-date {
-  display: flex;
-  flex-direction: column;
-  height: 5.5rem;
-  padding: 0;
-  border-right: 0.05rem solid #e7e9ed;
-  border-bottom: 0.05rem solid #e7e9ed;
-}
-
-.calendar.calendar-lg .calendar-body .calendar-date:nth-child(7n) {
-  border-right: 0;
-}
-
-.calendar.calendar-lg .calendar-body .calendar-date:nth-last-child(-n+7) {
-  border-bottom: 0;
-}
-
-.calendar.calendar-lg .date-item {
-  align-self: flex-end;
-  height: 1.4rem;
-  margin-top: 0.2rem;
-  margin-right: 0.2rem;
-}
-
-.calendar.calendar-lg .calendar-range::before {
-  top: 19px;
-}
-
-.calendar.calendar-lg .calendar-range.range-start::before {
-  left: auto;
-  width: 19px;
-}
-
-.calendar.calendar-lg .calendar-range.range-end::before {
-  right: 19px;
-}
-
-.calendar.calendar-lg .calendar-events {
-  overflow-y: auto;
-  flex-grow: 1;
-  padding: 0.2rem;
-  line-height: 1;
-}
-
-.calendar.calendar-lg .calendar-event {
-  display: block;
-  overflow: hidden;
-  margin: 0.1rem auto;
-  padding: 3px 4px;
-  text-align: left;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  border-radius: 0.1rem;
-  font-size: 0.7rem;
-}
-
-/**
- * @file
- * Spectre Cards
- *
- * Cards are flexible content containers.
- *
- * @see https://picturepan2.github.io/spectre/components.html#cards
- */
-.card {
-  display: flex;
-  flex-direction: column;
-  border: 0.05rem solid #e7e9ed;
-  border-radius: 0.1rem;
-  background: #fff;
-}
-
-.card .card-header,
-.card .card-body,
-.card .card-footer {
-  padding: 0.8rem;
-  padding-bottom: 0;
-}
-
-.card .card-header:last-child,
-.card .card-body:last-child,
-.card .card-footer:last-child {
-  padding-bottom: 0.8rem;
-}
-
-.card .card-image {
-  padding-top: 0.8rem;
-}
-
-.card .card-image:first-child {
-  padding-top: 0;
-}
-
-.card .card-image:first-child img {
-  border-top-left-radius: 0.1rem;
-  border-top-right-radius: 0.1rem;
-}
-
-.card .card-image:last-child img {
-  border-bottom-right-radius: 0.1rem;
-  border-bottom-left-radius: 0.1rem;
-}
-
 /**
  * @file
  * Spectre Carousels
@@ -2625,39 +2216,6 @@ summary.accordion-header::-webkit-details-marker {
   margin-left: -0.4rem;
 }
 
-/*
- * @file
- * Drupal's Comment
- *
- * A single comment in a thread of comments.
- *
- * .comment--preview - Preview version of comment.
- * .comment--nested - A nested comment.
- */
-.comment__section,
-.comments {
-  margin: 1rem 0;
-}
-
-.comment__title {
-  margin: 0;
-}
-
-.comment__permalink {
-  text-transform: uppercase;
-  font-size: 75%;
-}
-
-.comment--preview,
-.comment-preview {
-  background-color: #f8f9fa;
-}
-
-.comment--nested,
-.indented {
-  margin-left: 0.4rem;
-}
-
 /**
  * @file
  * Spectre Comparison Sliders
@@ -2789,41 +2347,6 @@ summary.accordion-header::-webkit-details-marker {
   100% {
     width: 0;
   }
-}
-
-/**
- * @file
- * Drupal's Dropdown
- */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown .menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  display: none;
-  overflow-y: auto;
-  max-height: 50vh;
-  animation: slide-down 0.15s ease 1;
-}
-
-.dropdown.dropdown-right .menu {
-  right: 0;
-  left: auto;
-}
-
-.dropdown.active .menu,
-.dropdown .dropdown-toggle:focus + .menu,
-.dropdown .menu:hover {
-  display: block;
-}
-
-.dropdown .btn-group .dropdown-toggle:nth-last-child(2) {
-  border-top-right-radius: 0.1rem;
-  border-bottom-right-radius: 0.1rem;
 }
 
 /**
@@ -3313,97 +2836,6 @@ span.field-label + * > :first-child > :first-child {
 
 /**
  * @file
- * Spectre Off canvas menus
- *
- * The Off-canvas is a navigation layout that the sidebar can slide in and out
- * of the viewport. It is built in pure CSS.
- *
- * By default, the off-canvas menu is collapsed whenever the window width is.
- * But you can add the off-canvas-sidebar-show class to the off-canvas to make
- * the sidebar expanded when the window width is larger than or equal to 960px.
- *
- * You can open the sidebar by adding the class active to off-canvas-sidebar.
- * And remove the active to close it.
- *
- * @see https://picturepan2.github.io/spectre/experimentals.html#off-canvas
- */
-.off-canvas {
-  position: relative;
-  display: flex;
-  flex-flow: nowrap;
-  width: 100%;
-  height: 100%;
-}
-
-.off-canvas .off-canvas-toggle {
-  position: absolute;
-  z-index: 1;
-  top: 0.4rem;
-  left: 0.4rem;
-  display: block;
-  transition: none;
-}
-
-.off-canvas .off-canvas-sidebar {
-  position: fixed;
-  z-index: 300;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  overflow-y: auto;
-  min-width: 10rem;
-  transition: transform 0.25s ease;
-  -ms-transform: translateX(-100%);
-  transform: translateX(-100%);
-  background: #f8f9fa;
-}
-
-.off-canvas .off-canvas-sidebar:target,
-.off-canvas .off-canvas-sidebar.active {
-  -ms-transform: translateX(0);
-  transform: translateX(0);
-}
-
-.off-canvas .off-canvas-sidebar:target ~ .off-canvas-overlay,
-.off-canvas .off-canvas-sidebar.active ~ .off-canvas-overlay {
-  z-index: 200;
-  display: block;
-}
-
-.off-canvas .off-canvas-content {
-  flex: 1 1 auto;
-  height: 100%;
-  padding: 0.4rem 0.4rem 0.4rem 4rem;
-}
-
-.off-canvas .off-canvas-overlay {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: none;
-  width: 100%;
-  height: 100%;
-  border-color: transparent;
-  border-radius: 0;
-  background: rgba(69, 77, 93, 0.1);
-}
-
-@media (min-width: 960px) {
-  .off-canvas.off-canvas-sidebar-show .off-canvas-toggle {
-    display: none;
-  }
-  .off-canvas.off-canvas-sidebar-show .off-canvas-sidebar {
-    position: relative;
-    flex: 0 0 auto;
-    -ms-transform: none;
-    transform: none;
-  }
-}
-
-/**
- * @file
  * Drupal's Pager
  *
  * Paged navigation is a list of page numbers when more than 1 page of content
@@ -3533,159 +2965,6 @@ span.field-label + * > :first-child > :first-child {
   overflow-y: auto;
   flex: 1 1 auto;
   padding: 0 0.8rem;
-}
-
-/**
- * @file
- * Spectre Parallax
- *
- * The Parallax acts like Apple TV/tvOS hover parallax effect. It is built in
- * pure CSS.
- *
- * @see https://picturepan2.github.io/spectre/experimentals.html#parallax
- */
-.parallax {
-  position: relative;
-  display: block;
-  width: auto;
-  height: auto;
-}
-
-.parallax .parallax-content {
-  width: 100%;
-  height: auto;
-  transition: all 0.4s ease;
-  transform: perspective(1000px);
-  box-shadow: 0 1rem 2.1rem rgba(69, 77, 93, 0.3);
-
-  transform-style: preserve-3d;
-}
-
-.parallax .parallax-content::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  content: "";
-}
-
-.parallax .parallax-front {
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  transition: all 0.4s ease;
-  transform: translateZ(50px) scale(0.95);
-  text-align: center;
-  color: #fff;
-  text-shadow: 0 0 20px rgba(69, 77, 93, 0.75);
-}
-
-.parallax .parallax-top-left {
-  position: absolute;
-  z-index: 100;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 50%;
-  outline: none;
-}
-
-.parallax .parallax-top-left:focus ~ .parallax-content,
-.parallax .parallax-top-left:hover ~ .parallax-content {
-  transform: perspective(1000px) rotateX(3deg) rotateY(-3deg);
-}
-
-.parallax .parallax-top-left:focus ~ .parallax-content::before,
-.parallax .parallax-top-left:hover ~ .parallax-content::before {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.35) 0%, transparent 50%);
-}
-
-.parallax .parallax-top-left:focus ~ .parallax-content .parallax-front,
-.parallax .parallax-top-left:hover ~ .parallax-content .parallax-front {
-  transform: translate3d(4.5px, 4.5px, 50px) scale(0.95);
-}
-
-.parallax .parallax-top-right {
-  position: absolute;
-  z-index: 100;
-  top: 0;
-  right: 0;
-  width: 50%;
-  height: 50%;
-  outline: none;
-}
-
-.parallax .parallax-top-right:focus ~ .parallax-content,
-.parallax .parallax-top-right:hover ~ .parallax-content {
-  transform: perspective(1000px) rotateX(3deg) rotateY(3deg);
-}
-
-.parallax .parallax-top-right:focus ~ .parallax-content::before,
-.parallax .parallax-top-right:hover ~ .parallax-content::before {
-  background: linear-gradient(-135deg, rgba(255, 255, 255, 0.35) 0%, transparent 50%);
-}
-
-.parallax .parallax-top-right:focus ~ .parallax-content .parallax-front,
-.parallax .parallax-top-right:hover ~ .parallax-content .parallax-front {
-  transform: translate3d(-4.5px, 4.5px, 50px) scale(0.95);
-}
-
-.parallax .parallax-bottom-left {
-  position: absolute;
-  z-index: 100;
-  bottom: 0;
-  left: 0;
-  width: 50%;
-  height: 50%;
-  outline: none;
-}
-
-.parallax .parallax-bottom-left:focus ~ .parallax-content,
-.parallax .parallax-bottom-left:hover ~ .parallax-content {
-  transform: perspective(1000px) rotateX(-3deg) rotateY(-3deg);
-}
-
-.parallax .parallax-bottom-left:focus ~ .parallax-content::before,
-.parallax .parallax-bottom-left:hover ~ .parallax-content::before {
-  background: linear-gradient(45deg, rgba(255, 255, 255, 0.35) 0%, transparent 50%);
-}
-
-.parallax .parallax-bottom-left:focus ~ .parallax-content .parallax-front,
-.parallax .parallax-bottom-left:hover ~ .parallax-content .parallax-front {
-  transform: translate3d(4.5px, -4.5px, 50px) scale(0.95);
-}
-
-.parallax .parallax-bottom-right {
-  position: absolute;
-  z-index: 100;
-  right: 0;
-  bottom: 0;
-  width: 50%;
-  height: 50%;
-  outline: none;
-}
-
-.parallax .parallax-bottom-right:focus ~ .parallax-content,
-.parallax .parallax-bottom-right:hover ~ .parallax-content {
-  transform: perspective(1000px) rotateX(-3deg) rotateY(3deg);
-}
-
-.parallax .parallax-bottom-right:focus ~ .parallax-content::before,
-.parallax .parallax-bottom-right:hover ~ .parallax-content::before {
-  background: linear-gradient(-45deg, rgba(255, 255, 255, 0.35) 0%, transparent 50%);
-}
-
-.parallax .parallax-bottom-right:focus ~ .parallax-content .parallax-front,
-.parallax .parallax-bottom-right:hover ~ .parallax-content .parallax-front {
-  transform: translate3d(-4.5px, -4.5px, 50px) scale(0.95);
 }
 
 /**
@@ -4364,25 +3643,6 @@ tr .ajax-progress .throbber {
 
 /**
  * @file
- * Zen's Watermark
- *
- * Make the element appear beneath sibling elements, like a watermark.
- */
-.watermark {
-  display: block;
-  overflow: visible;
-  height: 0;
-  text-align: center;
-  word-wrap: break-word;
-  color: #e7e9ed;
-  background-color: transparent;
-  text-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
-  font-size: 75px;
-  line-height: 1;
-}
-
-/**
- * @file
  * Spectre Icons
  *
  * Icons are single-element, responsive and pure CSS icons. You can include
@@ -5044,6 +4304,383 @@ tr .ajax-progress .throbber {
   border-right-color: transparent;
   border-bottom-color: transparent;
   border-radius: 50%;
+}
+
+.main {
+  float: left;
+  width: 70%;
+}
+
+@media screen and (max-width: 700px) {
+  .main {
+    width: 100%;
+  }
+}
+
+.main .main-content {
+  min-height: 480px;
+  background-color: #eee;
+}
+
+@media screen and (max-width: 700px) {
+  .main .main-content {
+    min-height: auto;
+  }
+}
+
+.main .field,
+.main .block-contact-form-blocks {
+  width: 95%;
+  margin: auto;
+  padding: 0 3px;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 700px) {
+  .main .field,
+  .main .block-contact-form-blocks {
+    width: 100%;
+  }
+}
+
+.main #contact-site-form label {
+  padding: 0;
+}
+
+.main #contact-site-form .form-text {
+  height: 30px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.main #contact-site-form .form-text,
+.main #contact-site-form .form-textarea {
+  width: 100%;
+  border: solid 1px #ddd;
+  box-shadow: none;
+  font-size: 12px;
+}
+
+.main #contact-site-form .form-text:focus,
+.main #contact-site-form .form-textarea:focus {
+  border: solid 1px #333;
+  border-radius: 0;
+}
+
+.main table,
+.main h1 {
+  width: 95%;
+  margin: auto;
+  padding: 15px 3px;
+  padding-top: 30px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 700px) {
+  .main table,
+  .main h1 {
+    width: 100%;
+    font-size: 22px;
+  }
+}
+
+.main td {
+  width: 50%;
+  padding: 6px 3px;
+  vertical-align: top;
+  border-bottom: 0;
+}
+
+@media screen and (max-width: 360px) {
+  .main td {
+    float: left;
+    width: 100%;
+  }
+}
+
+.main td img {
+  width: 100%;
+}
+
+.main td h3 {
+  height: 45px;
+  padding: 0 5px;
+  padding-top: 15px;
+  text-align: center;
+  background-color: white;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 13px;
+}
+
+@media screen and (max-width: 400px) {
+  .main td h3 {
+    font-size: 12px;
+    line-height: 12px;
+  }
+}
+
+.main .stripes {
+  width: 100%;
+  height: 9px;
+  background-image: url(../images/stripes.png);
+  background-repeat: repeat-x;
+  background-position: left top;
+}
+
+.section-kontakty .field p,
+.section-elerhetoseg .field p {
+  margin-bottom: 0;
+}
+
+.section-kontakty .field p a,
+.section-elerhetoseg .field p a {
+  color: #a29b00;
+}
+
+.section-kontakty .field p a:hover,
+.section-elerhetoseg .field p a:hover {
+  color: #000;
+}
+
+.section-kontakty #edit-submit,
+.section-elerhetoseg #edit-submit {
+  height: auto;
+  padding: 3px 6px;
+  color: #fff200;
+  border: 0;
+  border-radius: 0;
+  background-color: black;
+  font-size: 12px;
+}
+
+.region-sidebar {
+  float: left;
+  width: 30%;
+  background-image: url(../images/background.png);
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+
+@media screen and (max-width: 700px) {
+  .region-sidebar {
+    width: 100%;
+    margin-bottom: 35px;
+    background-image: none;
+  }
+}
+
+.region-sidebar h2 {
+  margin-top: 40px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #939393;
+  font-size: 14px;
+}
+
+.region-sidebar .block {
+  padding-bottom: 40px;
+}
+
+@media screen and (max-width: 700px) {
+  .region-sidebar .block {
+    padding-bottom: 5px;
+  }
+}
+
+.region-sidebar p {
+  margin: 0;
+  padding: 7px 0 10px 0;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.region-sidebar ul {
+  margin: 0;
+}
+
+.region-sidebar li.node-readmore {
+  padding: 3px 6px;
+  background-color: black;
+  font-size: 12px;
+}
+
+.region-sidebar li.node-readmore a {
+  color: #fff200;
+}
+
+.region-sidebar li.node-readmore a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.region-sidebar #block-nodeblock-2 p {
+  padding: 0;
+}
+
+.region-sidebar #block-nodeblock-2 p a {
+  text-decoration: none;
+  color: #a29b00;
+}
+
+.region-sidebar #block-nodeblock-2 .field-item {
+  padding: 7px 0 10px 0;
+}
+
+footer {
+  clear: both;
+  padding: 30px 30px 20px 30px;
+  background-color: #fff200;
+  font-size: 12px;
+  line-height: 11px;
+}
+
+footer .block {
+  padding: 0;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer a,
+footer a:hover {
+  color: #000;
+}
+
+footer .madeby p::before {
+  padding-right: 5px;
+  content: url(../images/brainsum-logo.png);
+  vertical-align: middle;
+}
+
+footer a {
+  display: inline-block;
+}
+
+#mobile-menu {
+  display: none;
+  background-color: #b4b4b4;
+}
+
+#mobile-menu .block.column {
+  flex: none;
+}
+
+#mobile-menu .menu {
+  min-width: auto;
+  background: transparent;
+  box-shadow: none;
+}
+
+#mobile-menu .menu a {
+  padding: 0.2rem 0rem;
+}
+
+#mobile-menu .menu a.active,
+#mobile-menu .menu a:hover,
+#mobile-menu .menu a:focus {
+  color: #fff200;
+  background: none;
+  box-shadow: none;
+}
+
+#mobile-menu #block-system-main-menu {
+  width: 40%;
+  text-align: right;
+  color: #eee;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 400px) {
+  #mobile-menu #block-system-main-menu {
+    font-size: 12px;
+  }
+}
+
+#mobile-menu #block-menu-menu-product-menu {
+  width: 60%;
+  text-transform: uppercase;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 400px) {
+  #mobile-menu #block-menu-menu-product-menu {
+    font-size: 12px;
+  }
+}
+
+#mobile-menu #block-menu-menu-product-menu .menu a {
+  padding-bottom: 10px;
+}
+
+#mobile-menu .cta-button i::before {
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  margin-right: 5px;
+  content: " ";
+  background: url(../images/cta-button-icon.png) no-repeat center center;
+}
+
+#mobile-menu .cta-button i {
+  padding-left: 0.4rem;
+}
+
+#mobile-menu .cta-button .container {
+  height: 46px;
+  padding: 10px 0.4rem;
+  background-color: black;
+}
+
+#mobile-menu .cta-button .col-gapless {
+  display: inline-block;
+}
+
+#mobile-menu .cta-button span {
+  display: block;
+  color: white;
+}
+
+#mobile-menu .cta-button .cta-button-label {
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 13px;
+}
+
+#mobile-menu .cta-button .cta-button-phone {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 15px;
+}
+
+.views_slideshow_cycle_main {
+  width: 100%;
+}
+
+.views_slideshow_cycle_main .views-slideshow-cycle-main-frame {
+  width: 100% !important;
+  height: auto;
+}
+
+.views_slideshow_cycle_main .views-slideshow-cycle-main-frame-row {
+  width: 100% !important;
+  height: auto;
+}
+
+.views_slideshow_cycle_main .field-content {
+  width: 100%;
+  max-width: 100%;
+}
+
+.views_slideshow_cycle_main .field-content img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
 }
 
 /*# sourceMappingURL=kovotech_mobile.components.css.map */

@@ -13,9 +13,9 @@
 (function ($) {
   Drupal.behaviors.hamburger = {
     attach: function (context, settings) {
-      $('.mobile-menu').hide();
+      $('#mobile-menu').hide();
       $('#hamburger').click(function () {
-          $('.mobile-menu').slideToggle();
+          $('#mobile-menu').slideToggle();
           $(this).toggleClass('open');
       });
     }

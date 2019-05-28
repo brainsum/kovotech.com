@@ -13,9 +13,9 @@
 @import "components/collapsible-fieldset/collapsible-fieldset";
 @import "components/form-item/form-item";
 @import "components/form-table/form-table";
-@import "components/labels/labels";
+//@import "components/labels/labels";
 @import "components/media/media";
-@import "components/resizable-textarea/resizable-textarea";
+//@import "components/resizable-textarea/resizable-textarea";
 @import "components/table-drag/table-drag";
 
 
@@ -26,18 +26,18 @@
 
 // Components
 @import "components/accordions/accordions";
-@import "components/autocomplete/autocomplete";
+//@import "components/autocomplete/autocomplete";
 @import "components/avatars/avatars";
-@import "components/badges/badges";
+//@import "components/badges/badges";
 @import "components/box/box";
-@import "components/breadcrumbs/breadcrumbs";
-@import "components/calendars/calendars";
-@import "components/cards/cards";
+//@import "components/breadcrumbs/breadcrumbs";
+//@import "components/calendars/calendars";
+//@import "components/cards/cards";
 @import "components/carousels/carousels";
 @import "components/chips/chips";
-@import "components/comment/comment";
+//@import "components/comment/comment";
 @import "components/comparison-slider/comparison-sliders";
-@import "components/dropdowns/dropdowns";
+//@import "components/dropdowns/dropdowns";
 @import "components/empty/empty";
 @import "components/filters/filters";
 @import "components/hidden/hidden";
@@ -49,10 +49,10 @@
 @import "components/meters/meters";
 @import "components/more-link/more-link";
 @import "components/navs/navs";
-@import "components/off-canvas/off-canvas";
+//@import "components/off-canvas/off-canvas";
 @import "components/pager/pager";
 @import "components/panels/panels";
-@import "components/parallax/parallax";
+//@import "components/parallax/parallax";
 @import "components/popovers/popovers";
 @import "components/print-none/print-none";
 @import "components/progress-bar/progress-bar";
@@ -65,8 +65,16 @@
 @import "components/timelines/timelines";
 @import "components/tooltips/tooltips";
 @import "components/visually-hidden/visually-hidden";
-@import "components/watermark/watermark";
+//@import "components/watermark/watermark";
 
 
 // Icons
 @import "components/icons/icons";
+
+
+//Own
+@import "components/main/main";
+@import "components/sidebar/sidebar";
+@import "components/footer/footer";
+@import "components/mobile-menu/mobile-menu";
+@import "components/views-slideshow/views-slideshow";

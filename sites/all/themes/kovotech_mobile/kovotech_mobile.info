@@ -57,8 +57,6 @@ stylesheets[all][] = css/kovotech_mobile.base.css
 stylesheets[all][] = css/kovotech_mobile.layout.css
 stylesheets[all][] = css/kovotech_mobile.components.css
 stylesheets[all][] = css/kovotech_mobile.theme.css
-stylesheets[all][] = css/kovotech_mobile.css
-stylesheets[all][] = css/kovotech_mobile_@media.css
 
 ; If you wish to use conditional stylesheets, you should install the
 ; conditional stylesheets module: https://drupal.org/project/conditional_styles
@@ -89,12 +87,9 @@ scripts[] = js/kovotech_mobile.js
 
 regions[header_mobile]  = Header Mobile
 regions[mobile_menu]    = Mobile menu
-regions[highlighted]    = Highlighted
-regions[help]           = Help
 regions[content]        = Content
 regions[sidebar]        = Sidebar
 regions[footer]         = Footer
-regions[bottom]         = Page bottom
 
 ; The page_top and page_bottom regions are hidden, which means they will not
 ; show up on the blocks administration page. But they are required in order for

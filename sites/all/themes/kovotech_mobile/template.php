@@ -137,6 +137,12 @@ function kovotech_mobile_preprocess_comment(&$variables, $hook) {
 }
 // */
 
+// Load webfonts
+function kovotech_mobile_process_html_tag(&$vars) {
+    drupal_add_css('//fonts.googleapis.com/css?family=PT+Sans:300,400,400i,700,700i,900&subset=latin-ext', array(
+        'type' => 'external'
+    ));
+}
 
 // Custom Checkbox and radio button output
 function kovotech_mobile_form_element($variables) {
