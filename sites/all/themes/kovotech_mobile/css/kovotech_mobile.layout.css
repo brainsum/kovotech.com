@@ -829,15 +829,15 @@ a.text-error:hover {
 }
 
 .container.grid-md {
-  max-width: 856px;
+  max-width: 716px;
 }
 
 .container.grid-sm {
-  max-width: 616px;
+  max-width: 416px;
 }
 
 .container.grid-xs {
-  max-width: 496px;
+  max-width: 376px;
 }
 
 .show-xs,
@@ -959,7 +959,7 @@ a.text-error:hover {
   margin-right: auto;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 360px) {
   .col-xs-12,
   .col-xs-11,
   .col-xs-10,
@@ -1018,7 +1018,7 @@ a.text-error:hover {
   }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 400px) {
   .col-sm-12,
   .col-sm-11,
   .col-sm-10,
@@ -1077,7 +1077,7 @@ a.text-error:hover {
   }
 }
 
-@media (min-width: 840px) {
+@media (min-width: 700px) {
   .col-md-12,
   .col-md-11,
   .col-md-10,

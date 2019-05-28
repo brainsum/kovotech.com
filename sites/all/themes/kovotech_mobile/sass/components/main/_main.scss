@@ -1,0 +1,112 @@
+.main{
+  width: 70%;
+  float: left;
+  @include media-w($size-md){
+    width: 100%;
+  }
+  .main-content{
+    background-color: #eee;
+    min-height: 480px;
+    @include media-w($size-md){
+      min-height: auto;
+    }
+  }
+  .field, .block-contact-form-blocks{
+    width: 95%;
+    padding: 0px 3px;
+    margin: auto;
+    font-size: 14px;
+    @include media-w($size-md){
+      width: 100%;
+    }
+  }
+  #contact-site-form{
+    label{
+      padding: 0px;
+    }
+    .form-text{
+      height: 30px;
+      padding-top: 0px;
+      padding-bottom: 0px;
+    }
+    .form-text, .form-textarea{
+      width: 100%;
+      font-size: 12px;
+      border: solid 1px #ddd;
+      box-shadow: none;
+    }
+    .form-text:focus, .form-textarea:focus{
+      border: solid 1px #333;
+      border-radius: 0px;
+    }
+  }
+  table, h1{
+    width: 95%;
+    margin: auto;
+    padding: 15px 3px;
+    padding-top: 30px;
+    font-size: 25px;
+    font-weight: bold;
+    @include media-w($size-md){
+      width: 100%;
+      font-size: 22px;
+    }
+  }
+  td{
+    width: 50%;
+    vertical-align: top;
+    border-bottom: 0px;
+    padding: 6px 3px;
+    @include media-w($size-xs){
+      width: 100%;
+      float: left;
+    }
+    img{
+      width: 100%;
+    }
+    h3{
+      font-size: 13px;
+      line-height: 13px;
+      font-weight: bold;
+      text-align: center;
+      padding: 0px 5px;
+      padding-top: 15px;
+      background-color: white;
+      height: 45px;
+      @include media-w($size-sm) {
+        font-size: 12px;
+        line-height: 12px;
+      }
+    }
+  }
+  .stripes{
+    background-image: url(../images/stripes.png);
+    background-repeat: repeat-x;
+    background-position: left top;
+    width: 100%;
+    height: 9px;
+  }
+}
+
+.section-kontakty, .section-elerhetoseg{
+  .field{
+    p{
+      margin-bottom: 0px;
+      a{
+        color: #a29b00;
+      }
+      a:hover{
+        color: #000;
+      }
+    }
+  }
+  #edit-submit{
+    background-color: black;
+    color: #fff200;
+    font-size: 12px;
+    border: 0px;
+    border-radius: 0px;
+    height: auto;
+    padding: 3px 6px;
+  }
+}

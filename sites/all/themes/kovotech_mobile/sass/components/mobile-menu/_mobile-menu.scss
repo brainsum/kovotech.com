@@ -1,0 +1,77 @@
+#mobile-menu{
+  background-color: #b4b4b4;
+  display: none;
+  .block.column{
+    flex: none;
+  }
+  .menu{
+    background: transparent;
+    box-shadow: none;
+    min-width: auto;
+    a{
+      padding: 0.2rem 0rem;
+    }
+    a.active, a:hover, a:focus{
+      color: #fff200;
+      background: none;
+      box-shadow: none;
+    }
+  }
+  #block-system-main-menu{
+    text-align: right;
+    color: #eee;
+    font-size: 14px;
+    width: 40%;
+    @include media-w($size-sm){
+      font-size: 12px;
+    }
+  }
+  #block-menu-menu-product-menu{
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    width: 60%;
+    @include media-w($size-sm){
+      font-size: 12px;
+    }
+    .menu a{
+      padding-bottom: 10px;
+    }
+  }
+  .cta-button{
+    i::before {
+      display: inline-block;
+      width: 23px;
+      height: 23px;
+      margin-right: 5px;
+      content: " ";
+      background: url(../images/cta-button-icon.png) no-repeat center center;
+    }
+    i{
+      padding-left: 0.4rem;
+    }
+    .container{
+      background-color: black;
+      padding: 10px 0.4rem;
+      height: 46px;
+    }
+    .col-gapless{
+      display: inline-block;
+    }
+    span{
+      display: block;
+      color: white;
+    }
+    .cta-button-label{
+      font-size: 12px;
+      text-transform: uppercase;
+      line-height: 13px;
+    }
+    .cta-button-phone{
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 15px;
+    }
+  }
+}

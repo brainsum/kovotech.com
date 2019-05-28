@@ -27,3 +27,18 @@ $breakpoints: (
     }
   }
 }
+
+@mixin media-w($point) {
+  @if $point == md {
+    @media screen and (max-width: $size-md) { @content; }
+  }
+  @else if $point == sm {
+    @media screen and (max-width: $size-sm) { @content; }
+  }
+  @else if $point == xs {
+    @media screen and (max-width: $size-xs) { @content; }
+  }
+  @else {
+    @media screen and (max-width: $point) { @content; }
+  }
+}

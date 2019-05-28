@@ -62,3 +62,96 @@
     clear: both;
   }
 }
+
+//Own
+header.header{
+  background-color: #fff200;
+  padding: 15px;
+  height: 60px;
+  #header.container{
+    width: 180px;
+    margin: 0px;
+    float: left;
+    font-size: 18px;
+  }
+  #hamburger{
+    width: 30px;
+    height: 27px;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    float: right;
+    margin-top: 3px;
+    span{
+      display: block;
+      position: absolute;
+      height: 4px;
+      width: 100%;
+      background: black;
+      border-radius: 4px;
+      opacity: 1;
+      left: 0;
+      transform: rotate(0deg);
+      transition: .25s ease-in-out;
+      transform-origin: left center;
+    }
+    span:nth-child(1){
+      top: 0px;
+    }
+    span:nth-child(2){
+      top: 10px;
+    }
+    span:nth-child(3){
+      top: 20px;
+    }
+  }
+  #hamburger.open{
+    span:nth-child(1){
+      transform: rotate(45deg);
+      top: 0px;
+      left: 7px;
+    }
+    span:nth-child(2){
+      width: 0%;
+      opacity: 0;
+    }
+    span:nth-child(3){
+      transform: rotate(-45deg);
+      top: 21px;
+      left: 7px;
+    }
+  }
+  .region-header-mobile{
+    float: right;
+    .column{
+      padding-left: 0px;
+      padding-right: 12px;
+    }
+    ul{
+      padding: 0;
+      margin: 0;
+      line-height: 0px;
+      padding-top: 3.5px;
+    }
+    li{
+      list-style: none;
+      margin-top: 0px;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 19px;
+    }
+    .sk a, .hu a{
+      background-color: black;
+      color: #fff200;
+      font-size: 11px;
+      padding: 3px 6px;
+      text-decoration: none;
+    }
+    .sk a:hover, .hu a:hover{
+      color: white;
+    }
+    .hu.active a, .sk.active a{
+      display: none;
+    }
+  }
+}
