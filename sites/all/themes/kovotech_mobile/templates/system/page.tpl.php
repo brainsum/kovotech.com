@@ -82,13 +82,6 @@
                 $sidebar_first_class = 'sidebar--left column col-12 col-md-5';
             endif;
             ?>
-
-            <?php if ($sidebar_first): ?>
-                <aside class="<?php print $sidebar_first_class; ?>" role="complementary">
-                    <?php print $sidebar_first; ?>
-                </aside>
-            <?php endif; ?>
-
             <section class="<?php print $content_class; ?>">
                 <a href="#skip-link" class="visually-hidden visually-hidden--focusable" id="main-content"><?php print t('Back to top'); ?></a>
                 <?php print render($title_prefix); ?>
@@ -105,13 +98,6 @@
                 <?php print render($page['content']); ?>
                 <?php print $feed_icons; ?>
             </section>
-
-            <?php if ($sidebar_second): ?>
-                <aside class="<?php print $sidebar_second_class; ?>" role="complementary">
-                    <?php print $sidebar_second; ?>
-                </aside>
-            <?php endif; ?>
-
         </div>
     </div>
     <div class="stripes"></div>

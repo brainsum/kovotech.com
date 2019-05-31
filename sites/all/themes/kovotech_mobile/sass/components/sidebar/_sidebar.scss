@@ -1,16 +1,14 @@
 .region-sidebar{
   width: 30%;
   float: left;
-  background-image: url(../images/background.png);
-  background-repeat: no-repeat;
-  background-position: right top;
+  background: url(../images/background.png) no-repeat right top;
   @include media-w($size-md){
     width: 100%;
     background-image: none;
     margin-bottom: 35px;
   }
   h2{
-    font-size: 14px;
+    font-size: 0.7rem;
     border-bottom: 1px solid #939393;
     padding-bottom: 14px;
     margin-top: 40px;
@@ -22,20 +20,20 @@
     }
   }
   p{
-    font-size: 12px;
-    line-height: 18px;
-    margin: 0px;
-    padding: 7px 0px 10px 0px;
+    font-size: 0.6rem;
+    line-height: 0.9rem;
+    margin: 0;
+    padding: 7px 0 10px 0;
   }
   ul{
-    margin: 0px;
+    margin: 0;
   }
   li.node-readmore{
-    padding: 3px 6px;
+    padding: 3px 6px !important;
     background-color: black;
-    font-size: 12px;
+    font-size: 0.6rem;
     a{
-      color: #fff200;
+      color: $kov-color;
     }
     a:hover{
       text-decoration: none;

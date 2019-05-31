@@ -1,21 +1,58 @@
-.views_slideshow_cycle_main{
-  width: 100%;
-  .views-slideshow-cycle-main-frame{
-    width: 100% !important;
-    height: auto;
+.views-slideshow-cycle-processed {
+  position: relative;
+  h1{
+    font-size: 1rem;
+    padding: 0;
+    width: auto;
+    margin: 1.2rem 0.4rem;
   }
-  .views-slideshow-cycle-main-frame-row{
-    width: 100% !important;
-    height: auto;
-  }
-  .field-content{
-    max-width: 100%;
+  .views_slideshow_cycle_main {
     width: 100%;
+    .views-slideshow-cycle-main-frame, .views-slideshow-cycle-main-frame-row {
+      width: 100% !important;
+      height: auto;
+    }
+    .views-slideshow-cycle-main-frame {
+      //margin-bottom: 20px;
+      height: auto;
+    }
+    .field-content {
+      max-width: 100%;
+      width: 100%;
+      img {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+      }
+    }
   }
-  .field-content img{
-    max-width: 100%;
-    width: 100%;
-    height: auto;
-    margin: 0;
-    padding:0;}
+  .views-slideshow-controls-bottom{
+    position: absolute;
+    float: right;
+    right: 0;
+    z-index: 5;
+    bottom: -9px;
+  }
+  .views-slideshow-pager-fields > div{
+    float: right;
+  }
+  .views-slideshow-pager-field-item{
+    background-color: $kov-color;
+    padding: 2px 7px;
+    margin-right: 5px;
+    font-size: 0.6rem;
+    a{
+      color: black;
+    }
+  }
+  .views-slideshow-pager-field-item.active{
+    background-color: black;
+    color: $kov-color;
+    cursor: pointer;
+    a{
+      color: $kov-color;
+    }
+  }
 }

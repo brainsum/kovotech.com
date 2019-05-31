@@ -1717,6 +1717,261 @@ header.header .region-header-mobile .sk.active a {
   display: none;
 }
 
+.main {
+  float: left;
+  width: 70%;
+}
+
+@media screen and (max-width: 700px) {
+  .main {
+    width: 100%;
+  }
+}
+
+.main .main-content {
+  min-height: 480px;
+  background-color: #eee;
+}
+
+@media screen and (max-width: 700px) {
+  .main .main-content {
+    min-height: auto;
+  }
+}
+
+.main .field,
+.main .block-contact-form-blocks {
+  width: 95%;
+  margin: auto;
+  padding: 0 3px;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 700px) {
+  .main .field,
+  .main .block-contact-form-blocks {
+    width: 100%;
+  }
+}
+
+.main #contact-site-form label {
+  padding: 0;
+}
+
+.main #contact-site-form .form-text {
+  height: 30px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.main #contact-site-form .form-text,
+.main #contact-site-form .form-textarea {
+  width: 100%;
+  border: solid 1px #ddd;
+  box-shadow: none;
+  font-size: 12px;
+}
+
+.main #contact-site-form .form-text:focus,
+.main #contact-site-form .form-textarea:focus {
+  border: solid 1px #333;
+  border-radius: 0;
+}
+
+.main table,
+.main h1 {
+  width: 95%;
+  margin: auto;
+  padding: 30px 3px 15px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 700px) {
+  .main table,
+  .main h1 {
+    width: 100%;
+    font-size: 22px;
+  }
+}
+
+.main td {
+  width: 50%;
+  padding: 6px 3px;
+  vertical-align: top;
+  border-bottom: 0;
+}
+
+@media screen and (max-width: 360px) {
+  .main td {
+    float: left;
+    width: 100%;
+  }
+}
+
+.main td img {
+  width: 100%;
+}
+
+.main td h3 {
+  height: 45px;
+  padding: 15px 5px 0;
+  text-align: center;
+  background-color: white;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 13px;
+}
+
+@media screen and (max-width: 400px) {
+  .main td h3 {
+    font-size: 12px;
+    line-height: 12px;
+  }
+}
+
+.main .stripes {
+  width: 100%;
+  height: 9px;
+  background: url(../images/stripes.png) repeat-x left top;
+}
+
+.section-kontakty .field p,
+.section-elerhetoseg .field p {
+  margin-bottom: 0;
+}
+
+.section-kontakty .field p a,
+.section-elerhetoseg .field p a {
+  color: #a29b00;
+}
+
+.section-kontakty .field p a:hover,
+.section-elerhetoseg .field p a:hover {
+  color: black;
+}
+
+.section-kontakty #edit-submit,
+.section-elerhetoseg #edit-submit {
+  height: auto;
+  padding: 3px 6px;
+  color: #fff200;
+  border: 0;
+  border-radius: 0;
+  background-color: black;
+  font-size: 12px;
+}
+
+.front .main-content {
+  min-height: auto;
+  padding: 0;
+}
+
+.front .main-content .column {
+  padding: 0;
+}
+
+.region-sidebar {
+  float: left;
+  width: 30%;
+  background: url(../images/background.png) no-repeat right top;
+}
+
+@media screen and (max-width: 700px) {
+  .region-sidebar {
+    width: 100%;
+    margin-bottom: 35px;
+    background-image: none;
+  }
+}
+
+.region-sidebar h2 {
+  margin-top: 40px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #939393;
+  font-size: 0.7rem;
+}
+
+.region-sidebar .block {
+  padding-bottom: 40px;
+}
+
+@media screen and (max-width: 700px) {
+  .region-sidebar .block {
+    padding-bottom: 5px;
+  }
+}
+
+.region-sidebar p {
+  margin: 0;
+  padding: 7px 0 10px 0;
+  font-size: 0.6rem;
+  line-height: 0.9rem;
+}
+
+.region-sidebar ul {
+  margin: 0;
+}
+
+.region-sidebar li.node-readmore {
+  padding: 3px 6px !important;
+  background-color: black;
+  font-size: 0.6rem;
+}
+
+.region-sidebar li.node-readmore a {
+  color: #fff200;
+}
+
+.region-sidebar li.node-readmore a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.region-sidebar #block-nodeblock-2 p {
+  padding: 0;
+}
+
+.region-sidebar #block-nodeblock-2 p a {
+  text-decoration: none;
+  color: #a29b00;
+}
+
+.region-sidebar #block-nodeblock-2 .field-item {
+  padding: 7px 0 10px 0;
+}
+
+footer {
+  clear: both;
+  padding: 30px 30px 20px 30px;
+  background-color: #fff200;
+  font-size: 0.6rem;
+  line-height: 0.55rem;
+}
+
+footer .block {
+  padding: 0;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer a,
+footer a:hover {
+  color: black;
+}
+
+footer .madeby p::before {
+  padding-right: 5px;
+  content: url(../images/brainsum-logo.png);
+  vertical-align: middle;
+}
+
+footer a {
+  display: inline-block;
+}
+
 /*
  * @file
  * Drupal's Navbar
@@ -1814,153 +2069,6 @@ header.header .region-header-mobile .sk.active a {
 
 /**
  * @file
- * Spectre Accordions
- *
- * Accordions are used to toggle sections of content.
- *
- * @see https://picturepan2.github.io/spectre/components.html#accordions
- */
-.accordion input:checked ~ .accordion-header .icon,
-.accordion[open] .accordion-header .icon {
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-
-.accordion input:checked ~ .accordion-body,
-.accordion[open] .accordion-body {
-  max-height: 50rem;
-}
-
-.accordion .accordion-header {
-  display: block;
-  padding: 0.2rem 0.4rem;
-}
-
-.accordion .accordion-header .icon {
-  transition: all 0.2s ease;
-}
-
-.accordion .accordion-body {
-  overflow: hidden;
-  max-height: 0;
-  margin-bottom: 0.4rem;
-  transition: max-height 0.2s ease;
-}
-
-summary.accordion-header::-webkit-details-marker {
-  display: none;
-}
-
-/**
- * @file
- * Avatars
- *
- * Avatars are user profile pictures.
- *
- * Add the avatar class to <img> element. There are 4 additional sizes
- * available, including avatar-xl (64px), avatar-lg (48px), avatar-sm (24px),
- * and avatar-xs (16px). By default, the avatar size is 32px.
- *
- * For users who don't have profile pictures, you may use their initials for
- * avatars. Add the avatar class and avatar size class to <div> element.
- * The data-initial attribute is the name appear inside the avatar.
- *
- * @see https://picturepan2.github.io/spectre/components.html#avatars
- */
-.avatar {
-  position: relative;
-  display: inline-block;
-  width: 1.6rem;
-  height: 1.6rem;
-  margin: 0;
-  vertical-align: middle;
-  color: rgba(255, 255, 255, 0.85);
-  border-radius: 50%;
-  background: #5755d9;
-  font-size: 0.8rem;
-  font-weight: 300;
-  line-height: 1.25;
-}
-
-.avatar.avatar-xs {
-  width: 0.8rem;
-  height: 0.8rem;
-  font-size: 0.4rem;
-}
-
-.avatar.avatar-sm {
-  width: 1.2rem;
-  height: 1.2rem;
-  font-size: 0.6rem;
-}
-
-.avatar.avatar-lg {
-  width: 2.4rem;
-  height: 2.4rem;
-  font-size: 1.2rem;
-}
-
-.avatar.avatar-xl {
-  width: 3.2rem;
-  height: 3.2rem;
-  font-size: 1.6rem;
-}
-
-.avatar img {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-}
-
-.avatar .avatar-icon,
-.avatar .avatar-presence {
-  position: absolute;
-  z-index: 2;
-  right: 14.64%;
-  bottom: 14.64%;
-  width: 50%;
-  height: 50%;
-  padding: 0.1rem;
-  -ms-transform: translate(50%, 50%);
-  transform: translate(50%, 50%);
-  background: #fff;
-}
-
-.avatar .avatar-presence {
-  width: 0.5em;
-  height: 0.5em;
-  border-radius: 50%;
-  background: #acb3c2;
-  box-shadow: 0 0 0 0.1rem #fff;
-}
-
-.avatar .avatar-presence.online {
-  background: #32b643;
-}
-
-.avatar .avatar-presence.busy {
-  background: #e85600;
-}
-
-.avatar .avatar-presence.away {
-  background: #ffb700;
-}
-
-.avatar[data-initial]::before {
-  position: absolute;
-  z-index: 1;
-  top: 50%;
-  left: 50%;
-  content: attr(data-initial);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  color: currentColor;
-}
-
-/**
- * @file
  * Box
  *
  * A simple box style.
@@ -2016,7 +2124,7 @@ summary.accordion-header::-webkit-details-marker {
 .box:hover,
 .box.is-focus,
 .box--is-focus {
-  border-color: #50596c;
+  border-color: black;
 }
 
 .box--highlight {
@@ -2047,338 +2155,6 @@ summary.accordion-header::-webkit-details-marker {
  *   }
  * }
  */
-/**
- * @file
- * Spectre Carousels
- *
- * Carousels are slideshows for cycling images. It is built in pure CSS.
- *
- * @see https://picturepan2.github.io/spectre/experimentals.html#carousels
- */
-.carousel {
-  position: relative;
-  display: block;
-  overflow: hidden;
-  -webkit-overflow-scrolling: touch;
-  width: 100%;
-  background: #f8f9fa;
-}
-
-.carousel .carousel-container {
-  position: relative;
-  left: 0;
-  height: 100%;
-}
-
-.carousel .carousel-container::before {
-  display: block;
-  padding-bottom: 56.25%;
-  content: "";
-}
-
-.carousel .carousel-container .carousel-item {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  animation: carousel-slideout 1s ease-in-out 1;
-  opacity: 0;
-}
-
-.carousel .carousel-container .carousel-item:hover .item-prev,
-.carousel .carousel-container .carousel-item:hover .item-next {
-  opacity: 1;
-}
-
-.carousel .carousel-container .item-prev,
-.carousel .carousel-container .item-next {
-  position: absolute;
-  z-index: 200;
-  top: 50%;
-  transition: all 0.4s ease;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  opacity: 0;
-  color: #e7e9ed;
-  border-color: rgba(231, 233, 237, 0.5);
-  background: rgba(231, 233, 237, 0.25);
-}
-
-.carousel .carousel-container .item-prev {
-  left: 1rem;
-}
-
-.carousel .carousel-container .item-next {
-  right: 1rem;
-}
-
-.carousel .carousel-locator:nth-of-type(1):checked ~ .carousel-container .carousel-item:nth-of-type(1),
-.carousel .carousel-locator:nth-of-type(2):checked ~ .carousel-container .carousel-item:nth-of-type(2),
-.carousel .carousel-locator:nth-of-type(3):checked ~ .carousel-container .carousel-item:nth-of-type(3),
-.carousel .carousel-locator:nth-of-type(4):checked ~ .carousel-container .carousel-item:nth-of-type(4) {
-  z-index: 100;
-  animation: carousel-slidein 0.75s ease-in-out 1;
-  opacity: 1;
-}
-
-.carousel .carousel-locator:nth-of-type(1):checked ~ .carousel-nav .nav-item:nth-of-type(1),
-.carousel .carousel-locator:nth-of-type(2):checked ~ .carousel-nav .nav-item:nth-of-type(2),
-.carousel .carousel-locator:nth-of-type(3):checked ~ .carousel-nav .nav-item:nth-of-type(3),
-.carousel .carousel-locator:nth-of-type(4):checked ~ .carousel-nav .nav-item:nth-of-type(4) {
-  color: #e7e9ed;
-}
-
-.carousel .carousel-nav {
-  position: absolute;
-  z-index: 200;
-  bottom: 0.4rem;
-  left: 50%;
-  display: flex;
-  justify-content: center;
-  width: 10rem;
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
-.carousel .carousel-nav .nav-item {
-  position: relative;
-  display: block;
-  flex: 1 0 auto;
-  max-width: 2.5rem;
-  height: 1.6rem;
-  margin: 0.2rem;
-  color: rgba(231, 233, 237, 0.5);
-}
-
-.carousel .carousel-nav .nav-item::before {
-  position: absolute;
-  top: 0.5rem;
-  display: block;
-  width: 100%;
-  height: 0.1rem;
-  content: "";
-  background: currentColor;
-}
-
-@keyframes carousel-slidein {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-@keyframes carousel-slideout {
-  0% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(-50%);
-    opacity: 1;
-  }
-}
-
-/**
- * @file
- * Spectre Chips
- *
- * Chips are complex entities in small blocks.
- *
- * @see https://picturepan2.github.io/spectre/components.html#chips
- */
-.chip {
-  display: inline-flex;
-  align-items: center;
-  max-width: 100%;
-  height: 1.2rem;
-  margin: 0.1rem;
-  padding: 0.2rem 0.4rem;
-  vertical-align: middle;
-  text-decoration: none;
-  color: #667189;
-  border-radius: 5rem;
-  background: #f0f1f4;
-  font-size: 90%;
-  line-height: 0.8rem;
-}
-
-.chip.active {
-  color: #fff;
-  background: #5755d9;
-}
-
-.chip .avatar {
-  margin-right: 0.2rem;
-  margin-left: -0.4rem;
-}
-
-/**
- * @file
- * Spectre Comparison Sliders
- *
- * Comparison Sliders are sliders for comparing two images. It is built in pure
- * CSS.
- * @see http://codepen.io/solipsistacp/pen/Gpmaq
- *
- * @see https://picturepan2.github.io/spectre/experimentals.html#comparison
- */
-.comparison-slider {
-  position: relative;
-  overflow: hidden;
-  -webkit-overflow-scrolling: touch;
-  width: 100%;
-  height: 50vh;
-}
-
-.comparison-slider .comparison-before,
-.comparison-slider .comparison-after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  height: 100%;
-  margin: 0;
-}
-
-.comparison-slider .comparison-before img,
-.comparison-slider .comparison-after img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-
-  -o-object-fit: cover;
-  object-fit: cover;
-  -o-object-position: left center;
-  object-position: left center;
-}
-
-.comparison-slider .comparison-before {
-  z-index: 1;
-  width: 100%;
-}
-
-.comparison-slider .comparison-before .comparison-label {
-  right: 0.8rem;
-}
-
-.comparison-slider .comparison-after {
-  z-index: 2;
-  min-width: 0;
-  max-width: 100%;
-}
-
-.comparison-slider .comparison-after::before {
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  right: 0.8rem;
-  left: 0;
-  height: 100%;
-  content: "";
-  cursor: default;
-  background: transparent;
-}
-
-.comparison-slider .comparison-after::after {
-  position: absolute;
-  top: 50%;
-  right: 0.4rem;
-  width: 3px;
-  height: 3px;
-  content: "";
-  -ms-transform: translate(50%, -50%);
-  transform: translate(50%, -50%);
-  color: #fff;
-  border-radius: 50%;
-  background: currentColor;
-  box-shadow: 0 -5px, 0 5px;
-}
-
-.comparison-slider .comparison-after .comparison-label {
-  left: 0.8rem;
-}
-
-.comparison-slider .comparison-resizer {
-  position: relative;
-  top: 50%;
-  left: 0;
-  width: 0;
-  min-width: 0.8rem;
-  max-width: 100%;
-  height: 0.8rem;
-  resize: horizontal;
-  cursor: ew-resize;
-  -ms-transform: translateY(-50%) scaleY(30);
-  transform: translateY(-50%) scaleY(30);
-  animation: first-run 1.5s 1 ease-in-out;
-  opacity: 0;
-  outline: none;
-}
-
-.comparison-slider .comparison-label {
-  position: absolute;
-  bottom: 0.8rem;
-  padding: 0.2rem 0.4rem;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  color: #fff;
-  background: rgba(69, 77, 93, 0.5);
-}
-
-@keyframes first-run {
-  0% {
-    width: 0;
-  }
-  25% {
-    width: 2.4rem;
-  }
-  50% {
-    width: 0.8rem;
-  }
-  75% {
-    width: 1.2rem;
-  }
-  100% {
-    width: 0;
-  }
-}
-
-/**
- * @file
- * Spectre Empty states
- *
- * Empty states/blank slates are commonly used as placeholders for first time
- * use, empty data and error screens.
- *
- * @see https://picturepan2.github.io/spectre/components.html#empty
- */
-.empty {
-  padding: 3.2rem 1.6rem;
-  text-align: center;
-  color: #667189;
-  border-radius: 0.1rem;
-  background: #f8f9fa;
-}
-
-.empty .empty-icon {
-  margin-bottom: 0.8rem;
-}
-
-.empty .empty-title,
-.empty .empty-subtitle {
-  margin: 0.4rem auto;
-}
-
-.empty .empty-action {
-  margin-top: 0.8rem;
-}
-
 /**
  * @file
  * Spectre Filters
@@ -2705,72 +2481,102 @@ span.field-label + * > :first-child > :first-child {
   opacity: 0.75;
 }
 
-/**
- * @file
- * Spectre Meters
- *
- * Meters represent the value within the known range.
- * @see https://css-tricks.com/html5-meter-element/
- *
- * @see https://picturepan2.github.io/spectre/experimentals.html#meters
- */
-.meter {
+#mobile-menu {
+  display: none;
+  background-color: #b4b4b4;
+}
+
+#mobile-menu .block.column {
+  flex: none;
+}
+
+#mobile-menu .menu {
+  min-width: auto;
+  background: transparent;
+  box-shadow: none;
+}
+
+#mobile-menu .menu a {
+  padding: 0.2rem 0rem;
+}
+
+#mobile-menu .menu a.active,
+#mobile-menu .menu a:hover,
+#mobile-menu .menu a:focus {
+  color: #fff200;
+  background: none;
+  box-shadow: none;
+}
+
+#mobile-menu #block-system-main-menu {
+  width: 40%;
+  text-align: right;
+  color: #eee;
+  font-size: 0.7rem;
+}
+
+@media screen and (max-width: 400px) {
+  #mobile-menu #block-system-main-menu {
+    font-size: 0.6rem;
+  }
+}
+
+#mobile-menu #block-menu-menu-product-menu {
+  width: 60%;
+  text-transform: uppercase;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 400px) {
+  #mobile-menu #block-menu-menu-product-menu {
+    font-size: 0.6rem;
+  }
+}
+
+#mobile-menu #block-menu-menu-product-menu .menu a {
+  padding-bottom: 10px;
+}
+
+#mobile-menu .cta-button i::before {
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  margin-right: 5px;
+  content: " ";
+  background: url(../images/cta-button-icon.png) no-repeat center center;
+}
+
+#mobile-menu .cta-button i {
+  padding-left: 0.4rem;
+}
+
+#mobile-menu .cta-button .container {
+  height: 46px;
+  padding: 10px 0.4rem;
+  background-color: black;
+}
+
+#mobile-menu .cta-button .col-gapless {
+  display: inline-block;
+}
+
+#mobile-menu .cta-button span {
   display: block;
-  width: 100%;
-  height: 0.8rem;
-  border: 0;
-  border-radius: 0.1rem;
-  background: #f8f9fa;
-
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+  color: white;
 }
 
-.meter::-webkit-meter-inner-element {
-  display: block;
+#mobile-menu .cta-button .cta-button-label {
+  text-transform: uppercase;
+  font-size: 0.6rem;
+  line-height: 0.65rem;
 }
 
-.meter::-webkit-meter-bar,
-.meter::-webkit-meter-optimum-value,
-.meter::-webkit-meter-suboptimum-value,
-.meter::-webkit-meter-even-less-good-value {
-  border-radius: 0.1rem;
-}
-
-.meter::-webkit-meter-bar {
-  background: #f8f9fa;
-}
-
-.meter::-webkit-meter-optimum-value {
-  background: #32b643;
-}
-
-.meter::-webkit-meter-suboptimum-value {
-  background: #ffb700;
-}
-
-.meter::-webkit-meter-even-less-good-value {
-  background: #e85600;
-}
-
-.meter::-moz-meter-bar,
-.meter:-moz-meter-optimum,
-.meter:-moz-meter-sub-optimum,
-.meter:-moz-meter-sub-sub-optimum {
-  border-radius: 0.1rem;
-}
-
-.meter:-moz-meter-optimum::-moz-meter-bar {
-  background: #32b643;
-}
-
-.meter:-moz-meter-sub-optimum::-moz-meter-bar {
-  background: #ffb700;
-}
-
-.meter:-moz-meter-sub-sub-optimum::-moz-meter-bar {
-  background: #e85600;
+#mobile-menu .cta-button .cta-button-phone {
+  font-size: 0.7rem;
+  font-weight: bold;
+  line-height: 0.75rem;
 }
 
 /**
@@ -2832,223 +2638,6 @@ span.field-label + * > :first-child > :first-child {
 .nav .nav {
   margin-bottom: 0.4rem;
   margin-left: 0.8rem;
-}
-
-/**
- * @file
- * Drupal's Pager
- *
- * Paged navigation is a list of page numbers when more than 1 page of content
- * is available.
- */
-.pager {
-  display: flex;
-  margin: 0.2rem 0;
-  padding: 0.2rem 0;
-  list-style: none;
-}
-
-@media print {
-  .pager {
-    display: none;
-  }
-}
-
-.pager__item,
-.pager__current-item,
-.pager-current,
-.pager-item,
-.pager-first,
-.pager-previous,
-.pager-next,
-.pager-last {
-  margin: 0.2rem 0.05rem;
-}
-
-.pager__item a,
-.pager__current-item a,
-.pager-current a,
-.pager-item a,
-.pager-first a,
-.pager-previous a,
-.pager-next a,
-.pager-last a {
-  display: inline-block;
-  padding: 0.2rem 0.4rem;
-  text-decoration: none;
-  color: #667189;
-  border-radius: 0.1rem;
-}
-
-.pager__item a:focus,
-.pager__item a:hover,
-.pager__current-item a:focus,
-.pager-current a:focus,
-.pager-item a:focus,
-.pager-first a:focus,
-.pager-previous a:focus,
-.pager-next a:focus,
-.pager-last a:focus,
-.pager__current-item a:hover,
-.pager-current a:hover,
-.pager-item a:hover,
-.pager-first a:hover,
-.pager-previous a:hover,
-.pager-next a:hover,
-.pager-last a:hover {
-  color: #5755d9;
-}
-
-.pager__current-item,
-.pager-current {
-  display: inline-block;
-  padding: 0.2rem 0.4rem;
-  text-decoration: none;
-  color: #667189;
-  border-radius: 0.1rem;
-  background: #5755d9;
-}
-
-/*
- * .pager-item     - A list item containing a page number in the list of pages.
- * .pager-first    - The first page's list item.
- * .pager-previous - The previous page's list item.
- * .pager-next     - The next page's list item.
- * .pager-last     - The last page's list item.
- * .pager-ellipsis - A concatenation of several list items using an ellipsis.
- */
-.pager-first,
-.pager-last {
-  flex: 1 0 50%;
-}
-
-.pager-next,
-.pager-last {
-  text-align: right;
-}
-
-.pager-ellipsis {
-  display: inline-block;
-  padding: 0.2rem;
-}
-
-/**
- * @file
- * Spectre Panels
- *
- * Panels are flexible view container with auto-expand content section.
- *
- * Add a container element with the panel class. And add child elements with
- * the panel-header, panel-nav, panel-body and/or panel-footer class. The
- * panel-body can be auto expanded and vertically scrollable.
- *
- * @see https://picturepan2.github.io/spectre/components.html#panels
- */
-.panel {
-  display: flex;
-  flex-direction: column;
-  border: 0.05rem solid #e7e9ed;
-  border-radius: 0.1rem;
-}
-
-.panel .panel-header,
-.panel .panel-footer {
-  flex: 0 0 auto;
-  padding: 0.8rem;
-}
-
-.panel .panel-nav {
-  flex: 0 0 auto;
-}
-
-.panel .panel-body {
-  overflow-y: auto;
-  flex: 1 1 auto;
-  padding: 0 0.8rem;
-}
-
-/**
- * @file
- * Spectre Popovers
- *
- * Popovers are small overlay content containers. Popovers component is built
- * entirely in CSS.
- *
- * Wrap an element by a container with the popover class. And add a container
- * with the popover-container next to the element. You can use Cards component
- * inside the popover-container.
- *
- * Also, you can add the popover-right, popover-bottom or popover-left class to
- * define the position. By default, the popovers appear above the element.
- *
- * @see https://picturepan2.github.io/spectre/components.html#popovers
- */
-.popover {
-  position: relative;
-  display: inline-block;
-}
-
-.popover .popover-container {
-  position: absolute;
-  z-index: 400;
-  top: 0;
-  left: 50%;
-  width: 320px;
-  padding: 0.4rem;
-  transition: transform 0.2s ease;
-  -ms-transform: translate(-50%, -50%) scale(0);
-  transform: translate(-50%, -50%) scale(0);
-  opacity: 0;
-}
-
-.popover *:focus + .popover-container,
-.popover:hover .popover-container,
-.popover .popover-container:hover {
-  display: block;
-  -ms-transform: translate(-50%, -100%) scale(1);
-  transform: translate(-50%, -100%) scale(1);
-  opacity: 1;
-}
-
-.popover.popover-right .popover-container {
-  top: 50%;
-  left: 100%;
-}
-
-.popover.popover-right :focus + .popover-container,
-.popover.popover-right:hover .popover-container,
-.popover.popover-right .popover-container:hover {
-  -ms-transform: translate(0, -50%) scale(1);
-  transform: translate(0, -50%) scale(1);
-}
-
-.popover.popover-bottom .popover-container {
-  top: 100%;
-  left: 50%;
-}
-
-.popover.popover-bottom :focus + .popover-container,
-.popover.popover-bottom:hover .popover-container,
-.popover.popover-bottom .popover-container:hover {
-  -ms-transform: translate(-50%, 0) scale(1);
-  transform: translate(-50%, 0) scale(1);
-}
-
-.popover.popover-left .popover-container {
-  top: 50%;
-  left: 0;
-}
-
-.popover.popover-left :focus + .popover-container,
-.popover.popover-left:hover .popover-container,
-.popover.popover-left .popover-container:hover {
-  -ms-transform: translate(-100%, -50%) scale(1);
-  transform: translate(-100%, -50%) scale(1);
-}
-
-.popover .card {
-  border: 0;
-  box-shadow: 0 0.2rem 0.5rem rgba(69, 77, 93, 0.3);
 }
 
 /**
@@ -3492,69 +3081,6 @@ tr .ajax-progress .throbber {
 
 /**
  * @file
- * Spectre Timelines
- *
- * Timelines are ordered sequences of activities.
- *
- * @see https://picturepan2.github.io/spectre/experimentals.html#timelines
- */
-.timeline .timeline-item {
-  position: relative;
-  display: flex;
-  margin-bottom: 1.2rem;
-}
-
-.timeline .timeline-item::before {
-  position: absolute;
-  top: 1.2rem;
-  left: 11px;
-  width: 2px;
-  height: 100%;
-  content: " ";
-  background: #e7e9ed;
-}
-
-.timeline .timeline-item .timeline-left {
-  flex: 0 0 auto;
-}
-
-.timeline .timeline-item .timeline-content {
-  flex: 1 1 auto;
-  padding: 2px 0 2px 0.8rem;
-}
-
-.timeline .timeline-item .timeline-icon {
-  display: block;
-  width: 1.2rem;
-  height: 1.2rem;
-  text-align: center;
-  color: #fff;
-  border-radius: 50%;
-}
-
-.timeline .timeline-item .timeline-icon::before {
-  position: absolute;
-  top: 0.4rem;
-  left: 0.4rem;
-  display: block;
-  width: 0.4rem;
-  height: 0.4rem;
-  content: " ";
-  border: 0.1rem solid #5755d9;
-  border-radius: 50%;
-}
-
-.timeline .timeline-item .timeline-icon.icon-lg {
-  background: #5755d9;
-  line-height: 1rem;
-}
-
-.timeline .timeline-item .timeline-icon.icon-lg::before {
-  content: none;
-}
-
-/**
- * @file
  * Spectre Tooltips
  *
  * And you can add the toast-primary, toast-success, toast-warning or
@@ -3639,6 +3165,77 @@ tr .ajax-progress .throbber {
 .tooltip.tooltip-left:hover::after {
   -ms-transform: translate(-0.2rem, 50%);
   transform: translate(-0.2rem, 50%);
+}
+
+.views-slideshow-cycle-processed {
+  position: relative;
+}
+
+.views-slideshow-cycle-processed h1 {
+  width: auto;
+  margin: 1.2rem 0.4rem;
+  padding: 0;
+  font-size: 1rem;
+}
+
+.views-slideshow-cycle-processed .views_slideshow_cycle_main {
+  width: 100%;
+}
+
+.views-slideshow-cycle-processed .views_slideshow_cycle_main .views-slideshow-cycle-main-frame,
+.views-slideshow-cycle-processed .views_slideshow_cycle_main .views-slideshow-cycle-main-frame-row {
+  width: 100% !important;
+  height: auto;
+}
+
+.views-slideshow-cycle-processed .views_slideshow_cycle_main .views-slideshow-cycle-main-frame {
+  height: auto;
+}
+
+.views-slideshow-cycle-processed .views_slideshow_cycle_main .field-content {
+  width: 100%;
+  max-width: 100%;
+}
+
+.views-slideshow-cycle-processed .views_slideshow_cycle_main .field-content img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.views-slideshow-cycle-processed .views-slideshow-controls-bottom {
+  position: absolute;
+  z-index: 5;
+  right: 0;
+  bottom: -9px;
+  float: right;
+}
+
+.views-slideshow-cycle-processed .views-slideshow-pager-fields > div {
+  float: right;
+}
+
+.views-slideshow-cycle-processed .views-slideshow-pager-field-item {
+  margin-right: 5px;
+  padding: 2px 7px;
+  background-color: #fff200;
+  font-size: 0.6rem;
+}
+
+.views-slideshow-cycle-processed .views-slideshow-pager-field-item a {
+  color: black;
+}
+
+.views-slideshow-cycle-processed .views-slideshow-pager-field-item.active {
+  cursor: pointer;
+  color: #fff200;
+  background-color: black;
+}
+
+.views-slideshow-cycle-processed .views-slideshow-pager-field-item.active a {
+  color: #fff200;
 }
 
 /**
@@ -4304,383 +3901,6 @@ tr .ajax-progress .throbber {
   border-right-color: transparent;
   border-bottom-color: transparent;
   border-radius: 50%;
-}
-
-.main {
-  float: left;
-  width: 70%;
-}
-
-@media screen and (max-width: 700px) {
-  .main {
-    width: 100%;
-  }
-}
-
-.main .main-content {
-  min-height: 480px;
-  background-color: #eee;
-}
-
-@media screen and (max-width: 700px) {
-  .main .main-content {
-    min-height: auto;
-  }
-}
-
-.main .field,
-.main .block-contact-form-blocks {
-  width: 95%;
-  margin: auto;
-  padding: 0 3px;
-  font-size: 14px;
-}
-
-@media screen and (max-width: 700px) {
-  .main .field,
-  .main .block-contact-form-blocks {
-    width: 100%;
-  }
-}
-
-.main #contact-site-form label {
-  padding: 0;
-}
-
-.main #contact-site-form .form-text {
-  height: 30px;
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
-.main #contact-site-form .form-text,
-.main #contact-site-form .form-textarea {
-  width: 100%;
-  border: solid 1px #ddd;
-  box-shadow: none;
-  font-size: 12px;
-}
-
-.main #contact-site-form .form-text:focus,
-.main #contact-site-form .form-textarea:focus {
-  border: solid 1px #333;
-  border-radius: 0;
-}
-
-.main table,
-.main h1 {
-  width: 95%;
-  margin: auto;
-  padding: 15px 3px;
-  padding-top: 30px;
-  font-size: 25px;
-  font-weight: bold;
-}
-
-@media screen and (max-width: 700px) {
-  .main table,
-  .main h1 {
-    width: 100%;
-    font-size: 22px;
-  }
-}
-
-.main td {
-  width: 50%;
-  padding: 6px 3px;
-  vertical-align: top;
-  border-bottom: 0;
-}
-
-@media screen and (max-width: 360px) {
-  .main td {
-    float: left;
-    width: 100%;
-  }
-}
-
-.main td img {
-  width: 100%;
-}
-
-.main td h3 {
-  height: 45px;
-  padding: 0 5px;
-  padding-top: 15px;
-  text-align: center;
-  background-color: white;
-  font-size: 13px;
-  font-weight: bold;
-  line-height: 13px;
-}
-
-@media screen and (max-width: 400px) {
-  .main td h3 {
-    font-size: 12px;
-    line-height: 12px;
-  }
-}
-
-.main .stripes {
-  width: 100%;
-  height: 9px;
-  background-image: url(../images/stripes.png);
-  background-repeat: repeat-x;
-  background-position: left top;
-}
-
-.section-kontakty .field p,
-.section-elerhetoseg .field p {
-  margin-bottom: 0;
-}
-
-.section-kontakty .field p a,
-.section-elerhetoseg .field p a {
-  color: #a29b00;
-}
-
-.section-kontakty .field p a:hover,
-.section-elerhetoseg .field p a:hover {
-  color: #000;
-}
-
-.section-kontakty #edit-submit,
-.section-elerhetoseg #edit-submit {
-  height: auto;
-  padding: 3px 6px;
-  color: #fff200;
-  border: 0;
-  border-radius: 0;
-  background-color: black;
-  font-size: 12px;
-}
-
-.region-sidebar {
-  float: left;
-  width: 30%;
-  background-image: url(../images/background.png);
-  background-repeat: no-repeat;
-  background-position: right top;
-}
-
-@media screen and (max-width: 700px) {
-  .region-sidebar {
-    width: 100%;
-    margin-bottom: 35px;
-    background-image: none;
-  }
-}
-
-.region-sidebar h2 {
-  margin-top: 40px;
-  padding-bottom: 14px;
-  border-bottom: 1px solid #939393;
-  font-size: 14px;
-}
-
-.region-sidebar .block {
-  padding-bottom: 40px;
-}
-
-@media screen and (max-width: 700px) {
-  .region-sidebar .block {
-    padding-bottom: 5px;
-  }
-}
-
-.region-sidebar p {
-  margin: 0;
-  padding: 7px 0 10px 0;
-  font-size: 12px;
-  line-height: 18px;
-}
-
-.region-sidebar ul {
-  margin: 0;
-}
-
-.region-sidebar li.node-readmore {
-  padding: 3px 6px;
-  background-color: black;
-  font-size: 12px;
-}
-
-.region-sidebar li.node-readmore a {
-  color: #fff200;
-}
-
-.region-sidebar li.node-readmore a:hover {
-  text-decoration: none;
-  color: white;
-}
-
-.region-sidebar #block-nodeblock-2 p {
-  padding: 0;
-}
-
-.region-sidebar #block-nodeblock-2 p a {
-  text-decoration: none;
-  color: #a29b00;
-}
-
-.region-sidebar #block-nodeblock-2 .field-item {
-  padding: 7px 0 10px 0;
-}
-
-footer {
-  clear: both;
-  padding: 30px 30px 20px 30px;
-  background-color: #fff200;
-  font-size: 12px;
-  line-height: 11px;
-}
-
-footer .block {
-  padding: 0;
-}
-
-footer p {
-  margin: 0;
-}
-
-footer a,
-footer a:hover {
-  color: #000;
-}
-
-footer .madeby p::before {
-  padding-right: 5px;
-  content: url(../images/brainsum-logo.png);
-  vertical-align: middle;
-}
-
-footer a {
-  display: inline-block;
-}
-
-#mobile-menu {
-  display: none;
-  background-color: #b4b4b4;
-}
-
-#mobile-menu .block.column {
-  flex: none;
-}
-
-#mobile-menu .menu {
-  min-width: auto;
-  background: transparent;
-  box-shadow: none;
-}
-
-#mobile-menu .menu a {
-  padding: 0.2rem 0rem;
-}
-
-#mobile-menu .menu a.active,
-#mobile-menu .menu a:hover,
-#mobile-menu .menu a:focus {
-  color: #fff200;
-  background: none;
-  box-shadow: none;
-}
-
-#mobile-menu #block-system-main-menu {
-  width: 40%;
-  text-align: right;
-  color: #eee;
-  font-size: 14px;
-}
-
-@media screen and (max-width: 400px) {
-  #mobile-menu #block-system-main-menu {
-    font-size: 12px;
-  }
-}
-
-#mobile-menu #block-menu-menu-product-menu {
-  width: 60%;
-  text-transform: uppercase;
-  color: white;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-@media screen and (max-width: 400px) {
-  #mobile-menu #block-menu-menu-product-menu {
-    font-size: 12px;
-  }
-}
-
-#mobile-menu #block-menu-menu-product-menu .menu a {
-  padding-bottom: 10px;
-}
-
-#mobile-menu .cta-button i::before {
-  display: inline-block;
-  width: 23px;
-  height: 23px;
-  margin-right: 5px;
-  content: " ";
-  background: url(../images/cta-button-icon.png) no-repeat center center;
-}
-
-#mobile-menu .cta-button i {
-  padding-left: 0.4rem;
-}
-
-#mobile-menu .cta-button .container {
-  height: 46px;
-  padding: 10px 0.4rem;
-  background-color: black;
-}
-
-#mobile-menu .cta-button .col-gapless {
-  display: inline-block;
-}
-
-#mobile-menu .cta-button span {
-  display: block;
-  color: white;
-}
-
-#mobile-menu .cta-button .cta-button-label {
-  text-transform: uppercase;
-  font-size: 12px;
-  line-height: 13px;
-}
-
-#mobile-menu .cta-button .cta-button-phone {
-  font-size: 14px;
-  font-weight: bold;
-  line-height: 15px;
-}
-
-.views_slideshow_cycle_main {
-  width: 100%;
-}
-
-.views_slideshow_cycle_main .views-slideshow-cycle-main-frame {
-  width: 100% !important;
-  height: auto;
-}
-
-.views_slideshow_cycle_main .views-slideshow-cycle-main-frame-row {
-  width: 100% !important;
-  height: auto;
-}
-
-.views_slideshow_cycle_main .field-content {
-  width: 100%;
-  max-width: 100%;
-}
-
-.views_slideshow_cycle_main .field-content img {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  margin: 0;
-  padding: 0;
 }
 
 /*# sourceMappingURL=kovotech_mobile.components.css.map */

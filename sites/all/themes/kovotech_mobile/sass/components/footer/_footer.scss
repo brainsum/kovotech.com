@@ -1,17 +1,17 @@
 footer{
-  background-color: #fff200;
-  font-size: 12px;
-  line-height: 11px;
+  background-color: $kov-color;
+  font-size: 0.6rem;
+  line-height: 0.55rem;
   padding: 30px 30px 20px 30px;
   clear: both;
   .block{
-    padding: 0px;
+    padding: 0;
   }
   p{
     margin: 0;
   }
   a, a:hover{
-    color: #000;
+    color: black;
   }
   .madeby p::before{
     content: url(../images/brainsum-logo.png);
