@@ -11,8 +11,9 @@
 // - https://drupal.org/node/1446420
 // - http://www.adequatelygood.com/2010/3/JavaScript-Module-Pattern-In-Depth
 (function ($) {
+  // Hamburger menu
   Drupal.behaviors.hamburger = {
-    attach: function (context, settings) {
+    attach: function () {
       $('#mobile-menu').hide();
       $('#hamburger').click(function () {
           $('#mobile-menu').slideToggle();
@@ -20,5 +21,37 @@
       });
     }
   };
+
+// Views Slideshow height
+
+$(document).ready(function () {
+    $('.views-slideshow-cycle-main-frame-row img').each(function () {
+        var img_height = $(this).height();
+        if (img_height !== 0) {
+            $('.views-slideshow-cycle-main-frame').height(img_height);
+            return false;
+        }
+    });
+});
+
+$(window).load(function () {
+    $('.views-slideshow-cycle-main-frame-row img').each(function () {
+        var img_height = $(this).height();
+        if (img_height !== 0) {
+            $('.views-slideshow-cycle-main-frame').height(img_height);
+            return false;
+        }
+    });
+});
+
+$(window).resize(function () {
+    $('.views-slideshow-cycle-main-frame-row img').each(function () {
+        var img_height = $(this).height();
+        if (img_height !== 0) {
+            $('.views-slideshow-cycle-main-frame').height(img_height);
+            return false;
+        }
+    });
+});
 
 }(jQuery));
