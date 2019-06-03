@@ -66,17 +66,12 @@
             <?php
             // Render the sidebars to see if there's anything in them.
             $sidebar_first = render($page['sidebar_first']);
-            $sidebar_second = render($page['sidebar_second']);
             // Decide on layout classes by checking if sidebars have content.
             $content_class = 'main-content column col-12';
             $sidebar_first_class = $sidebar_second_class = 'sidebar column';
             if ($sidebar_first && $sidebar_second):
                 $content_class = 'main-content column col-12 col-md-6';
                 $sidebar_first_class = 'sidebar--left column col-12 col-md-3';
-                $sidebar_second_class = 'sidebar--right column col-12 col-md-3';
-            elseif ($sidebar_second):
-                $content_class = 'main-content column col-12 col-md-7';
-                $sidebar_second_class = 'sidebar--right column col-12 col-md-5';
             elseif ($sidebar_first):
                 $content_class = 'main-content column col-12 col-md-7';
                 $sidebar_first_class = 'sidebar--left column col-12 col-md-5';
