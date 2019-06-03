@@ -13,7 +13,6 @@
       height: auto;
     }
     .views-slideshow-cycle-main-frame {
-      //margin-bottom: 20px;
       height: auto;
     }
     .field-content {
@@ -27,13 +26,21 @@
         padding: 0;
       }
     }
+    .views-field-field-slider-image:after{
+      content: " ";
+      display: block;
+      position: absolute;
+      background: url(../images/stripes.png) repeat-x left top;
+      width: 100%;
+      height: 9px;
+    }
   }
   .views-slideshow-controls-bottom{
     position: absolute;
     float: right;
     right: 0;
     z-index: 5;
-    bottom: -9px;
+    bottom: 41px;
   }
   .views-slideshow-pager-fields > div{
     float: right;
