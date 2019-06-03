@@ -28,7 +28,7 @@ $(document).ready(function () {
     $('.views-slideshow-cycle-main-frame-row img').each(function () {
         var img_height = $(this).height();
         if (img_height !== 0) {
-            $('.views-slideshow-cycle-main-frame').height(img_height);
+            $('.views-slideshow-cycle-main-frame').height(img_height + 50);
             return false;
         }
     });
@@ -38,7 +38,7 @@ $(window).load(function () {
     $('.views-slideshow-cycle-main-frame-row img').each(function () {
         var img_height = $(this).height();
         if (img_height !== 0) {
-            $('.views-slideshow-cycle-main-frame').height(img_height);
+            $('.views-slideshow-cycle-main-frame').height(img_height + 50);
             return false;
         }
     });
@@ -48,7 +48,7 @@ $(window).resize(function () {
     $('.views-slideshow-cycle-main-frame-row img').each(function () {
         var img_height = $(this).height();
         if (img_height !== 0) {
-            $('.views-slideshow-cycle-main-frame').height(img_height);
+            $('.views-slideshow-cycle-main-frame').height(img_height + 50);
             return false;
         }
     });

@@ -97,7 +97,6 @@
             </section>
         </div>
     </div>
-    <div class="stripes"></div>
 </main>
 
 <?php if ($page['sidebar']): ?>
