@@ -1698,8 +1698,7 @@ header.header .region-header-mobile li {
   line-height: 19px;
 }
 
-header.header .region-header-mobile .sk a,
-header.header .region-header-mobile .hu a {
+header.header .region-header-mobile #block-locale-language a {
   padding: 3px 6px;
   text-decoration: none;
   color: #fff200;
@@ -1707,13 +1706,11 @@ header.header .region-header-mobile .hu a {
   font-size: 11px;
 }
 
-header.header .region-header-mobile .sk a:hover,
-header.header .region-header-mobile .hu a:hover {
+header.header .region-header-mobile #block-locale-language a:hover {
   color: white;
 }
 
-header.header .region-header-mobile .hu.active a,
-header.header .region-header-mobile .sk.active a {
+header.header .region-header-mobile #block-locale-language .active a {
   display: none;
 }
 
