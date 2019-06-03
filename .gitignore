@@ -33,3 +33,9 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# PHP Storm configs files
+.idea
+
+# Node js
+node_modules
