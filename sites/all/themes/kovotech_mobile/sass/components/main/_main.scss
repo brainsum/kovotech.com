@@ -20,26 +20,6 @@
       width: 100%;
     }
   }
-  #contact-site-form{
-    label{
-      padding: 0;
-    }
-    .form-text{
-      height: 30px;
-      padding-top: 0;
-      padding-bottom: 0;
-    }
-    .form-text, .form-textarea{
-      width: 100%;
-      font-size: 12px;
-      border: solid 1px #ddd;
-      box-shadow: none;
-    }
-    .form-text:focus, .form-textarea:focus{
-      border: solid 1px #333;
-      border-radius: 0;
-    }
-  }
   table, h1{
     width: 95%;
     margin: auto;
@@ -83,30 +63,17 @@
     height: 9px;
   }
 }
-
 .section-kontakty, .section-elerhetoseg{
-  .field{
-    p{
-      margin-bottom: 0;
-      a{
-        color: #a29b00;
-      }
-      a:hover{
-        color: black;
-      }
+  .field p{
+    margin-bottom: 0;
+    a{
+      color: #a29b00;
+    }
+    a:hover{
+      color: black;
     }
   }
-  #edit-submit{
-    background-color: black;
-    color: $kov-color;
-    font-size: 12px;
-    border: 0;
-    border-radius: 0;
-    height: auto;
-    padding: 3px 6px;
-  }
 }
-
 .front{
   .main-content {
     min-height: auto;
@@ -117,3 +84,33 @@
     }
   }
 }
+#contact-site-form{
+  label{
+    padding: 0;
+  }
+  .form-text{
+    height: 30px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .form-text, .form-textarea{
+    width: 100%;
+    font-size: 12px;
+    border: solid 1px #ddd;
+    box-shadow: none;
+  }
+  .form-text:focus, .form-textarea:focus{
+    border: solid 1px #333;
+    border-radius: 0;
+  }
+}
+#edit-submit{
+  background-color: black;
+  color: $kov-color;
+  font-size: 12px;
+  border: 0;
+  border-radius: 0;
+  height: auto;
+  padding: 3px 6px;
+}
+
