@@ -1,11 +1,11 @@
 .region-sidebar{
-  width: 30%;
-  float: left;
-  background: url(../images/background.png) no-repeat right top;
+  width: 100%;
+  background-image: none;
+  margin-bottom: 35px;
   @include media-w($size-md){
-    width: 100%;
-    background-image: none;
-    margin-bottom: 35px;
+    width: 30%;
+    float: left;
+    background: url(../images/background.png) no-repeat right top;
   }
   h2{
     font-size: 0.7rem;
@@ -14,9 +14,9 @@
     margin-top: 40px;
   }
   .block{
-    padding-bottom: 40px;
+    padding-bottom: 5px;
     @include media-w($size-md){
-      padding-bottom: 5px;
+      padding-bottom: 40px;
     }
   }
   p{
@@ -40,16 +40,16 @@
       color: white;
     }
   }
-  #block-nodeblock-2{
-    p{
-      padding: 0;
-      a{
-        color: #a29b00;
-        text-decoration: none;
-      }
+}
+#block-nodeblock-2{
+  p{
+    padding: 0;
+    a{
+      color: #a29b00;
+      text-decoration: none;
     }
-    .field-item{
-      padding: 7px 0 10px 0;
-    }
+  }
+  .field-item{
+    padding: 7px 0 10px 0;
   }
 }

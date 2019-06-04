@@ -1,59 +1,60 @@
 .main{
-  width: 70%;
-  float: left;
+  width: 100%;
   @include media-w($size-md){
-    width: 100%;
+    width: 70%;
+    float: left;
   }
   .main-content{
     background-color: #eee;
-    min-height: 480px;
+    min-height: auto;
     @include media-w($size-md){
-      min-height: auto;
+      min-height: 480px;
     }
   }
   .field, .block-contact-form-blocks{
-    width: 95%;
+    width: 100%;
     padding: 0px 3px;
     margin: auto;
-    font-size: 14px;
+    font-size: 0.7rem;
     @include media-w($size-md){
-      width: 100%;
+      width: 95%;
     }
   }
   table, h1{
-    width: 95%;
     margin: auto;
     padding: 30px 3px 15px;
-    font-size: 25px;
     font-weight: bold;
+    width: 100%;
+    font-size: 1.1rem;
     @include media-w($size-md){
-      width: 100%;
-      font-size: 22px;
+      width: 95%;
+      font-size: 1.25rem;
     }
   }
   td{
-    width: 50%;
     vertical-align: top;
     border-bottom: 0;
     padding: 6px 3px;
+    width: 100%;
+    float: left;
     @include media-w($size-xs){
-      width: 100%;
-      float: left;
+      width: 50%;
+      float: none;
     }
     img{
       width: 100%;
     }
     h3{
-      font-size: 13px;
-      line-height: 13px;
+      font-size: 0.6rem;
+      line-height: 0.6rem;
       font-weight: bold;
       text-align: center;
-      padding: 15px 5px 0px;
+      padding: 15px 5px 0;
       background-color: white;
       height: 45px;
       @include media-w($size-sm) {
-        font-size: 12px;
-        line-height: 12px;
+        font-size: 0.65rem;
+        line-height: 0.65rem;
       }
     }
   }
@@ -95,7 +96,7 @@
   }
   .form-text, .form-textarea{
     width: 100%;
-    font-size: 12px;
+    font-size: 0.6rem;
     border: solid 1px #ddd;
     box-shadow: none;
   }
@@ -107,7 +108,7 @@
 #edit-submit{
   background-color: black;
   color: $kov-color;
-  font-size: 12px;
+  font-size: 0.6rem;
   border: 0;
   border-radius: 0;
   height: auto;
