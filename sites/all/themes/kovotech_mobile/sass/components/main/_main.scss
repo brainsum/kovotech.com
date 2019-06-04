@@ -8,7 +8,7 @@
     background-color: #eee;
     min-height: auto;
     @include media-w($size-md){
-      min-height: 480px;
+      min-height: 490px;
     }
   }
   .field, .block-contact-form-blocks{
@@ -103,6 +103,9 @@
   .form-text:focus, .form-textarea:focus{
     border: solid 1px #333;
     border-radius: 0;
+  }
+  textarea{
+    resize: vertical;
   }
 }
 #edit-submit{

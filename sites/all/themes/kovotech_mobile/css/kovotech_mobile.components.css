@@ -114,62 +114,6 @@
 
 /**
  * @file
- * Drupal's Collapsible fieldset
- *
- * Fieldsets with optional entry fields can be hidden with collapsed fieldsets.
- * .is-collapsed - The collapsed fieldset.
- */
-.collapsible-fieldset,
-.collapsible {
-  position: relative;
-}
-
-.collapsible-fieldset__legend,
-.collapsible .fieldset-legend {
-  display: block;
-  padding-left: 15px;
-  background-image: image-url("forms", "collapsible-fieldset/expanded.svg");
-  background-repeat: no-repeat;
-  background-position: 4px 50%;
-}
-
-.collapsible-fieldset__summary,
-.collapsible .fieldset-legend .summary {
-  margin-left: 0.5em;
-  color: #f1f1fc;
-  font-size: 0.9em;
-}
-
-.collapsible-fieldset.is-collapsed,
-.collapsible-fieldset--is-collapsed,
-.is-collapsed.collapsible,
-.collapsible.collapsed {
-  height: 1em;
-  border-right-width: 0;
-  border-bottom-width: 0;
-  border-left-width: 0;
-}
-
-.collapsible-fieldset.is-collapsed .collapsible-fieldset__wrapper,
-.collapsible-fieldset--is-collapsed__wrapper,
-.is-collapsed.collapsible .collapsible-fieldset__wrapper,
-.collapsible.collapsed .fieldset-wrapper {
-  display: none;
-}
-
-.collapsible-fieldset.is-collapsed .collapsible-fieldset__legend,
-.collapsible-fieldset--is-collapsed__legend,
-.is-collapsed.collapsible .collapsible-fieldset__legend,
-.collapsible.collapsed .fieldset-legend,
-.collapsible-fieldset.is-collapsed .collapsible .fieldset-legend,
-.collapsible .collapsible-fieldset.is-collapsed .fieldset-legend,
-.is-collapsed.collapsible .fieldset-legend {
-  background-image: image-url("forms", "collapsible-fieldset/collapsed.svg");
-  background-position: 4px 50%;
-}
-
-/**
- * @file
  * Drupal's Form item
  *
  * Wrapper for a form element (or group of form elements) and its label.
@@ -528,96 +472,6 @@ label.option {
 
 /**
  * @file
- * Drupal admin tables
- *
- * Complex forms that appear in html `<table>` elements.
- *
- * If your custom theme isn't used for Drupal's admin pages, you can safely
- * delete this component to save file weight in the generated CSS.
- */
-.form-table__sticky-header,
-.sticky-header {
-  position: fixed;
-  visibility: hidden;
-  margin-top: 0;
-  background-color: #fff;
-}
-
-.form-table__sticky-header.is-sticky,
-.form-table__sticky-header--is-sticky,
-.is-sticky.sticky-header {
-  visibility: visible;
-}
-
-.form-table__header,
-.form-table th,
-form table th {
-  padding-right: 1em;
-  text-align: left;
-  border-bottom: 3px solid #e7e9ed;
-}
-
-.form-table__body,
-.form-table tbody,
-form table tbody {
-  border-top: 1px solid #e7e9ed;
-}
-
-.form-table__row,
-.form-table tbody tr,
-form table tbody tr {
-  padding: 0.1em 0.6em;
-  border-bottom: 1px solid #e7e9ed;
-  background-color: #f0f1f4;
-}
-
-.form-table__row:nth-of-type(odd),
-.form-table tbody tr:nth-of-type(odd),
-form table tbody tr:nth-of-type(odd) {
-  background: #f8f9fa;
-}
-
-.form-table__row.is-active,
-.form-table__row--is-active,
-.form-table tbody tr.is-active,
-form table tbody tr.is-active,
-td.active {
-  background: #f0f1f4;
-}
-
-.form-table__row.is-disabled,
-.form-table__row--is-disabled,
-.form-table tbody tr.is-disabled,
-form table tbody tr.is-disabled,
-td.menu-disabled {
-  background: #f0f1f4;
-}
-
-.form-table__row.is-selected,
-.form-table__row--is-selected,
-.form-table tbody tr.is-selected,
-form table tbody tr.is-selected,
-tr.selected td {
-  background: #f0f1f4;
-}
-
-.form-table__list,
-.form-table ul,
-form table ul {
-  margin: 0;
-}
-
-.form-table__narrow-column,
-.form-table th.form-table__narrow-column,
-form table th.form-table__narrow-column,
-td .checkbox,
-th .checkbox {
-  width: -webkit-min-content;
-  text-align: center;
-}
-
-/**
- * @file
  * Spectre Media + Zen's Responsive media
  *
  * @see https://picturepan2.github.io/spectre/elements.html#media
@@ -703,106 +557,6 @@ figure {
 figure figcaption {
   margin-top: 0.4rem;
   color: #667189;
-}
-
-/**
- * @file
- * Drupal's Table drag
- *
- * Drag and drop rows inside a form.
- *
- * If your custom theme isn"t used for Drupal"s admin pages, you can safely
- * delete this component to save file weight in the generated CSS.
- */
-.table-drag__wrapper,
-body.drag {
-  cursor: move;
-}
-
-.table-drag__item,
-tr.drag {
-  background-color: #f1f1fc;
-}
-
-.table-drag__item-previous,
-tr.drag-previous {
-  background-color: #e5e5f9;
-}
-
-.table-drag__handle,
-.tabledrag-handle {
-  float: left;
-  overflow: hidden;
-  height: 1.7em;
-  margin-left: -1em;
-  cursor: move;
-  text-decoration: none;
-  font-size: 12px;
-}
-
-.table-drag__handle:focus,
-.table-drag__handle:hover,
-.tabledrag-handle:focus,
-.tabledrag-handle:hover {
-  text-decoration: none;
-}
-
-.table-drag__handle-icon,
-.tabledrag-handle .handle {
-  box-sizing: content-box;
-  width: 13px;
-  height: 13px;
-  margin: -0.4em 0.5em;
-  padding: 0.42em 0.5em;
-  background: image-url("forms", "table-drag/handle-icon.png") no-repeat 6px 9px;
-}
-
-.table-drag__handle.is-hover .table-drag__handle-icon,
-.table-drag__handle-icon--is-hover,
-.is-hover.tabledrag-handle .table-drag__handle-icon,
-.tabledrag-handle-hover .handle,
-.table-drag__handle.is-hover .tabledrag-handle .handle,
-.tabledrag-handle .table-drag__handle.is-hover .handle,
-.is-hover.tabledrag-handle .handle {
-  background-position: 6px -11px;
-}
-
-.table-drag__toggle-weight-wrapper,
-.tabledrag-toggle-weight-wrapper {
-  text-align: right;
-}
-
-.table-drag__toggle-weight,
-.tabledrag-toggle-weight {
-  font-size: 0.9em;
-}
-
-.table-drag__indentation,
-.indentation {
-  float: left;
-  width: 20px;
-  height: 1.7em;
-  margin: -0.4em 0.2em -0.4em -0.4em;
-  padding: 0.42em 0 0.42em 0.6em;
-}
-
-.table-drag__tree-child,
-.table-drag__tree-child-last,
-.tree-child-last,
-.table-drag__tree-child-horizontal,
-.tree-child-horizontal,
-.tree-child {
-  background: image-url("forms", "table-drag/tree-child.png") no-repeat 11px center;
-}
-
-.table-drag__tree-child-last,
-.tree-child-last {
-  background-image: image-url("forms", "table-drag/tree-child-last.png");
-}
-
-.table-drag__tree-child-horizontal,
-.tree-child-horizontal {
-  background-position: -11px center;
 }
 
 /**
@@ -1041,7 +795,7 @@ header.header .region-header-mobile li {
 
 @media screen and (min-width: 700px) {
   .main .main-content {
-    min-height: 480px;
+    min-height: 490px;
   }
 }
 
@@ -1168,6 +922,10 @@ header.header .region-header-mobile li {
   border-radius: 0;
 }
 
+#contact-site-form textarea {
+  resize: vertical;
+}
+
 #edit-submit {
   height: auto;
   padding: 3px 6px;
@@ -1188,6 +946,7 @@ header.header .region-header-mobile li {
   .region-sidebar {
     float: left;
     width: 30%;
+    margin-bottom: 0;
     background: url(../images/background.png) no-repeat right top;
   }
 }
@@ -1279,189 +1038,6 @@ footer a {
   display: inline-block;
 }
 
-/*
- * @file
- * Drupal's Navbar
- *
- * A simple method to get navigation links to appear in one line.
- */
-/**
- * @file
- * Drupal's Visually hidden classes
- *
- * Make an element visually hidden, but accessible to screen readers, etc.
- *
- * .visually-hidden--off        - Turns off the visually-hidden effect.
- * .visually-hidden--focusable  - Makes an element visually hidden by default,
- *                                but visible when receiving focus.
- * .visually-hidden--focusable:focus  - A focused, and visible, element.
- *
- * @see more, Spectre.css related display utility in sass/utilities/_display.scss
- */
-.visually-hidden,
-.element-invisible,
-.element-focusable,
-.main-navigation .block-menu .block__title,
-.main-navigation .block-menu-block .block__title {
-  position: absolute !important;
-  overflow: hidden;
-  clip: rect(1px, 1px, 1px, 1px);
-  width: 1px;
-  height: 1px;
-  word-wrap: normal;
-}
-
-.visually-hidden--off,
-.visually-hidden--focusable:active,
-.visually-hidden--focusable:focus,
-.element-focusable:active,
-.element-focusable:focus {
-  position: static !important;
-  overflow: visible;
-  clip: auto;
-  width: auto;
-  height: auto;
-}
-
-.navbar,
-.main-navigation .links,
-.main-navigation .menu {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: stretch;
-  margin: 0;
-  padding: 0;
-  text-align: left;
-}
-
-.navbar .navbar-section,
-.main-navigation .links .navbar-section,
-.main-navigation .menu .navbar-section {
-  display: flex;
-  flex: 1 0 0;
-  align-items: center;
-}
-
-.navbar .navbar-section:not(:first-child):last-child,
-.main-navigation .links .navbar-section:not(:first-child):last-child,
-.main-navigation .menu .navbar-section:not(:first-child):last-child {
-  justify-content: flex-end;
-}
-
-.navbar .navbar-center,
-.main-navigation .links .navbar-center,
-.main-navigation .menu .navbar-center {
-  display: flex;
-  flex: 0 0 auto;
-  align-items: center;
-}
-
-.navbar .navbar-brand,
-.main-navigation .links .navbar-brand,
-.main-navigation .menu .navbar-brand {
-  text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: 500;
-}
-
-.navbar__item,
-.navbar li,
-.main-navigation .links li,
-.main-navigation .menu li {
-  padding: 0 10px 0 0;
-  list-style-type: none;
-  list-style-image: none;
-}
-
-/**
- * @file
- * Box
- *
- * A simple box style.
- *
- * A Drupal block is often styled as a box. However, this design component is
- * not applied to any blocks by default; it is used as an example of how to
- * build and document a CSS component.
- *
- * "box" is the name of our component, so we define a `.box` class that we can
- * apply to any HTML element that needs the box styling. We also provide a
- * `%box` placeholder selector so that we can easily extend the basic box
- * component with `@extend %box;`.
- *
- * Take a look at the source code for this component for more information about
- * building a good component.
- *
- * :hover - The hover/focus styling.
- * .box--highlight - The "highlight" box variant.
- */
-.box {
-  margin-bottom: 1rem;
-  padding: 1em;
-  border: 5px solid #e7e9ed;
-  /* Sass compiles this to the selector: .box__title, %box__title {}
-   * The "__" (double underscore) is part of a BEM naming convention that
-   * indicates the "title" is an _element_ of (a piece of) the "box" component.
-   */
-  /*
-   * Sass compiles this nested ruleset's selector into:
-   * .box:focus, .box:hover, .box.is-focus, .box--is-focus,
-   * %box:focus, %box:hover, %box.is-focus, %box--is-focus {}
-   *
-   * The ".box--is-focus" class is a stray class we don't actually want, but we
-   * deal with it because we often want a placeholder selector like
-   * %box--is-focus in case we need to use @extends later.
-   *
-   * The ".is-" part of the class name is a Drupal 8 BEM naming convention that
-   * indicates the "focus" is a _state_ of the "box" component.
-   */
-  /*
-   * Sass compiles this to the selector: .box--highlight, %box--highlight {}
-   * The "--" (double dash) is part of a BEM naming convention that indicates
-   * the "highlight" is a _modifier_, creating a new variation of the standard
-   * "box" component.
-   */
-}
-
-.box__title {
-  margin: 0;
-}
-
-.box:focus,
-.box:hover,
-.box.is-focus,
-.box--is-focus {
-  border-color: black;
-}
-
-.box--highlight {
-  border-color: #5755d9;
-}
-
-/*
- * Drupal selectors.
- *
- * In this part of the file, we write some fugly selectors if we can't figure
- * out how to insert the class we want (.box) into the Drupal theme system. Then
- * we @extend from the fugly selector into the nicely-written component
- * selector.
- *
- * You could create a theme hook suggestion and override the block.tpl.php just
- * for the sidebar regions or write a HOOK_preprocess_block() function to check
- * for the regions and insert the classes into the right variables, or, if you
- * have no idea what I'm talking about, you could just use this fugly CSS
- * selector:
- *
- * [class$="sidebar"] {
- *   .block {
- *     @extend %box;
- *   }
- *
- *   .block__title {
- *     @extend %box__title;
- *   }
- * }
- */
 /**
  * @file
  * Spectre Filters
@@ -1907,48 +1483,6 @@ span.field-label + * > :first-child > :first-child {
 
 /**
  * @file
- * Spectre Navs
- *
- * Add a container element with the nav class. And add child elements with the
- * nav-item class. The nav-item with the active class will be highlighted.
- *
- * @see https://picturepan2.github.io/spectre/components.html#navs
- */
-.nav {
-  display: flex;
-  flex-direction: column;
-  margin: 0.2rem 0;
-  list-style: none;
-}
-
-.nav .nav-item a {
-  padding: 0.2rem 0.4rem;
-  text-decoration: none;
-  color: #667189;
-}
-
-.nav .nav-item a:focus,
-.nav .nav-item a:hover {
-  color: #5755d9;
-}
-
-.nav .nav-item.active > a {
-  color: #50596c;
-  font-weight: 700;
-}
-
-.nav .nav-item.active > a:focus,
-.nav .nav-item.active > a:hover {
-  color: #5755d9;
-}
-
-.nav .nav {
-  margin-bottom: 0.4rem;
-  margin-left: 0.8rem;
-}
-
-/**
- * @file
  * Zen's Do not print
  *
  * Removes an element from the print version of the web site.
@@ -1967,310 +1501,6 @@ span.field-label + * > :first-child > :first-child {
   .feed-icons {
     display: none;
   }
-}
-
-/**
- * @file
- * Drupal's Progress bar
- *
- * Shows the progress of a task in a simple bar graph.
- *
- * .progress-bar--inline - An inline progress bar.
- */
-.progress-bar__bar,
-.progress .bar {
-  position: relative;
-  width: 100%;
-  height: 0.2rem;
-  color: #5755d9;
-  border: 0;
-  border-radius: 0.1rem;
-  background: #f0f1f4;
-
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.progress-bar__fill,
-.progress .filled {
-  animation: progress-indeterminate 1.5s linear infinite;
-  background: #f0f1f4 linear-gradient(to right, #5755d9 30%, #f0f1f4 30%) top left/150% 150% no-repeat;
-}
-
-.progress-bar__percentage,
-.progress .percentage {
-  float: right;
-  border-radius: 0.1rem;
-  background: #5755d9;
-}
-
-.progress-bar--inline,
-.ajax-progress-bar {
-  display: inline-block;
-  width: 16em;
-}
-
-@keyframes progress-indeterminate {
-  0% {
-    background-position: 200% 0;
-  }
-  100% {
-    background-position: -200% 0;
-  }
-}
-
-/**
- * @file
- * Drupal's Progress throbber
- *
- * Shows the progress of a task using a throbber.
- */
-.progress-throbber,
-.ajax-progress {
-  display: inline-flex;
-}
-
-.progress-throbber__widget,
-.ajax-progress .throbber {
-  float: left;
-  width: 15px;
-  height: 15px;
-  margin: 2px;
-  background: image-url("forms", "progress-throbber/progress-throbber.gif") no-repeat 0 -18px transparent;
-}
-
-.progress-throbber__widget-in-tr,
-tr .ajax-progress .throbber {
-  margin: 0 2px;
-}
-
-.progress-throbber__message,
-.ajax-progress .message {
-  padding-left: 20px;
-}
-
-/**
- * @file
- * Drupal's Skip link
- *
- * To make the link completely hidden until a user tabs to the link, combine it
- * with the `visually-hidden` component.
- */
-.skip-link {
-  display: block;
-  padding: 2px 0 3px;
-  text-align: center;
-}
-
-.skip-link:link,
-.skip-link:visited {
-  color: #5755d9;
-  background-color: #f8f9fa;
-}
-
-.skip-link__wrapper {
-  margin: 0;
-}
-
-@media print {
-  .skip-link__wrapper {
-    display: none;
-  }
-}
-
-/**
- * @file
- * Spectre Sliders
- *
- * Sliders are for selecting values from ranges.
- *
- * You can add the class tooltip to have tooltip labels. If no data-tooltip is
- * set, the value will be used instead.
- *
- * @see https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/
- *
- * @see https://picturepan2.github.io/spectre/experimentals.html#sliders
- */
-.slider {
-  display: block;
-  width: 100%;
-  height: 1.2rem;
-  background: transparent;
-
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.slider:focus {
-  outline: none;
-  box-shadow: 0 0 0 0.1rem rgba(87, 85, 217, 0.2);
-}
-
-.slider.tooltip:not([data-tooltip])::after {
-  content: attr(value);
-}
-
-.slider::-webkit-slider-thumb {
-  width: 0.6rem;
-  height: 0.6rem;
-  margin-top: -0.25rem;
-  transition: transform 0.2s ease;
-  border: 0;
-  border-radius: 50%;
-  background: #5755d9;
-
-  -webkit-appearance: none;
-}
-
-.slider::-moz-range-thumb {
-  width: 0.6rem;
-  height: 0.6rem;
-  transition: transform 0.2s ease;
-  border: 0;
-  border-radius: 50%;
-  background: #5755d9;
-}
-
-.slider::-ms-thumb {
-  width: 0.6rem;
-  height: 0.6rem;
-  transition: transform 0.2s ease;
-  border: 0;
-  border-radius: 50%;
-  background: #5755d9;
-}
-
-.slider:active::-webkit-slider-thumb {
-  transform: scale(1.25);
-}
-
-.slider:active::-moz-range-thumb {
-  transform: scale(1.25);
-}
-
-.slider:active::-ms-thumb {
-  -ms-transform: scale(1.25);
-  transform: scale(1.25);
-}
-
-.slider:disabled::-webkit-slider-thumb,
-.slider.disabled::-webkit-slider-thumb {
-  transform: scale(1);
-  background: #e7e9ed;
-}
-
-.slider:disabled::-moz-range-thumb,
-.slider.disabled::-moz-range-thumb {
-  transform: scale(1);
-  background: #e7e9ed;
-}
-
-.slider:disabled::-ms-thumb,
-.slider.disabled::-ms-thumb {
-  -ms-transform: scale(1);
-  transform: scale(1);
-  background: #e7e9ed;
-}
-
-.slider::-webkit-slider-runnable-track {
-  width: 100%;
-  height: 0.1rem;
-  border-radius: 0.1rem;
-  background: #f0f1f4;
-}
-
-.slider::-moz-range-track {
-  width: 100%;
-  height: 0.1rem;
-  border-radius: 0.1rem;
-  background: #f0f1f4;
-}
-
-.slider::-ms-track {
-  width: 100%;
-  height: 0.1rem;
-  border-radius: 0.1rem;
-  background: #f0f1f4;
-}
-
-.slider::-ms-fill-lower {
-  background: #5755d9;
-}
-
-/**
- * @file
- * Spectre Steps
- *
- * Steps are progress indicators of a sequence of task steps.
- *
- * Add a container element with the step class. And add child elements with the
- * step-item class. The step-item with the active class will be highlighted and
- * indicate the current state of progress.
- *
- * @see https://picturepan2.github.io/spectre/components.html#steps
- */
-.step {
-  display: flex;
-  flex-wrap: nowrap;
-  width: 100%;
-  margin: 0.2rem 0;
-  list-style: none;
-}
-
-.step-item {
-  position: relative;
-  flex: 1 1 0;
-  min-height: 1rem;
-  margin-top: 0;
-  text-align: center;
-}
-
-.step-item:not(:first-child)::before {
-  position: absolute;
-  top: 9px;
-  left: -50%;
-  width: 100%;
-  height: 2px;
-  content: " ";
-  background: #5755d9;
-}
-
-.step-item a {
-  display: inline-block;
-  padding: 20px 10px 0;
-  text-decoration: none;
-  color: #acb3c2;
-}
-
-.step-item a::before {
-  position: absolute;
-  z-index: 1;
-  top: 0.2rem;
-  left: 50%;
-  display: block;
-  width: 0.6rem;
-  height: 0.6rem;
-  content: " ";
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-  border: 0.1rem solid #fff;
-  border-radius: 50%;
-  background: #5755d9;
-}
-
-.step-item.active a::before {
-  border: 0.1rem solid #5755d9;
-  background: #fff;
-}
-
-.step-item.active ~ .step-item::before {
-  background: #e7e9ed;
-}
-
-.step-item.active ~ .step-item a::before {
-  background: #e7e9ed;
 }
 
 /**
@@ -2384,6 +1614,42 @@ tr .ajax-progress .throbber {
   margin-bottom: 0;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+
+/**
+ * @file
+ * Drupal's Visually hidden classes
+ *
+ * Make an element visually hidden, but accessible to screen readers, etc.
+ *
+ * .visually-hidden--off        - Turns off the visually-hidden effect.
+ * .visually-hidden--focusable  - Makes an element visually hidden by default,
+ *                                but visible when receiving focus.
+ * .visually-hidden--focusable:focus  - A focused, and visible, element.
+ *
+ * @see more, Spectre.css related display utility in sass/utilities/_display.scss
+ */
+.visually-hidden,
+.element-invisible,
+.element-focusable {
+  position: absolute !important;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px;
+  height: 1px;
+  word-wrap: normal;
+}
+
+.visually-hidden--off,
+.visually-hidden--focusable:active,
+.visually-hidden--focusable:focus,
+.element-focusable:active,
+.element-focusable:focus {
+  position: static !important;
+  overflow: visible;
+  clip: auto;
+  width: auto;
+  height: auto;
 }
 
 .views-slideshow-cycle-processed {
