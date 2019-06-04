@@ -1505,6 +1505,35 @@ span.field-label + * > :first-child > :first-child {
 
 /**
  * @file
+ * Drupal's Skip link
+ *
+ * To make the link completely hidden until a user tabs to the link, combine it
+ * with the `visually-hidden` component.
+ */
+.skip-link {
+  display: block;
+  padding: 2px 0 3px;
+  text-align: center;
+}
+
+.skip-link:link,
+.skip-link:visited {
+  color: #5755d9;
+  background-color: #f8f9fa;
+}
+
+.skip-link__wrapper {
+  margin: 0;
+}
+
+@media print {
+  .skip-link__wrapper {
+    display: none;
+  }
+}
+
+/**
+ * @file
  * Drupal's Tabs + Spectre Tabs
  *
  * The primary and secondary tabs.
