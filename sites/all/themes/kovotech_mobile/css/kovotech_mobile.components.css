@@ -92,67 +92,6 @@
  */
 /**
  * @file
- * image-url()
- *
- * If you include your images next to your component Sass files, you need to
- * specify a url() to point from the generated CSS to the Sass source like this:
- *
- * @code
- * content: url(../sass/components/is-quite/long.svg);
- * @endcode
- *
- * With the `image-url()` function the path to all your components is assumed to
- * start with `../sass/components/` and you just need to give it the last, short
- * bit of the path in your Sass code like this:
- *
- * @code
- * content: image-url(is-quite/short.svg);
- * @endcode
- *
- * If you want to point at an image that is not in the components sub-directory
- * of your sass directory, you can override the default $subdirectory by
- * passing it in as the first parameter of `image-url()` like this:
- *
- * @code
- * content: image-url(base, grouping/blockquote.svg);
- * @endcode
- *
- * which would output `url(../sass/base/grouping/blockquote.svg)`.
- *
- * $subdirectory   = $image-url-subdirectory - Optional. The relative path from
- *                  the root of your Sass source to the sub-directory where
- *                  components usually lie.
- * $path           - Required. The path to the image relative to the
- *                  `$subdirectory`.
- * $path-to-source = $image-url-path-to-source - Optional. The relative path
- *                  from the css build directory to the sass source directory.
- */
-/**
- * @file
- * Spectre Animations
- */
-@keyframes loading {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes slide-down {
-  0% {
-    transform: translateY(-1.6rem);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-/**
- * @file
  * Drupal's Clearfix
  *
  * Allows the bottom of an element to extend to the bottom of all floated child
@@ -175,636 +114,6 @@
 
 /**
  * @file
- * Spectre Colors
- *
- * Color utilities are used for changing colors for text, link and background.
- *
- * @see https://picturepan2.github.io/spectre/utilities.html#colors
- */
-.text-primary {
-  color: #5755d9;
-}
-
-a.text-primary:focus,
-a.text-primary:hover {
-  color: #4240d4;
-}
-
-.text-secondary {
-  color: #e5e5f9;
-}
-
-a.text-secondary:focus,
-a.text-secondary:hover {
-  color: #d1d0f4;
-}
-
-.text-gray {
-  color: #acb3c2;
-}
-
-a.text-gray:focus,
-a.text-gray:hover {
-  color: #9ea6b7;
-}
-
-.text-light {
-  color: #fff;
-}
-
-a.text-light:focus,
-a.text-light:hover {
-  color: #f2f2f2;
-}
-
-.text-success {
-  color: #32b643;
-}
-
-a.text-success:focus,
-a.text-success:hover {
-  color: #2da23c;
-}
-
-.text-warning {
-  color: #ffb700;
-}
-
-a.text-warning:focus,
-a.text-warning:hover {
-  color: #e6a500;
-}
-
-.text-error {
-  color: #e85600;
-}
-
-a.text-error:focus,
-a.text-error:hover {
-  color: #cf4d00;
-}
-
-.bg-primary {
-  color: #fff;
-  background: #5755d9;
-}
-
-.bg-secondary {
-  background: #f1f1fc;
-}
-
-.bg-dark {
-  color: #fff;
-  background: #454d5d;
-}
-
-.bg-gray {
-  background: #f8f9fa;
-}
-
-.bg-success {
-  color: #fff;
-  background: #32b643;
-}
-
-.bg-warning {
-  color: #fff;
-  background: #ffb700;
-}
-
-.bg-error {
-  color: #fff;
-  background: #e85600;
-}
-
-/**
- * @file
- * Spectre Cursor utilities
- *
- * Cursor utilities specify which mouse cursor to display when mouseover.
- *
- * @see https://picturepan2.github.io/spectre/utilities.html#cursors
- */
-.c-hand {
-  cursor: pointer;
-}
-
-.c-move {
-  cursor: move;
-}
-
-.c-zoom-in {
-  cursor: zoom-in;
-}
-
-.c-zoom-out {
-  cursor: zoom-out;
-}
-
-.c-not-allowed {
-  cursor: not-allowed;
-}
-
-.c-auto {
-  cursor: auto;
-}
-
-/**
- * @file
- * Spectre Display utilities
- *
- * Display utilities are used for display and hidden things.
- *
- * @see https://picturepan2.github.io/spectre/utilities.html#display
- */
-.d-block {
-  display: block;
-}
-
-.d-inline {
-  display: inline;
-}
-
-.d-inline-block {
-  display: inline-block;
-}
-
-.d-flex {
-  display: flex;
-}
-
-.d-inline-flex {
-  display: inline-flex;
-}
-
-.d-none,
-.d-hide {
-  display: none !important;
-}
-
-.d-visible {
-  visibility: visible;
-}
-
-.d-invisible {
-  visibility: hidden;
-}
-
-.text-hide {
-  color: transparent;
-  border: 0;
-  background: transparent;
-  text-shadow: none;
-  font-size: 0;
-  line-height: 0;
-}
-
-.text-assistive {
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-}
-
-/**
- * @file
- * Spectre Divider
- *
- * A Divider is used for separating elements.
- *
- * @see https://picturepan2.github.io/spectre/utilities.html#divider
- */
-.divider,
-.divider-vert {
-  position: relative;
-  display: block;
-}
-
-.divider[data-content]::after,
-.divider-vert[data-content]::after {
-  display: inline-block;
-  padding: 0 0.4rem;
-  content: attr(data-content);
-  -ms-transform: translateY(-0.65rem);
-  transform: translateY(-0.65rem);
-  color: #acb3c2;
-  background: #fff;
-  font-size: 0.7rem;
-}
-
-.divider {
-  height: 0.05rem;
-  margin: 0.4rem 0;
-  border-top: 0.05rem solid #e7e9ed;
-}
-
-.divider[data-content] {
-  margin: 0.8rem 0;
-}
-
-.divider-vert {
-  display: block;
-  padding: 0.8rem;
-}
-
-.divider-vert::before {
-  position: absolute;
-  top: 0.4rem;
-  bottom: 0.4rem;
-  left: 50%;
-  display: block;
-  content: " ";
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-  border-left: 0.05rem solid #e7e9ed;
-}
-
-.divider-vert[data-content]::after {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  padding: 0.2rem 0;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-/**
- * @file
- * Spectre Loading
- *
- * Loading indicator is used for loading or updating. Also, you can add the
- * loading class to buttons for loading status.Loading indicator is used for
- * loading or updating. Also, you can add the loading class to buttons for
- * loading status.
- *
- * Add the loading-lg class for large size.
- *
- * @see https://picturepan2.github.io/spectre/utilities.html#loading
- */
-.loading {
-  position: relative;
-  min-height: 0.8rem;
-  pointer-events: none;
-  color: transparent !important;
-}
-
-.loading::after {
-  position: absolute;
-  z-index: 1;
-  top: 50%;
-  left: 50%;
-  display: block;
-  width: 0.8rem;
-  height: 0.8rem;
-  margin-top: -0.4rem;
-  margin-left: -0.4rem;
-  content: "";
-  animation: loading 500ms infinite linear;
-  border: 0.1rem solid #5755d9;
-  border-top-color: transparent;
-  border-right-color: transparent;
-  border-radius: 50%;
-}
-
-.loading.loading-lg {
-  min-height: 2rem;
-}
-
-.loading.loading-lg::after {
-  width: 1.6rem;
-  height: 1.6rem;
-  margin-top: -0.8rem;
-  margin-left: -0.8rem;
-}
-
-/**
- * @file
- * Spectre Position utilities
- *
- * Position utilities are used for useful layout and position things,
- * including clearfix, float, position and margin/padding utilities.
- *
- * @see https://picturepan2.github.io/spectre/utilities.html#position
- */
-.clearfix::before {
-  display: table;
-  content: "";
-}
-
-.clearfix::after {
-  display: table;
-  clear: both;
-  content: "";
-}
-
-.float-left {
-  float: left !important;
-}
-
-.float-right {
-  float: right !important;
-}
-
-.relative {
-  position: relative;
-}
-
-.absolute {
-  position: absolute;
-}
-
-.fixed {
-  position: fixed;
-}
-
-.centered {
-  display: block;
-  float: none;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.flex-centered {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.m-0 {
-  margin: 0;
-}
-
-.mb-0 {
-  margin-bottom: 0;
-}
-
-.ml-0 {
-  margin-left: 0;
-}
-
-.mr-0 {
-  margin-right: 0;
-}
-
-.mt-0 {
-  margin-top: 0;
-}
-
-.mx-0 {
-  margin-right: 0;
-  margin-left: 0;
-}
-
-.my-0 {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.m-1 {
-  margin: 0.2rem;
-}
-
-.mb-1 {
-  margin-bottom: 0.2rem;
-}
-
-.ml-1 {
-  margin-left: 0.2rem;
-}
-
-.mr-1 {
-  margin-right: 0.2rem;
-}
-
-.mt-1 {
-  margin-top: 0.2rem;
-}
-
-.mx-1 {
-  margin-right: 0.2rem;
-  margin-left: 0.2rem;
-}
-
-.my-1 {
-  margin-top: 0.2rem;
-  margin-bottom: 0.2rem;
-}
-
-.m-2 {
-  margin: 0.4rem;
-}
-
-.mb-2 {
-  margin-bottom: 0.4rem;
-}
-
-.ml-2 {
-  margin-left: 0.4rem;
-}
-
-.mr-2 {
-  margin-right: 0.4rem;
-}
-
-.mt-2 {
-  margin-top: 0.4rem;
-}
-
-.mx-2 {
-  margin-right: 0.4rem;
-  margin-left: 0.4rem;
-}
-
-.my-2 {
-  margin-top: 0.4rem;
-  margin-bottom: 0.4rem;
-}
-
-.p-0 {
-  padding: 0;
-}
-
-.pb-0 {
-  padding-bottom: 0;
-}
-
-.pl-0 {
-  padding-left: 0;
-}
-
-.pr-0 {
-  padding-right: 0;
-}
-
-.pt-0 {
-  padding-top: 0;
-}
-
-.px-0 {
-  padding-right: 0;
-  padding-left: 0;
-}
-
-.py-0 {
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
-.p-1 {
-  padding: 0.2rem;
-}
-
-.pb-1 {
-  padding-bottom: 0.2rem;
-}
-
-.pl-1 {
-  padding-left: 0.2rem;
-}
-
-.pr-1 {
-  padding-right: 0.2rem;
-}
-
-.pt-1 {
-  padding-top: 0.2rem;
-}
-
-.px-1 {
-  padding-right: 0.2rem;
-  padding-left: 0.2rem;
-}
-
-.py-1 {
-  padding-top: 0.2rem;
-  padding-bottom: 0.2rem;
-}
-
-.p-2 {
-  padding: 0.4rem;
-}
-
-.pb-2 {
-  padding-bottom: 0.4rem;
-}
-
-.pl-2 {
-  padding-left: 0.4rem;
-}
-
-.pr-2 {
-  padding-right: 0.4rem;
-}
-
-.pt-2 {
-  padding-top: 0.4rem;
-}
-
-.px-2 {
-  padding-right: 0.4rem;
-  padding-left: 0.4rem;
-}
-
-.py-2 {
-  padding-top: 0.4rem;
-  padding-bottom: 0.4rem;
-}
-
-/**
- * @file
- * Spectre Shape utilities
- *
- * Shape utilities are used for change element shapes.
- *
- * @see https://picturepan2.github.io/spectre/utilities.html#shapes
- */
-.rounded {
-  border-radius: 0.1rem;
-}
-
-.circle {
-  border-radius: 50%;
-}
-
-/**
- * @file
- * Spectre Text utilities
- *
- * Text utilities are used for text alignment, styles and overflow things.
- *
- * @see https://picturepan2.github.io/spectre/utilities.html#text
- */
-.text-left {
-  text-align: left;
-}
-
-.text-right {
-  text-align: right;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.text-justify {
-  text-align: justify;
-}
-
-.text-lowercase {
-  text-transform: lowercase;
-}
-
-.text-uppercase {
-  text-transform: uppercase;
-}
-
-.text-capitalize {
-  text-transform: capitalize;
-}
-
-.text-normal {
-  font-weight: normal;
-}
-
-.text-bold {
-  font-weight: bold;
-}
-
-.text-italic {
-  font-style: italic;
-}
-
-.text-large {
-  font-size: 1.2em;
-}
-
-.text-ellipsis {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-.text-clip {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: clip;
-}
-
-.text-break {
-  word-wrap: break-word;
-  word-break: break-word;
-  -webkit-hyphens: auto;
-  hyphens: auto;
-
-  -ms-hyphens: auto;
-}
-
-/**
- * @file
  * Drupal's Collapsible fieldset
  *
  * Fieldsets with optional entry fields can be hidden with collapsed fieldsets.
@@ -819,7 +128,7 @@ a.text-error:hover {
 .collapsible .fieldset-legend {
   display: block;
   padding-left: 15px;
-  background-image: url(../sass/forms/collapsible-fieldset/expanded.svg);
+  background-image: image-url("forms", "collapsible-fieldset/expanded.svg");
   background-repeat: no-repeat;
   background-position: 4px 50%;
 }
@@ -855,7 +164,7 @@ a.text-error:hover {
 .collapsible-fieldset.is-collapsed .collapsible .fieldset-legend,
 .collapsible .collapsible-fieldset.is-collapsed .fieldset-legend,
 .is-collapsed.collapsible .fieldset-legend {
-  background-image: url(../sass/forms/collapsible-fieldset/collapsed.svg);
+  background-image: image-url("forms", "collapsible-fieldset/collapsed.svg");
   background-position: 4px 50%;
 }
 
@@ -1445,7 +754,7 @@ tr.drag-previous {
   height: 13px;
   margin: -0.4em 0.5em;
   padding: 0.42em 0.5em;
-  background: url(../sass/forms/table-drag/handle-icon.png) no-repeat 6px 9px;
+  background: image-url("forms", "table-drag/handle-icon.png") no-repeat 6px 9px;
 }
 
 .table-drag__handle.is-hover .table-drag__handle-icon,
@@ -1483,12 +792,12 @@ tr.drag-previous {
 .table-drag__tree-child-horizontal,
 .tree-child-horizontal,
 .tree-child {
-  background: url(../sass/forms/table-drag/tree-child.png) no-repeat 11px center;
+  background: image-url("forms", "table-drag/tree-child.png") no-repeat 11px center;
 }
 
 .table-drag__tree-child-last,
 .tree-child-last {
-  background-image: url(../sass/forms/table-drag/tree-child-last.png);
+  background-image: image-url("forms", "table-drag/tree-child-last.png");
 }
 
 .table-drag__tree-child-horizontal,
@@ -1633,7 +942,7 @@ header.header .region-header-mobile li {
   line-height: 19px;
 }
 
-#header.container {
+#header {
   float: left;
   width: 180px;
   margin: 0;
@@ -1715,70 +1024,71 @@ header.header .region-header-mobile li {
 }
 
 .main {
-  float: left;
-  width: 70%;
+  width: 100%;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (min-width: 700px) {
   .main {
-    width: 100%;
+    float: left;
+    width: 70%;
   }
 }
 
 .main .main-content {
-  min-height: 480px;
+  min-height: auto;
   background-color: #eee;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (min-width: 700px) {
   .main .main-content {
-    min-height: auto;
+    min-height: 480px;
   }
 }
 
 .main .field,
 .main .block-contact-form-blocks {
-  width: 95%;
+  width: 100%;
   margin: auto;
   padding: 0 3px;
-  font-size: 14px;
+  font-size: 0.7rem;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (min-width: 700px) {
   .main .field,
   .main .block-contact-form-blocks {
-    width: 100%;
+    width: 95%;
   }
 }
 
 .main table,
 .main h1 {
-  width: 95%;
+  width: 100%;
   margin: auto;
   padding: 30px 3px 15px;
-  font-size: 25px;
+  font-size: 1.1rem;
   font-weight: bold;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (min-width: 700px) {
   .main table,
   .main h1 {
-    width: 100%;
-    font-size: 22px;
+    width: 95%;
+    font-size: 1.25rem;
   }
 }
 
 .main td {
-  width: 50%;
+  float: left;
+  width: 100%;
   padding: 6px 3px;
   vertical-align: top;
   border-bottom: 0;
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (min-width: 360px) {
   .main td {
-    float: left;
-    width: 100%;
+    float: none;
+    width: 50%;
   }
 }
 
@@ -1791,15 +1101,15 @@ header.header .region-header-mobile li {
   padding: 15px 5px 0;
   text-align: center;
   background-color: white;
-  font-size: 13px;
+  font-size: 0.6rem;
   font-weight: bold;
-  line-height: 13px;
+  line-height: 0.6rem;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (min-width: 400px) {
   .main td h3 {
-    font-size: 12px;
-    line-height: 12px;
+    font-size: 0.65rem;
+    line-height: 0.65rem;
   }
 }
 
@@ -1849,7 +1159,7 @@ header.header .region-header-mobile li {
   width: 100%;
   border: solid 1px #ddd;
   box-shadow: none;
-  font-size: 12px;
+  font-size: 0.6rem;
 }
 
 #contact-site-form .form-text:focus,
@@ -1865,20 +1175,20 @@ header.header .region-header-mobile li {
   border: 0;
   border-radius: 0;
   background-color: black;
-  font-size: 12px;
+  font-size: 0.6rem;
 }
 
 .region-sidebar {
-  float: left;
-  width: 30%;
-  background: url(../images/background.png) no-repeat right top;
+  width: 100%;
+  margin-bottom: 35px;
+  background-image: none;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (min-width: 700px) {
   .region-sidebar {
-    width: 100%;
-    margin-bottom: 35px;
-    background-image: none;
+    float: left;
+    width: 30%;
+    background: url(../images/background.png) no-repeat right top;
   }
 }
 
@@ -1890,12 +1200,12 @@ header.header .region-header-mobile li {
 }
 
 .region-sidebar .block {
-  padding-bottom: 40px;
+  padding-bottom: 5px;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (min-width: 700px) {
   .region-sidebar .block {
-    padding-bottom: 5px;
+    padding-bottom: 40px;
   }
 }
 
@@ -1925,16 +1235,16 @@ header.header .region-header-mobile li {
   color: white;
 }
 
-.region-sidebar #block-nodeblock-2 p {
+#block-nodeblock-2 p {
   padding: 0;
 }
 
-.region-sidebar #block-nodeblock-2 p a {
+#block-nodeblock-2 p a {
   text-decoration: none;
   color: #a29b00;
 }
 
-.region-sidebar #block-nodeblock-2 .field-item {
+#block-nodeblock-2 .field-item {
   padding: 7px 0 10px 0;
 }
 
@@ -2505,37 +1815,6 @@ span.field-label + * > :first-child > :first-child {
   box-shadow: none;
 }
 
-#mobile-menu #block-system-main-menu {
-  width: 40%;
-  text-align: right;
-  color: #eee;
-  font-size: 0.7rem;
-}
-
-@media screen and (max-width: 400px) {
-  #mobile-menu #block-system-main-menu {
-    font-size: 0.6rem;
-  }
-}
-
-#mobile-menu #block-menu-menu-product-menu {
-  width: 60%;
-  text-transform: uppercase;
-  color: white;
-  font-size: 0.7rem;
-  font-weight: bold;
-}
-
-@media screen and (max-width: 400px) {
-  #mobile-menu #block-menu-menu-product-menu {
-    font-size: 0.6rem;
-  }
-}
-
-#mobile-menu #block-menu-menu-product-menu .menu a {
-  padding-bottom: 10px;
-}
-
 #mobile-menu .cta-button i::before {
   display: inline-block;
   width: 23px;
@@ -2576,6 +1855,37 @@ span.field-label + * > :first-child > :first-child {
   line-height: 0.75rem;
 }
 
+#block-system-main-menu {
+  width: 40%;
+  text-align: right;
+  color: #eee;
+  font-size: 0.6rem;
+}
+
+@media screen and (min-width: 400px) {
+  #block-system-main-menu {
+    font-size: 0.7rem;
+  }
+}
+
+#block-menu-menu-product-menu {
+  width: 60%;
+  text-transform: uppercase;
+  color: white;
+  font-size: 0.6rem;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 400px) {
+  #block-menu-menu-product-menu {
+    font-size: 0.7rem;
+  }
+}
+
+#block-menu-menu-product-menu .menu a {
+  padding-bottom: 10px;
+}
+
 /**
  * @file
  * Zen's "More" link
@@ -2590,7 +1900,7 @@ span.field-label + * > :first-child > :first-child {
 .more-link__help-icon,
 .more-help-link a {
   padding: 1px 0 1px 20px;
-  background-image: url(../sass/navigation/more-link/more-link__help-icon.svg);
+  background-image: image-url("navigation", "more-link/more-link__help-icon.svg");
   background-repeat: no-repeat;
   background-position: 0 50%;
 }
@@ -2727,7 +2037,7 @@ span.field-label + * > :first-child > :first-child {
   width: 15px;
   height: 15px;
   margin: 2px;
-  background: url(../sass/forms/progress-throbber/progress-throbber.gif) no-repeat 0 -18px transparent;
+  background: image-url("forms", "progress-throbber/progress-throbber.gif") no-repeat 0 -18px transparent;
 }
 
 .progress-throbber__widget-in-tr,
@@ -3076,94 +2386,6 @@ tr .ajax-progress .throbber {
   text-overflow: ellipsis;
 }
 
-/**
- * @file
- * Spectre Tooltips
- *
- * And you can add the toast-primary, toast-success, toast-warning or
- * toast-error class for additional toast colors.
- *
- * @see https://picturepan2.github.io/spectre/components.html#tooltips
- */
-.tooltip {
-  position: relative;
-}
-
-.tooltip::after {
-  position: absolute;
-  z-index: 300;
-  bottom: 100%;
-  left: 50%;
-  display: block;
-  overflow: hidden;
-  max-width: 320px;
-  padding: 0.2rem 0.4rem;
-  content: attr(data-tooltip);
-  transition: all 0.2s ease;
-  -ms-transform: translate(-50%, 0.4rem);
-  transform: translate(-50%, 0.4rem);
-  white-space: pre;
-  text-overflow: ellipsis;
-  pointer-events: none;
-  opacity: 0;
-  color: #fff;
-  border-radius: 0.1rem;
-  background: rgba(69, 77, 93, 0.9);
-  font-size: 0.7rem;
-}
-
-.tooltip:focus::after,
-.tooltip:hover::after {
-  -ms-transform: translate(-50%, -0.2rem);
-  transform: translate(-50%, -0.2rem);
-  opacity: 1;
-}
-
-.tooltip[disabled],
-.tooltip.disabled {
-  pointer-events: auto;
-}
-
-.tooltip.tooltip-right::after {
-  bottom: 50%;
-  left: 100%;
-  -ms-transform: translate(-0.2rem, 50%);
-  transform: translate(-0.2rem, 50%);
-}
-
-.tooltip.tooltip-right:focus::after,
-.tooltip.tooltip-right:hover::after {
-  -ms-transform: translate(0.2rem, 50%);
-  transform: translate(0.2rem, 50%);
-}
-
-.tooltip.tooltip-bottom::after {
-  top: 100%;
-  bottom: auto;
-  -ms-transform: translate(-50%, -0.4rem);
-  transform: translate(-50%, -0.4rem);
-}
-
-.tooltip.tooltip-bottom:focus::after,
-.tooltip.tooltip-bottom:hover::after {
-  -ms-transform: translate(-50%, 0.2rem);
-  transform: translate(-50%, 0.2rem);
-}
-
-.tooltip.tooltip-left::after {
-  right: 100%;
-  bottom: 50%;
-  left: auto;
-  -ms-transform: translate(0.4rem, 50%);
-  transform: translate(0.4rem, 50%);
-}
-
-.tooltip.tooltip-left:focus::after,
-.tooltip.tooltip-left:hover::after {
-  -ms-transform: translate(-0.2rem, 50%);
-  transform: translate(-0.2rem, 50%);
-}
-
 .views-slideshow-cycle-processed {
   position: relative;
 }
@@ -3242,671 +2464,6 @@ tr .ajax-progress .throbber {
 
 .views-slideshow-cycle-processed .views-slideshow-pager-field-item.active a {
   color: #fff200;
-}
-
-/**
- * @file
- * Spectre Icons
- *
- * Icons are single-element, responsive and pure CSS icons. You can include
- * spectre-icons.css located in the dist folder to your web <head> to have
- * these CSS icons.
- *
- * @see https://picturepan2.github.io/spectre/elements.html#icons
- */
-.icon {
-  position: relative;
-  display: inline-block;
-  box-sizing: border-box;
-  width: 1em;
-  height: 1em;
-  vertical-align: middle;
-  text-indent: -9999px;
-  font-size: inherit;
-  font-style: normal;
-}
-
-.icon::before,
-.icon::after {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  display: block;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-.icon.icon-2x {
-  font-size: 1.6rem;
-}
-
-.icon.icon-3x {
-  font-size: 2.4rem;
-}
-
-.icon.icon-4x {
-  font-size: 3.2rem;
-}
-
-.accordion .icon,
-.btn .icon,
-.toast .icon,
-.menu .icon {
-  vertical-align: -10%;
-}
-
-.btn-lg .icon {
-  vertical-align: -15%;
-}
-
-.icon-arrow-down::before,
-.icon-arrow-left::before,
-.icon-arrow-right::before,
-.icon-arrow-up::before,
-.icon-downward::before,
-.icon-back::before,
-.icon-forward::before,
-.icon-upward::before {
-  width: 0.65em;
-  height: 0.65em;
-  content: "";
-  border: 0.1rem solid currentColor;
-  border-right: 0;
-  border-bottom: 0;
-}
-
-.icon-arrow-down::before {
-  -ms-transform: translate(-50%, -75%) rotate(225deg);
-  transform: translate(-50%, -75%) rotate(225deg);
-}
-
-.icon-arrow-left::before {
-  -ms-transform: translate(-25%, -50%) rotate(-45deg);
-  transform: translate(-25%, -50%) rotate(-45deg);
-}
-
-.icon-arrow-right::before {
-  -ms-transform: translate(-75%, -50%) rotate(135deg);
-  transform: translate(-75%, -50%) rotate(135deg);
-}
-
-.icon-arrow-up::before {
-  -ms-transform: translate(-50%, -25%) rotate(45deg);
-  transform: translate(-50%, -25%) rotate(45deg);
-}
-
-.icon-back::after,
-.icon-forward::after {
-  width: 0.8em;
-  height: 0.1rem;
-  content: "";
-  background: currentColor;
-}
-
-.icon-downward::after,
-.icon-upward::after {
-  width: 0.1rem;
-  height: 0.8em;
-  content: "";
-  background: currentColor;
-}
-
-.icon-back::after {
-  left: 55%;
-}
-
-.icon-back::before {
-  -ms-transform: translate(-50%, -50%) rotate(-45deg);
-  transform: translate(-50%, -50%) rotate(-45deg);
-}
-
-.icon-downward::after {
-  top: 45%;
-}
-
-.icon-downward::before {
-  -ms-transform: translate(-50%, -50%) rotate(-135deg);
-  transform: translate(-50%, -50%) rotate(-135deg);
-}
-
-.icon-forward::after {
-  left: 45%;
-}
-
-.icon-forward::before {
-  -ms-transform: translate(-50%, -50%) rotate(135deg);
-  transform: translate(-50%, -50%) rotate(135deg);
-}
-
-.icon-upward::after {
-  top: 55%;
-}
-
-.icon-upward::before {
-  -ms-transform: translate(-50%, -50%) rotate(45deg);
-  transform: translate(-50%, -50%) rotate(45deg);
-}
-
-.icon-caret::before {
-  width: 0;
-  height: 0;
-  content: "";
-  -ms-transform: translate(-50%, -25%);
-  transform: translate(-50%, -25%);
-  border-top: 0.3em solid currentColor;
-  border-right: 0.3em solid transparent;
-  border-left: 0.3em solid transparent;
-}
-
-.icon-menu::before {
-  width: 100%;
-  height: 0.1rem;
-  content: "";
-  background: currentColor;
-  box-shadow: 0 -0.35em, 0 0.35em;
-}
-
-.icon-apps::before {
-  width: 3px;
-  height: 3px;
-  content: "";
-  background: currentColor;
-  box-shadow: -0.35em -0.35em, -0.35em 0, -0.35em 0.35em, 0 -0.35em, 0 0.35em, 0.35em -0.35em, 0.35em 0, 0.35em 0.35em;
-}
-
-.icon-resize-horiz::before,
-.icon-resize-horiz::after,
-.icon-resize-vert::before,
-.icon-resize-vert::after {
-  width: 0.45em;
-  height: 0.45em;
-  content: " ";
-  border: 0.1rem solid currentColor;
-  border-right: 0;
-  border-bottom: 0;
-}
-
-.icon-resize-horiz::before,
-.icon-resize-vert::before {
-  -ms-transform: translate(-50%, -90%) rotate(45deg);
-  transform: translate(-50%, -90%) rotate(45deg);
-}
-
-.icon-resize-horiz::after,
-.icon-resize-vert::after {
-  -ms-transform: translate(-50%, -10%) rotate(225deg);
-  transform: translate(-50%, -10%) rotate(225deg);
-}
-
-.icon-resize-horiz::before {
-  -ms-transform: translate(-90%, -50%) rotate(-45deg);
-  transform: translate(-90%, -50%) rotate(-45deg);
-}
-
-.icon-resize-horiz::after {
-  -ms-transform: translate(-10%, -50%) rotate(135deg);
-  transform: translate(-10%, -50%) rotate(135deg);
-}
-
-.icon-more-horiz::before,
-.icon-more-vert::before {
-  width: 3px;
-  height: 3px;
-  content: " ";
-  border-radius: 50%;
-  background: currentColor;
-  box-shadow: -0.4em 0, 0.4em 0;
-}
-
-.icon-more-vert::before {
-  box-shadow: 0 -0.4em, 0 0.4em;
-}
-
-.icon-plus::before,
-.icon-minus::before,
-.icon-cross::before {
-  width: 100%;
-  height: 0.1rem;
-  content: " ";
-  background: currentColor;
-}
-
-.icon-plus::after,
-.icon-cross::after {
-  width: 0.1rem;
-  height: 100%;
-  content: " ";
-  background: currentColor;
-}
-
-.icon-cross::before {
-  width: 100%;
-}
-
-.icon-cross::after {
-  height: 100%;
-}
-
-.icon-cross::before,
-.icon-cross::after {
-  -ms-transform: translate(-50%, -50%) rotate(45deg);
-  transform: translate(-50%, -50%) rotate(45deg);
-}
-
-.icon-check::before {
-  width: 0.9em;
-  height: 0.5em;
-  content: " ";
-  -ms-transform: translate(-50%, -75%) rotate(-45deg);
-  transform: translate(-50%, -75%) rotate(-45deg);
-  border: 0.1rem solid currentColor;
-  border-top: 0;
-  border-right: 0;
-}
-
-.icon-stop {
-  border: 0.1rem solid currentColor;
-  border-radius: 50%;
-}
-
-.icon-stop::before {
-  width: 1em;
-  height: 0.1rem;
-  content: " ";
-  -ms-transform: translate(-50%, -50%) rotate(45deg);
-  transform: translate(-50%, -50%) rotate(45deg);
-  background: currentColor;
-}
-
-.icon-shutdown {
-  border: 0.1rem solid currentColor;
-  border-top-color: transparent;
-  border-radius: 50%;
-}
-
-.icon-shutdown::before {
-  top: 0.1em;
-  width: 0.1rem;
-  height: 0.5em;
-  content: " ";
-  background: currentColor;
-}
-
-.icon-refresh::before {
-  width: 1em;
-  height: 1em;
-  content: " ";
-  border: 0.1rem solid currentColor;
-  border-right-color: transparent;
-  border-radius: 50%;
-}
-
-.icon-refresh::after {
-  top: 20%;
-  left: 80%;
-  width: 0;
-  height: 0;
-  content: " ";
-  border: 0.2em solid currentColor;
-  border-top-color: transparent;
-  border-left-color: transparent;
-}
-
-.icon-search::before {
-  top: 5%;
-  left: 5%;
-  width: 0.75em;
-  height: 0.75em;
-  content: " ";
-  -ms-transform: translate(0, 0) rotate(45deg);
-  transform: translate(0, 0) rotate(45deg);
-  border: 0.1rem solid currentColor;
-  border-radius: 50%;
-}
-
-.icon-search::after {
-  top: 80%;
-  left: 80%;
-  width: 0.4em;
-  height: 0.1rem;
-  content: " ";
-  -ms-transform: translate(-50%, -50%) rotate(45deg);
-  transform: translate(-50%, -50%) rotate(45deg);
-  background: currentColor;
-}
-
-.icon-edit::before {
-  width: 0.85em;
-  height: 0.4em;
-  content: " ";
-  -ms-transform: translate(-40%, -60%) rotate(-45deg);
-  transform: translate(-40%, -60%) rotate(-45deg);
-  border: 0.1rem solid currentColor;
-}
-
-.icon-edit::after {
-  top: 95%;
-  left: 5%;
-  width: 0;
-  height: 0;
-  content: " ";
-  -ms-transform: translate(0, -100%);
-  transform: translate(0, -100%);
-  border: 0.15em solid currentColor;
-  border-top-color: transparent;
-  border-right-color: transparent;
-}
-
-.icon-delete::before {
-  top: 60%;
-  width: 0.75em;
-  height: 0.75em;
-  content: " ";
-  border: 0.1rem solid currentColor;
-  border-top: 0;
-  border-bottom-right-radius: 0.1rem;
-  border-bottom-left-radius: 0.1rem;
-}
-
-.icon-delete::after {
-  top: 0.05rem;
-  width: 0.5em;
-  height: 0.1rem;
-  content: " ";
-  background: currentColor;
-  box-shadow: -0.25em 0.2em, 0.25em 0.2em;
-}
-
-.icon-share {
-  border: 0.1rem solid currentColor;
-  border-top: 0;
-  border-right: 0;
-  border-radius: 0.1rem;
-}
-
-.icon-share::before {
-  top: 0.25em;
-  left: 100%;
-  width: 0.4em;
-  height: 0.4em;
-  content: " ";
-  -ms-transform: translate(-125%, -50%) rotate(-45deg);
-  transform: translate(-125%, -50%) rotate(-45deg);
-  border: 0.1rem solid currentColor;
-  border-top: 0;
-  border-left: 0;
-}
-
-.icon-share::after {
-  width: 0.6em;
-  height: 0.5em;
-  content: " ";
-  border: 0.1rem solid currentColor;
-  border-right: 0;
-  border-bottom: 0;
-  border-radius: 75% 0;
-}
-
-.icon-flag::before {
-  left: 15%;
-  width: 0.1rem;
-  height: 1em;
-  content: " ";
-  background: currentColor;
-}
-
-.icon-flag::after {
-  top: 35%;
-  left: 60%;
-  width: 0.8em;
-  height: 0.65em;
-  content: " ";
-  border: 0.1rem solid currentColor;
-  border-left: 0;
-  border-top-right-radius: 0.1rem;
-  border-bottom-right-radius: 0.1rem;
-}
-
-.icon-bookmark::before {
-  width: 0.8em;
-  height: 0.9em;
-  content: " ";
-  border: 0.1rem solid currentColor;
-  border-bottom: 0;
-  border-top-left-radius: 0.1rem;
-  border-top-right-radius: 0.1rem;
-}
-
-.icon-bookmark::after {
-  width: 0.5em;
-  height: 0.5em;
-  content: " ";
-  -ms-transform: translate(-50%, 35%) rotate(-45deg) skew(15deg, 15deg);
-  transform: translate(-50%, 35%) rotate(-45deg) skew(15deg, 15deg);
-  border: 0.1rem solid currentColor;
-  border-bottom: 0;
-  border-left: 0;
-  border-radius: 0.1rem;
-}
-
-.icon-download,
-.icon-upload {
-  border-bottom: 0.1rem solid currentColor;
-}
-
-.icon-download::before,
-.icon-upload::before {
-  width: 0.5em;
-  height: 0.5em;
-  content: " ";
-  -ms-transform: translate(-50%, -60%) rotate(-135deg);
-  transform: translate(-50%, -60%) rotate(-135deg);
-  border: 0.1rem solid currentColor;
-  border-right: 0;
-  border-bottom: 0;
-}
-
-.icon-download::after,
-.icon-upload::after {
-  top: 40%;
-  width: 0.1rem;
-  height: 0.6em;
-  content: " ";
-  background: currentColor;
-}
-
-.icon-upload::before {
-  -ms-transform: translate(-50%, -60%) rotate(45deg);
-  transform: translate(-50%, -60%) rotate(45deg);
-}
-
-.icon-upload::after {
-  top: 50%;
-}
-
-.icon-time {
-  border: 0.1rem solid currentColor;
-  border-radius: 50%;
-}
-
-.icon-time::before {
-  width: 0.1rem;
-  height: 0.4em;
-  content: "";
-  -ms-transform: translate(-50%, -75%);
-  transform: translate(-50%, -75%);
-  background: currentColor;
-}
-
-.icon-time::after {
-  width: 0.1rem;
-  height: 0.3em;
-  content: "";
-  -ms-transform: translate(-50%, -75%) rotate(90deg);
-  transform: translate(-50%, -75%) rotate(90deg);
-  -ms-transform-origin: 50% 90%;
-  transform-origin: 50% 90%;
-  background: currentColor;
-}
-
-.icon-mail::before {
-  width: 1em;
-  height: 0.8em;
-  content: "";
-  border: 0.1rem solid currentColor;
-  border-radius: 0.1rem;
-}
-
-.icon-mail::after {
-  width: 0.5em;
-  height: 0.5em;
-  content: "";
-  -ms-transform: translate(-50%, -90%) rotate(-45deg) skew(10deg, 10deg);
-  transform: translate(-50%, -90%) rotate(-45deg) skew(10deg, 10deg);
-  border: 0.1rem solid currentColor;
-  border-top: 0;
-  border-right: 0;
-}
-
-.icon-people::before {
-  top: 25%;
-  width: 0.45em;
-  height: 0.45em;
-  content: "";
-  border: 0.1rem solid currentColor;
-  border-radius: 50%;
-}
-
-.icon-people::after {
-  top: 75%;
-  width: 0.9em;
-  height: 0.4em;
-  content: "";
-  border: 0.1rem solid currentColor;
-  border-radius: 50% 50% 0 0;
-}
-
-.icon-message {
-  border: 0.1rem solid currentColor;
-  border-right: 0;
-  border-bottom: 0;
-  border-radius: 0.1rem;
-}
-
-.icon-message::before {
-  top: 40%;
-  left: 65%;
-  width: 0.7em;
-  height: 0.8em;
-  content: "";
-  border: 0.1rem solid currentColor;
-  border-top: 0;
-  border-left: 0;
-  border-bottom-right-radius: 0.1rem;
-}
-
-.icon-message::after {
-  top: 100%;
-  left: 10%;
-  width: 0.1rem;
-  height: 0.3em;
-  content: "";
-  -ms-transform: translate(0, -90%) rotate(45deg);
-  transform: translate(0, -90%) rotate(45deg);
-  border-radius: 0.1rem;
-  background: currentColor;
-}
-
-.icon-photo {
-  border: 0.1rem solid currentColor;
-  border-radius: 0.1rem;
-}
-
-.icon-photo::before {
-  top: 35%;
-  left: 35%;
-  width: 0.25em;
-  height: 0.25em;
-  content: "";
-  border: 0.1rem solid currentColor;
-  border-radius: 50%;
-}
-
-.icon-photo::after {
-  left: 60%;
-  width: 0.5em;
-  height: 0.5em;
-  content: "";
-  -ms-transform: translate(-50%, 25%) rotate(-45deg);
-  transform: translate(-50%, 25%) rotate(-45deg);
-  border: 0.1rem solid currentColor;
-  border-bottom: 0;
-  border-left: 0;
-}
-
-.icon-link::before,
-.icon-link::after {
-  width: 0.75em;
-  height: 0.5em;
-  content: "";
-  border: 0.1rem solid currentColor;
-  border-right: 0;
-  border-radius: 5em 0 0 5em;
-}
-
-.icon-link::before {
-  -ms-transform: translate(-70%, -45%) rotate(-45deg);
-  transform: translate(-70%, -45%) rotate(-45deg);
-}
-
-.icon-link::after {
-  -ms-transform: translate(-30%, -55%) rotate(135deg);
-  transform: translate(-30%, -55%) rotate(135deg);
-}
-
-.icon-location::before {
-  width: 0.8em;
-  height: 0.8em;
-  content: "";
-  -ms-transform: translate(-50%, -60%) rotate(-45deg);
-  transform: translate(-50%, -60%) rotate(-45deg);
-  border: 0.1rem solid currentColor;
-  border-radius: 50% 50% 50% 0;
-}
-
-.icon-location::after {
-  width: 0.2em;
-  height: 0.2em;
-  content: "";
-  -ms-transform: translate(-50%, -80%);
-  transform: translate(-50%, -80%);
-  border: 0.1rem solid currentColor;
-  border-radius: 50%;
-}
-
-.icon-emoji {
-  border: 0.1rem solid currentColor;
-  border-radius: 50%;
-}
-
-.icon-emoji::before {
-  width: 0.1em;
-  height: 0.1em;
-  content: "";
-  border-radius: 50%;
-  box-shadow: -0.17em -0.15em, 0.17em -0.15em;
-}
-
-.icon-emoji::after {
-  width: 0.5em;
-  height: 0.5em;
-  content: "";
-  -ms-transform: translate(-50%, -40%) rotate(-135deg);
-  transform: translate(-50%, -40%) rotate(-135deg);
-  border: 0.1rem solid currentColor;
-  border-right-color: transparent;
-  border-bottom-color: transparent;
-  border-radius: 50%;
 }
 
 /*# sourceMappingURL=kovotech_mobile.components.css.map */

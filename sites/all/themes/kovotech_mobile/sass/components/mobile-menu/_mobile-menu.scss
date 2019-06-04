@@ -17,28 +17,6 @@
       box-shadow: none;
     }
   }
-  #block-system-main-menu{
-    text-align: right;
-    color: #eee;
-    font-size: 0.7rem;
-    width: 40%;
-    @include media-w($size-sm){
-      font-size: 0.6rem;
-    }
-  }
-  #block-menu-menu-product-menu{
-    text-transform: uppercase;
-    color: white;
-    font-weight: bold;
-    font-size: 0.7rem;
-    width: 60%;
-    @include media-w($size-sm){
-      font-size: 0.6rem;
-    }
-    .menu a{
-      padding-bottom: 10px;
-    }
-  }
   .cta-button{
     i::before {
       display: inline-block;
@@ -73,5 +51,27 @@
       font-weight: bold;
       line-height: 0.75rem;
     }
+  }
+}
+#block-system-main-menu{
+  text-align: right;
+  color: #eee;
+  font-size: 0.6rem;
+  width: 40%;
+  @include media-w($size-sm){
+    font-size: 0.7rem;
+  }
+}
+#block-menu-menu-product-menu{
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
+  font-size: 0.6rem;
+  width: 60%;
+  @include media-w($size-sm){
+    font-size: 0.7rem;
+  }
+  .menu a{
+    padding-bottom: 10px;
   }
 }
