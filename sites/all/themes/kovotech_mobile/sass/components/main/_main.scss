@@ -80,6 +80,9 @@
     min-height: auto;
     padding: 0;
     background-color: transparent;
+    @include media-w($size-md){
+      padding-bottom: 30px;
+    }
     .column{
       padding: 0;
     }

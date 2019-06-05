@@ -894,6 +894,12 @@ header.header .region-header-mobile li {
   background-color: transparent;
 }
 
+@media screen and (min-width: 700px) {
+  .front .main-content {
+    padding-bottom: 30px;
+  }
+}
+
 .front .main-content .column {
   padding: 0;
 }
