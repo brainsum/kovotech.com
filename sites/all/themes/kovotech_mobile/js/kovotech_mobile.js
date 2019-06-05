@@ -15,9 +15,11 @@
   Drupal.behaviors.hamburger = {
     attach: function () {
       $('#mobile-menu').hide();
-      $('#hamburger').click(function () {
-          $('#mobile-menu').slideToggle();
-          $(this).toggleClass('open');
+      $('#hamburger').once('mymenu', function () {
+          $('#hamburger').click(function () {
+              $('#mobile-menu').slideToggle();
+              $(this).toggleClass('open');
+          });
       });
     }
   };
