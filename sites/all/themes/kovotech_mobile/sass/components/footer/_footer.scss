@@ -1,8 +1,19 @@
+.page-wrap{
+  min-height: 100%;
+  margin-bottom: -74px;
+}
+
+.page-wrap:after{
+  content: " ";
+  display: block;
+  height: 74px;
+}
+
 footer{
   background-color: $kov-color;
   font-size: 0.6rem;
   line-height: 0.55rem;
-  padding: 30px 30px 20px 30px;
+  padding: 20px;
   clear: both;
   .block{
     padding: 0;
@@ -13,10 +24,19 @@ footer{
   a, a:hover{
     color: black;
   }
-  .madeby p::before{
-    content: url(../images/brainsum-logo.png);
-    vertical-align: middle;
-    padding-right: 5px;
+  .copyright p{
+    padding-top: 12px;
+  }
+  .madeby{
+    text-align: right;
+    a{
+      text-align: left;
+    }
+    p::before{
+      content: url(../images/brainsum-logo.png);
+      vertical-align: middle;
+      padding-right: 5px;
+    }
   }
   a{
     display: inline-block;

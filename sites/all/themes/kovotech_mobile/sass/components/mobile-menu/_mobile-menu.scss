@@ -28,11 +28,12 @@
     }
     i{
       padding-left: 0.4rem;
+      vertical-align: text-bottom;
     }
     .container{
       background-color: black;
       padding: 10px 0.4rem;
-      height: 46px;
+      height: 51px;
     }
     .col-gapless{
       display: inline-block;
@@ -44,7 +45,8 @@
     .cta-button-label{
       font-size: 0.6rem;
       text-transform: uppercase;
-      line-height: 0.65rem;
+      line-height: 0.6rem;
+      padding-bottom: 5px;
     }
     .cta-button-phone{
       font-size: 0.7rem;
