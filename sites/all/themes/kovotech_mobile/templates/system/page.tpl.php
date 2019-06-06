@@ -8,7 +8,7 @@
  */
 ?>
 
-
+<div class="page-wrap">
 <header class="header" role="banner">
     <div id="header" class="container">
         <div class="columns">
@@ -101,6 +101,8 @@
 <?php if ($page['sidebar']): ?>
     <?php print render($page['sidebar']); ?>
 <?php endif; ?>
+
+</div>
 
 <?php if ($page['footer']): ?>
   <?php print render($page['footer']); ?>
