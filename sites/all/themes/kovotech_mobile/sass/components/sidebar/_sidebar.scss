@@ -33,9 +33,12 @@
   h2{
     font-size: 0.7rem;
     border-bottom: 1px solid #939393;
-    margin: 30px 0.4rem 0 0.4rem;;
+    margin: 0 0.4rem;
     padding-bottom: 14px;
-    padding-top: 10px;
+    padding-top: 30px;
+    @include media-w($size-md){
+      padding-top: 40px;
+    }
   }
   .clearfix{
     padding: 0.4rem;
