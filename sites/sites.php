@@ -63,6 +63,7 @@
 $sites['www.kovotech.com'] = 'kovotech.com';
 $sites['kovotech.gubo.brainsum.com'] = 'kovotech.com';
 $sites['localhost'] = 'kovotech.com';
+$sites['kovotech.test'] = 'kovotech.com';
 
 #$sites['medicalproducts.sk.muntiac.brain.sk'] = 'medicalproducts.sk';
 #$sites['www.bnm-slovakia.sk'] = 'medicalproducts.sk';
