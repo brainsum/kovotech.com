@@ -9,6 +9,9 @@ stylesheets[all][] = css/reset.css
 stylesheets[all][] = css/style.css
 stylesheets[print][] = css/print.css
 
+; JS
+scripts[] = is-mobile.js
+
 ; Regions
 regions[language] = Language Switcher
 regions[header] = Header
