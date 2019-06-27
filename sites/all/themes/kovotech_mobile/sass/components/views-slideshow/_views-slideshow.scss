@@ -1,23 +1,30 @@
 .views-slideshow-cycle-processed {
   position: relative;
-  h1{
+
+  h1 {
     font-size: 1rem;
     padding: 0;
     width: auto;
-    margin: 1.2rem 0.4rem;
+    margin: 1.2rem .4rem;
   }
+
   .views_slideshow_cycle_main {
     width: 100%;
-    .views-slideshow-cycle-main-frame, .views-slideshow-cycle-main-frame-row {
+
+    .views-slideshow-cycle-main-frame,
+    .views-slideshow-cycle-main-frame-row {
       width: 100% !important;
       height: auto;
     }
+
     .views-slideshow-cycle-main-frame {
       height: auto;
     }
+
     .field-content {
       max-width: 100%;
       width: 100%;
+
       img {
         max-width: 100%;
         width: 100%;
@@ -26,8 +33,9 @@
         padding: 0;
       }
     }
-    .views-field-field-slider-image:after{
-      content: " ";
+
+    .views-field-field-slider-image::after {
+      content: "";
       display: block;
       position: absolute;
       background: url(../images/stripes.png) repeat-x left top;
@@ -35,30 +43,36 @@
       height: 9px;
     }
   }
-  .views-slideshow-controls-bottom{
+
+  .views-slideshow-controls-bottom {
     position: absolute;
     float: right;
     right: 0;
     z-index: 5;
     bottom: 56px;
   }
-  .views-slideshow-pager-fields > div{
+
+  .views-slideshow-pager-fields > div {
     float: right;
   }
-  .views-slideshow-pager-field-item{
+
+  .views-slideshow-pager-field-item {
     background-color: $kov-color;
     padding: 4px 10px;
     margin-right: 10px;
-    font-size: 0.6rem;
-    a{
+    font-size: .6rem;
+
+    a {
       color: black;
     }
   }
-  .views-slideshow-pager-field-item.active{
+
+  .views-slideshow-pager-field-item.active {
     background-color: black;
     color: $kov-color;
     cursor: pointer;
-    a{
+
+    a {
       color: $kov-color;
     }
   }

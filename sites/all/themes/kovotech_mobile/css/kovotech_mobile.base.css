@@ -1431,9 +1431,7 @@ textarea::placeholder {
  * Style guide: forms.base.fieldset
  */
 fieldset {
-  margin: 0;
-  margin-bottom: 0.8rem;
-  padding: 0;
+  margin: 0 0 0.8rem;
   padding: 0.35rem 0.625rem 0.65rem;
   border: 0;
 }
@@ -1561,5 +1559,3 @@ th {
 th {
   border-bottom-width: 0.1rem;
 }
-
-/*# sourceMappingURL=kovotech_mobile.base.css.map */

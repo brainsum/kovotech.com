@@ -237,11 +237,9 @@ input {
 
 fieldset {
   border: 0;
-  margin: 0;
-  padding: 0;
+  margin: 0 0 $layout-spacing-lg;;
   // Change the border, margin, and padding in all browsers (opinionated).
   padding: .35rem .625rem .65rem;
-  margin-bottom: $layout-spacing-lg;
 }
 
 legend {

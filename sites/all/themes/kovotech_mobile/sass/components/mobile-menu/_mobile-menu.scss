@@ -1,79 +1,97 @@
-#mobile-menu{
+#mobile-menu {
   background-color: #b4b4b4;
   display: none;
-  .block.column{
+
+  .block.column {
     flex: none;
   }
-  .menu{
+
+  .menu {
     background: transparent;
     box-shadow: none;
     min-width: auto;
-    a{
-      padding: 0.2rem 0rem;
+
+    a {
+      padding: .2rem 0;
     }
-    a.active, a:hover, a:focus{
+
+    a.active,
+    a:hover,
+    a:focus {
       color: $kov-color;
       background: none;
       box-shadow: none;
     }
   }
-  .cta-button{
+
+  .cta-button {
     i::before {
       display: inline-block;
       width: 23px;
       height: 23px;
       margin-right: 5px;
-      content: " ";
+      content: "";
       background: url(../images/cta-button-icon.png) no-repeat center center;
     }
-    i{
-      padding-left: 0.4rem;
+
+    i {
+      padding-left: .4rem;
       vertical-align: text-bottom;
     }
-    .container{
+
+    .container {
       background-color: black;
-      padding: 10px 0.4rem;
+      padding: 10px .4rem;
       height: 51px;
     }
-    .col-gapless{
+
+    .col-gapless {
       display: inline-block;
     }
-    span{
+
+    span {
       display: block;
       color: white;
     }
-    .cta-button-label{
-      font-size: 0.6rem;
+
+    .cta-button-label {
+      font-size: .6rem;
       text-transform: uppercase;
-      line-height: 0.6rem;
+      line-height: .6rem;
       padding-bottom: 5px;
     }
-    .cta-button-phone{
-      font-size: 0.7rem;
+
+    .cta-button-phone {
+      font-size: .7rem;
       font-weight: bold;
-      line-height: 0.75rem;
+      line-height: .75rem;
     }
   }
 }
-#block-system-main-menu{
+
+#block-system-main-menu {
   text-align: right;
   color: #eee;
-  font-size: 0.6rem;
+  font-size: .6rem;
   width: 40%;
-  @include media-w($size-sm){
-    font-size: 0.7rem;
+
+  @include media-w($size-sm) {
+    font-size: .7rem;
   }
 }
-#block-menu-menu-product-menu{
+
+#block-menu-menu-product-menu {
   text-transform: uppercase;
   color: white;
   font-weight: bold;
-  font-size: 0.6rem;
+  font-size: .6rem;
   width: 60%;
-  @include media-w($size-sm){
-    font-size: 0.7rem;
+
+  @include media-w($size-sm) {
+    font-size: .7rem;
   }
-  .menu a{
+
+  .menu a {
     padding-bottom: 10px;
   }
 }
