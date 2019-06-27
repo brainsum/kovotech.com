@@ -107,3 +107,8 @@
   clear: both;
   content: "";
 }
+
+#colorbox,
+#colorbox div {
+  overflow: visible !important;
+}

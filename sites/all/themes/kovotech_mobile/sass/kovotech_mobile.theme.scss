@@ -6,3 +6,9 @@
 
 // First import our custom variables and mixins
 @import "index";
+
+
+#colorbox,
+#colorbox div {
+  overflow: visible !important;
+}
