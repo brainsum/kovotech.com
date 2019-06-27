@@ -20,8 +20,7 @@ $breakpoints: (
     @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
       @content;
     }
-  }
-  @else {
+  } @else {
     @media screen and (min-width: $breakpoint) {
       @content;
     }
@@ -31,14 +30,11 @@ $breakpoints: (
 @mixin media-w($point) {
   @if $point == md {
     @media screen and (min-width: $size-md) { @content; }
-  }
-  @else if $point == sm {
+  } @else if $point == sm {
     @media screen and (min-width: $size-sm) { @content; }
-  }
-  @else if $point == xs {
+  } @else if $point == xs {
     @media screen and (min-width: $size-xs) { @content; }
-  }
-  @else {
+  } @else {
     @media screen and (min-width: $point) { @content; }
   }
 }

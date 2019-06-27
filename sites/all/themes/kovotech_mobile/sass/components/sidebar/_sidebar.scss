@@ -1,97 +1,119 @@
-.region-sidebar{
+.region-sidebar {
   width: 100%;
   background-image: none;
   margin-bottom: 35px;
-  .first.column{
+
+  .first.column {
     background-color: #eee;
   }
-  .first.column:after{
-    content: " ";
+
+  .first.column::after {
+    content: "";
     display: block;
     position: absolute;
     background: url(../images/stripes.png) repeat-x left top;
     width: 100%;
     height: 9px;
   }
-  @include media-w($size-md){
-    .first.column{
+
+  @include media-w($size-md) {
+    .first.column {
       background-color: transparent;
     }
-    .first.column:after {
+
+    .first.column::after {
       width: 0;
     }
   }
-  .column{
+
+  .column {
     padding: 0;
   }
-  @include media-w($size-md){
+
+  @include media-w($size-md) {
     width: 30%;
     float: left;
     background: url(../images/background.png) no-repeat right top;
     margin-bottom: 0;
   }
-  h2{
-    font-size: 0.7rem;
+
+  h2 {
+    font-size: .7rem;
     border-bottom: 1px solid #939393;
-    margin: 0 0.4rem;
+    margin: 0 .4rem;
     padding-bottom: 14px;
     padding-top: 30px;
-    @include media-w($size-md){
+
+    @include media-w($size-md) {
       padding-top: 40px;
     }
   }
-  .clearfix{
-    padding: 0.4rem;
-    @include media-w($size-md){
+
+  .clearfix {
+    padding: .4rem;
+
+    @include media-w($size-md) {
       padding-bottom: 40px;
     }
   }
-  p{
-    font-size: 0.6rem;
-    line-height: 0.9rem;
+
+  p {
+    font-size: .6rem;
+    line-height: .9rem;
     margin: 0;
     padding: 7px 0 10px 0;
   }
-  ul{
+
+  ul {
     margin: 0;
   }
-  li.node-readmore{
+
+  li.node-readmore {
     padding: 3px 6px !important;
     background-color: black;
-    font-size: 0.6rem;
-    a{
+    font-size: .6rem;
+
+    a {
       color: $kov-color;
     }
-    a:hover{
+
+    a:hover {
       text-decoration: none;
       color: white;
     }
   }
 }
 
-.section-kontakty, .section-elerhetoseg, .section-cegunkrol, .section-o-firme{
+.section-kontakty,
+.section-elerhetoseg,
+.section-cegunkrol,
+.section-o-firme {
   .region-sidebar {
-    .first.column{
+    .first.column {
       background-color: transparent;
     }
-    .first.column:after {
+
+    .first.column::after {
       width: 0;
     }
+
     @include media-w($size-md) {
       min-height: 285px;
     }
   }
 }
 
-#block-nodeblock-2{
-  p{
+#block-nodeblock-2 {
+  p {
     padding: 0;
-    a{
+
+    a {
       color: #a29b00;
       text-decoration: none;
     }
   }
-  .field-item{
-    padding: 7px 0 10px 0;
+
+  .field-item {
+    padding: 7px 0 10px;
   }
 }

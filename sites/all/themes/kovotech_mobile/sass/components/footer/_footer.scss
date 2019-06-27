@@ -1,44 +1,53 @@
-.page-wrap{
+.page-wrap {
   min-height: 100%;
   margin-bottom: -74px;
 }
 
-.page-wrap:after{
-  content: " ";
+.page-wrap::after {
+  content: "";
   display: block;
   height: 74px;
 }
 
-footer{
+footer {
   background-color: $kov-color;
-  font-size: 0.6rem;
-  line-height: 0.55rem;
+  font-size: .6rem;
+  line-height: .55rem;
   padding: 20px;
   clear: both;
-  .block{
+
+  .block {
     padding: 0;
   }
-  p{
+
+  p {
     margin: 0;
   }
-  a, a:hover{
+
+  a,
+  a:hover {
     color: black;
   }
-  .copyright p{
+
+  .copyright p {
     padding-top: 12px;
   }
-  .madeby{
+
+  .madeby {
     text-align: right;
-    a{
+
+    a {
       text-align: left;
     }
-    p::before{
+
+    p::before {
       content: url(../images/brainsum-logo.png);
       vertical-align: middle;
       padding-right: 5px;
     }
   }
-  a{
+
+  a {
     display: inline-block;
   }
 }
