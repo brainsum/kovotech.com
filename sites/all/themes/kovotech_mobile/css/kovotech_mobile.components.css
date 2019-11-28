@@ -1121,7 +1121,6 @@ footer .madeby a {
 footer .madeby p::before {
   padding-right: 5px;
   content: url(../images/brainsum-logo.png);
-  vertical-align: middle;
 }
 
 footer a {
