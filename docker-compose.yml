@@ -2,7 +2,7 @@ version: "2"
 
 services:
   mariadb:
-    image: wodby/drupal-mariadb:1.0.0
+    image: wodby/mariadb:10.4-3.7.6
     environment:
       MYSQL_RANDOM_ROOT_PASSWORD: 1
       MYSQL_DATABASE: drupal
