@@ -49,15 +49,31 @@
     <?php if ($page['mobile_menu']): ?>
         <?php print render($page['mobile_menu']); ?>
     <?php endif; ?>
-    <a class="cta-button" href="tel:00421315523447">
+    <a class="cta-button" href="tel:+421315523447">
         <div class="container">
             <i></i>
             <div class="columns col-gapless">
                 <span class="cta-button-label"><?php print t('Have a question?'); ?></span>
-                <span class="cta-button-phone">+421 31/552 3447</span>
+                <span class="cta-button-phone">031/552 34 47</span>
             </div>
         </div>
     </a>
+  <a class="cta-button additional" href="tel:+421903946025">
+    <div class="container">
+      <i></i>
+      <div class="columns col-gapless">
+        <span class="cta-button-phone">0903 946 025</span>
+      </div>
+    </div>
+  </a>
+  <a class="cta-button additional" href="tel:+421903379387">
+    <div class="container">
+      <i></i>
+      <div class="columns col-gapless">
+        <span class="cta-button-phone">0903 379 387</span>
+      </div>
+    </div>
+  </a>
 </div>
 
 <main id="main" class="main" role="main">

@@ -25,6 +25,17 @@
   }
 
   .cta-button {
+    display: block;
+    color: #fff;
+
+    &.additional {
+      border-top: 1px solid #fff;
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+
     i::before {
       display: inline-block;
       width: 23px;
@@ -40,6 +51,9 @@
     }
 
     .container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
       background-color: black;
       padding: 10px .4rem;
       height: 51px;

@@ -897,8 +897,6 @@ button,
   padding: 0.35rem 0.4rem;
   cursor: pointer;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   transition: all 0.2s ease;
   text-align: center;
@@ -914,7 +912,6 @@ button,
   line-height: 1rem;
 
   -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
 }
 
@@ -1292,7 +1289,6 @@ textarea {
   line-height: 1rem;
 
   -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
 }
 
@@ -1308,19 +1304,6 @@ textarea {
 textarea:focus {
   border-color: #5755d9;
   box-shadow: 0 0 0 0.1rem rgba(87, 85, 217, 0.2);
-}
-
-[type="text"]:-ms-input-placeholder,
-[type="search"]:-ms-input-placeholder,
-[type="tel"]:-ms-input-placeholder,
-[type="url"]:-ms-input-placeholder,
-[type="email"]:-ms-input-placeholder,
-[type="password"]:-ms-input-placeholder,
-[type="date"]:-ms-input-placeholder,
-[type="time"]:-ms-input-placeholder,
-[type="number"]:-ms-input-placeholder,
-textarea:-ms-input-placeholder {
-  color: #acb3c2;
 }
 
 [type="text"]::placeholder,
@@ -1484,7 +1467,6 @@ select {
   line-height: 1rem;
 
   -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
 }
 
@@ -1559,3 +1541,5 @@ th {
 th {
   border-bottom-width: 0.1rem;
 }
+
+/*# sourceMappingURL=kovotech_mobile.base.css.map */

@@ -1290,8 +1290,6 @@ span.field-label + * > :first-child > :first-child {
   margin-top: 0;
   padding: 0 0.4rem;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   text-decoration: none;
 }
@@ -1480,6 +1478,19 @@ span.field-label + * > :first-child > :first-child {
   box-shadow: none;
 }
 
+#mobile-menu .cta-button {
+  display: block;
+  color: #fff;
+}
+
+#mobile-menu .cta-button.additional {
+  border-top: 1px solid #fff;
+}
+
+#mobile-menu .cta-button:hover {
+  text-decoration: none;
+}
+
 #mobile-menu .cta-button i::before {
   display: inline-block;
   width: 23px;
@@ -1495,6 +1506,9 @@ span.field-label + * > :first-child > :first-child {
 }
 
 #mobile-menu .cta-button .container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   height: 51px;
   padding: 10px 0.4rem;
   background-color: black;
@@ -1851,3 +1865,5 @@ span.field-label + * > :first-child > :first-child {
 .views-slideshow-cycle-processed .views-slideshow-pager-field-item.active a {
   color: #fff200;
 }
+
+/*# sourceMappingURL=kovotech_mobile.components.css.map */
